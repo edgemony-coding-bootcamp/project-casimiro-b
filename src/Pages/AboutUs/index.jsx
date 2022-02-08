@@ -3,7 +3,7 @@ const AboutUs = () => {
 
 
     return (
-        <>Ciao</>
+        <>Please</>
 
     )
 }
