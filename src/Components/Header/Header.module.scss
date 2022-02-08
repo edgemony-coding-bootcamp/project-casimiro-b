@@ -1,0 +1,54 @@
+@import "../../Tools/General.scss";
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    padding: 15px 1px;
+  
+    align-items: center;
+  
+    display: flex;
+    justify-content: space-between;
+    background-color: $mainDarker;
+    box-shadow: 0 0 15px rgba(34, 19, 6, 0.616);
+  
+    color: $mainLighter;
+  
+    h1 {
+      padding-left: 50px;  
+      margin: 0;
+    }
+  
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+  
+        a {
+          text-decoration: none;
+          padding: 25px;
+          transition: $baseTransition;
+          color: $mainLighter;
+  
+          &:hover {
+            // .header nav ul a:hover { ... }
+            background-color: $mainLighter;
+            color: $mainDarker;
+          }
+  
+          &.active {
+            background-color: $main;
+          }
+        }
+      }
+    }
+  }
+
+
+ 
+
+
+
+
+ 

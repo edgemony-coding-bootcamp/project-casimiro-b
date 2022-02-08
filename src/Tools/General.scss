@@ -4,10 +4,24 @@
 $main: #f4efef;
 $secondary: #bc6e7e;
 
+$mainLighter: rgb(242, 242, 242);
+$mainDarker: rgb(8, 8, 8);
+
+
 /* Global */
 $transition: all 3s ease;
+$baseTransition: all 0.4s ease;
+
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+
+// Box
+$sidePadding: 30px;
+
+
+//font
+$fontPlayfair: 'Playfair Display', serif;
+
 
 *,
 *::after,
