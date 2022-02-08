@@ -30,13 +30,13 @@ const Header = (props) => {
       <button className={styles.resp_menu} onClick={handleMenu}>
         <FiMenu className={styles.icon_menu} />
       </button>
-        <ul className={`${styles.menuItems} ${isActive ? styles.showMenu : ''}`}>
-          {links.map((item, index) => (
-            <li key={index}>
-              <Link to={item.link} className={CheckActive(item.link)}>{item.label}</Link>
-            </li>
-          ))}
-        </ul>
+      <ul className={`${styles.menuItems} ${isActive ? styles.showMenu : ''}`}>
+        {links.map((item, index) => (
+          <li key={index}>
+            <Link to={item.link} className={CheckActive(item.link)}>{item.label}</Link>
+          </li>
+        ))}
+      </ul>
     </header>
 
 
