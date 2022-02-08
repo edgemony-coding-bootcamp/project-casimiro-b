@@ -1,6 +1,32 @@
 @import "../../Tools/General.scss";
 
 .footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    margin-top: 30px;
     background-color: $main;
-    height: 200px;
+}
+
+.footerText {
+    text-align: center;
+    margin: 0 auto 20px;
+
+    p:nth-child(2) {
+        font-style: italic;
+        margin-top: 10px;
+      }
+}
+
+.footerSocial {
+    text-align: center;
+    margin: 0 auto;
+
+    .social_icon{
+        width: 30px;
+        margin: 0 10px;
+        color: $secondary;
+    }
 }
