@@ -1,0 +1,27 @@
+@import "../../Tools/General.scss";
+
+.customBg {
+    opacity: 0.85;
+}
+
+.parallaxDiv {
+    z-index: 2;
+}
+
+.textParallax {
+    background-color: $blackOpacity;
+    color: $main;
+    left:25%;
+    bottom: 10%;
+    position: absolute;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+
+    h2 {
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}

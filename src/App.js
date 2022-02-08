@@ -12,11 +12,11 @@ import AboutUs from './Pages/AboutUs';
 const INIT_STATE = {
   name: "'Ddocu",
   nav: [
-    { link: "/", label: "Home" },
-    { link: "/AboutUs", label: "AboutUs" },
+    { link: "/", label: "HOME" },
+    { link: "/AboutUs", label: "ABOUT US" },
 
-    { link: "/Discover", label: "Discover" },
-    { link: "/Experience", label: "Experience" },
+    { link: "/Discover", label: "DISCOVER" },
+    { link: "/Experience", label: "EXPERIENCE" },
   ],
   productsPreview: [],
 };
@@ -27,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header name={INIT_STATE.name} links={INIT_STATE.nav} />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
