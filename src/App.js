@@ -1,5 +1,5 @@
+import Footer from "./Components/Footer";
 import Header from './Components/Header';
-
 import Discover from './Pages/Discover';
 import Home from './Pages/Home';
 import { Routes, Route } from "react-router-dom";
@@ -23,12 +23,11 @@ const INIT_STATE = {
 
 
 
-
-
-
 function App() {
   return (
     <div className="App">
+
+    <Footer />
 
     </div>
   );
