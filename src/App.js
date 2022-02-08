@@ -14,9 +14,9 @@ const INIT_STATE = {
   nav: [
     { link: "/", label: "Home" },
     { link: "/AboutUs", label: "AboutUs" },
-  
-    {link: "/Discover", label: "Discover"},
-    {link: "/Experience", label: "Experience"},
+
+    { link: "/Discover", label: "Discover" },
+    { link: "/Experience", label: "Experience" },
   ],
   productsPreview: [],
 };
@@ -26,8 +26,16 @@ const INIT_STATE = {
 function App() {
   return (
     <div className="App">
+      <Header name={INIT_STATE.name} links={INIT_STATE.nav} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
 
-    <Footer />
+        <Route path="/Discover" element={<Discover />} />
+        <Route path="/Experience" element={<Experience />} />
+      </Routes>
+
+      <Footer />
 
     </div>
   );
