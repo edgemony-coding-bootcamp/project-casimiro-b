@@ -29,15 +29,7 @@ const INIT_STATE = {
 function App() {
   return (
     <div className="App">
-      <Header name={INIT_STATE.name} links={INIT_STATE.nav} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        
-        <Route path="/Discover" element={<Discover />} />
-        <Route path="/Experience" element={<Experience />} />
-        </Routes>
-      
+
     </div>
   );
 }
