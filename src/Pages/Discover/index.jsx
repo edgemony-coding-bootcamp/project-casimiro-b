@@ -1,4 +1,3 @@
-
 import DiscoverCard from "./DiscoverCard";
 import { useState, useEffect } from "react";
 import "../../Tools/discover.json";
@@ -27,14 +26,10 @@ const Discover = () => {
         </div>
 
         <div className={styles.discoverElementTwo}>
+          <DiscoverMenu />
+        </div>
 
-
-          <DiscoverMenu /> 
-          
-          </div>
-
-
-          <div className={styles.containerCard}>
+        <div className={styles.containerCard}>
           {card?.map((item, index) => (
             <DiscoverCard
               key={index}
@@ -45,9 +40,8 @@ const Discover = () => {
               image={item.image}
               date={item.date}
             />
-            
           ))}
-         
+
           {card?.map((item, index) => (
             <DiscoverCard
               key={index}
@@ -58,10 +52,9 @@ const Discover = () => {
               image={item.image}
               date={item.date}
             />
-            
           ))}
-          </div>
-       </div>
+        </div>
+      </div>
     </div>
   );
 };
