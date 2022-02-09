@@ -1,3 +1,4 @@
+
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
 import DiscoverMenu from "./DiscoverMenu";
@@ -11,6 +12,7 @@ const Discover = () => {
         <DiscoverSelect />
         <DiscoverText />
       </div>
+
 
       <div className={styles.discoverElementTwo}>
         <DiscoverMenu />
