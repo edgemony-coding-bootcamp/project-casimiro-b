@@ -15,8 +15,8 @@ $mainDarker: rgb(8, 8, 8);
 $transition: all 3s ease;
 $baseTransition: all 0.4s ease;
 
-$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-$dark-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+$light-shadow: rgba(52, 54, 56, 0.2);
+$dark-shadow: rgba(52, 54, 56, 0.8);
 
 // Box
 $sidePadding: 30px;
@@ -78,7 +78,8 @@ h4 {
     font-size: 0.875rem;
 }
 
-p {
+p,
+li {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
