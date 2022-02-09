@@ -1,7 +1,9 @@
+
 import DiscoverCard from "./DiscoverCard";
 import { useState, useEffect } from "react";
 import "../../Tools/discover.json";
 import styles from "./Discover.module.scss";
+
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
 import DiscoverMenu from "./DiscoverMenu";
@@ -31,6 +33,7 @@ const Discover = () => {
           
           </div>
 
+
           <div className={styles.containerCard}>
           {card?.map((item, index) => (
             <DiscoverCard
@@ -58,8 +61,7 @@ const Discover = () => {
             
           ))}
           </div>
-       
-      </div>
+       </div>
     </div>
   );
 };
