@@ -1,0 +1,14 @@
+[
+    {
+        "city": {
+            "id": "24",
+            "name": "Palermo"
+        },
+        "title": "VISITA A PALERMO",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "price": "10€",
+        "image": "https://picsum.photos/200/300",
+        "date": "25/02",
+        "icon": "https://img.icons8.com/ios-filled/50/000000/fork.png"
+    }
+]
