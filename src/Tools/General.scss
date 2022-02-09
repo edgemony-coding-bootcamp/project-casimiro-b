@@ -84,6 +84,10 @@ li {
 }
 
 
+.wrapperPage {
+  margin: 100px 40px 0;
+}
+
   @media screen and (min-width: 800px) {
 
     h1 {
@@ -101,6 +105,11 @@ li {
     h4 {
       font-size: 1rem;
     }
+
+    .wrapperPage {
+      margin: 200px 70px 50;
+    }
     
   }
+
 
