@@ -1,0 +1,32 @@
+@import "../../../Tools/General.scss";
+
+.discoverCard{
+    padding: $sidePadding;
+    margin: 0 auto;
+    margin-top: 200px;
+    display: flex;
+    width: 450px;
+    height: 500px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.description{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.price{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
