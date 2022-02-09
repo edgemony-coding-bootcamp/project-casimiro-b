@@ -18,10 +18,10 @@ const DiscoverText = () => {
 
         " The dead body is carried away. The Poisoner wooes the Queen with
         gifts; she seems loth and unwilling awhile, but in the end accepts his
-        love."  
+        love."
         <br></br>
         - R.Hollie
-         </p>
+      </p>
 
       <p>
 
@@ -30,7 +30,7 @@ const DiscoverText = () => {
         tragical-comical- historical-pastoral, scene individable, or poem.
 
         <br></br>
-        
+
         unlimited: Seneca cannot be too heavy nor Plautus too light. For the law
         of writ and the liberty, these are the only men.
 
