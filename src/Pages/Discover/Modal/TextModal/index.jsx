@@ -1,6 +1,6 @@
-import styles from './TextComponent.module.scss'
+import styles from './TextModal.module.scss'
 
-const TextComponent = (props) => {
+const TextModal = (props) => {
     return (
         <div className={styles.textComponent}>
 
@@ -12,4 +12,4 @@ const TextComponent = (props) => {
     )
 }
 
-export default TextComponent;
+export default TextModal;
