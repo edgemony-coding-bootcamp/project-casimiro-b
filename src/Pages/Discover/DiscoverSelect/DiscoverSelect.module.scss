@@ -1,0 +1,32 @@
+@import "./../../../Tools/General.scss";
+
+
+form {
+
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 250px;
+    height: auto;
+    margin: 200px 0px 0px 67px;
+
+
+    label {
+        
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+.selectCity {
+
+    width: 250px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+
+}
+
+
+
+
+}

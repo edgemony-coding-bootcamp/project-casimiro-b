@@ -3,7 +3,7 @@ const Loading = () => {
 
 
     return (
-        <></>
+        <>  </>
 
     )
 }

@@ -1,0 +1,20 @@
+@import "../../Tools/General.scss";
+
+.discoverContOne {
+  display: flex;
+  flex-direction: row;
+
+  .discoverElementOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 50%;
+  }
+
+  .discoverElementTwo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: left;
+  }
+}
