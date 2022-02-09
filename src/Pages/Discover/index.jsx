@@ -6,7 +6,8 @@ const Discover = () => {
 
     return (
         
-        <Modal/>
+        <>
+        </>
 
     )
 }
