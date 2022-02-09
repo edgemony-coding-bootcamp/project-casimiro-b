@@ -11,9 +11,7 @@ const DiscoverCard = ({ date, title, icon, description, price, image }) => {
             <div className={styles.description}>
                 <img src={image} alt='prova' />
                 <p>{description}</p>
-                <div className={styles.price}>
-                    <p>{price}</p>
-                </div>
+                
             </div>
         </div>
     )

@@ -8,13 +8,21 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-    width: 50%;
+    width: 40%;
   }
 
   .discoverElementTwo {
     display: flex;
     flex-direction: column;
     width: 50%;
-    justify-content: left;
+    height: 20%;
+
+    align-items: flex-start;
+  }
+
+  .containerCard {
+    display: flex;
+    flex-direction: row;
+    margin-left: -50%;
   }
 }
