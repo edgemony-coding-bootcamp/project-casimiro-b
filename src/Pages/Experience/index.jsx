@@ -1,9 +1,12 @@
+import CardExperience from "./CardExperience";
 const Experience = () => {
 
 
 
     return (
-        <></>
+        <>
+        <CardExperience/>
+        </>
 
     )
 }
