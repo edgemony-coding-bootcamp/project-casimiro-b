@@ -1,4 +1,4 @@
-import styles from "./DiscoverMenu.module.scss"
+import styles from "./Menu.module.scss"
 
 const DiscoverMenu = () => {
     return (

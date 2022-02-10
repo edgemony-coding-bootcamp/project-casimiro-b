@@ -5,7 +5,7 @@ import styles from "./Discover.module.scss";
 
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
-import DiscoverMenu from "./DiscoverMenu";
+import DiscoverMenu from "../../Components/Menu";
 
 const data = require("../../Tools/discover.json");
 
