@@ -1,10 +1,9 @@
 
-import Menu from "../../Components/Menu"
+import Menu from "../../Components/Menu";
+import CardExperience from "./CardExperience";
 
-const Experience = () => {
 
-
-import styles from "./Experience.module.scss"
+import styles from "./Experience.module.scss";
 
 
 const Experience = ({ city, }) => {
@@ -29,21 +28,23 @@ const Experience = ({ city, }) => {
 
             <div className={styles.sectionCity}>
                 <div className={styles.sectionHeader}>
-                    <h1>{city}</h1>
+                    <h1>{city}Prova</h1>
                     <Menu />
                 </div>
-                <div className={styles.sectionBlock}>
-                    <h3>LOREM IPSUM</h3>
-                    <p>Margherita risolve conflitti</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    
+                <div className={styles.sectionMain}>
+                    <div className={styles.sectionBlock}>
+                        <h3>LOREM IPSUM</h3>
+                        <p>Margherita risolve conflitti</p>
+                    </div>
+                    <div className={styles.sectionCard}>
+                        <CardExperience />
+                        <CardExperience />
+                        <CardExperience />
+                    </div>
                 </div>
             </div>
 
         </div>
-
-
     )
 }
 
