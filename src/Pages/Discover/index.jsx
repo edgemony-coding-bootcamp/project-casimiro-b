@@ -12,14 +12,16 @@ import Modal from "./Modal";
 const data = require("../../Tools/discover.json");
 
 const Discover = () => {
-
   const [card, setCard] = useState();
+  const [author, setAuthor] = useState("All");
 
   const [modalOpen, setModalOpen] = useState(false);
 
   const OpenModalFunc = () => {
-      setModalOpen(!modalOpen);
-  }
+    setModalOpen(!modalOpen);
+  };
+
+  const sortingText = (e) => setAuthor(e.target.value);
 
   useEffect(() => {
     setCard(data);
@@ -30,9 +32,12 @@ const Discover = () => {
     <div className="wrapperPage">
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
-          <DiscoverSelect />
+          <DiscoverSelect sorting={sortingText} sort={author} />
+          <div className={styles.mobileMenu}>
+            <DiscoverMenu />
+          </div>
           <DiscoverText />
-          {modalOpen && <Modal setOpenModal={setModalOpen}/>}
+          {modalOpen && <Modal setOpenModal={setModalOpen} />}
         </div>
 
         <div className={styles.discoverElementTwo}>
@@ -40,20 +45,21 @@ const Discover = () => {
         </div>
 
         <div className={styles.containerCard}>
-          {card?.map((item, index) => (
-            <div key={index} onClick={OpenModalFunc}>
-              <DiscoverCard
-                key={index}
-                title={item.title}
-                description={item.description}
-                price={item.price}
-                icon={item.icon}
-                image={item.image}
-                date={item.date}
-              />
-            </div>
-          ))}
-
+          {card
+            ?.filter((el) => (author != "All" ? el.city === author : el))
+            .map((item, index) => (
+              <div key={index} onClick={OpenModalFunc}>
+                <DiscoverCard
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                  price={item.price}
+                  icon={item.icon}
+                  image={item.image}
+                  date={item.date}
+                />
+              </div>
+            ))}
         </div>
       </div>
     </div>
