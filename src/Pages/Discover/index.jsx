@@ -15,21 +15,13 @@ const Discover = () => {
     
 
   const [card, setCard] = useState();
-  const [author, setAuthor] = useState("");
+  const [author, setAuthor] = useState("All");
 
 
  const data = require("../../Tools/discover.json");
 
-  const sortingText = (e) => {
-    console.log("ciao magghe");
-    const sorting = e.target.value;
-    setAuthor(() => {
-      if (sorting === "Catania") {
 
-        return data.city
-      }
-    });
-  };
+ const sortingText = (e) => setAuthor(e.target.value)
 
   useEffect(() => {
     setCard(data);
@@ -53,7 +45,7 @@ const Discover = () => {
         </div>
 
         <div className={styles.containerCard}>
-          {card?.map((item, index) => (
+          {card?.filter((el) => author != 'All' ? el.city === author : el).map((item, index)=> (
             <DiscoverCard
               key={index}
               title={item.title}

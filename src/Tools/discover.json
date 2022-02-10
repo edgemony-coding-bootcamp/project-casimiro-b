@@ -1,112 +1,83 @@
 [
     {
-        "city": {
-            "id": "24",
-            "name": "Palermo"
-        },
-        "title": "È l’ora blu delle storie",
-        "description": "La vera storia di Sfavolina e Sfavolo - spettacolo per burattini e narratore - di Salvino Calatabiano, con Vito Bartucca (narratore) e Salvino Calatabiano (burattinaio). Compagnia teatro degli Spiriti",
-        "price": "6€",
-        "image": "http://www.piccoloteatropatafisico.it/wp-content/uploads/2021/01/79127790_2272069459751927_1875315650671411200_o.jpg",
-        "date": "25/02"
+      "city": "Palermo",
+      "title": "È l’ora blu delle storie",
+      "description": "La vera storia di Sfavolina e Sfavolo - spettacolo per burattini e narratore - di Salvino Calatabiano, con Vito Bartucca (narratore) e Salvino Calatabiano (burattinaio). Compagnia teatro degli Spiriti",
+      "price": "6€",
+      "image": "http://www.piccoloteatropatafisico.it/wp-content/uploads/2021/01/79127790_2272069459751927_1875315650671411200_o.jpg",
+      "date": "25/02"
     },
     {
-        "city": {
-            "id": "15",
-            "name": "Catania"
-        },
-        "title": "Andy Warhol e Banksy a confronto",
-        "description": "Il famoso muro con la Bambina con l’Hula Hoop, per la prima volta in assoluto esposto in Italia, il dipinto di Kate Moss, Lincoln, Winston Churchill e la Regina Elisabetta di Banksy; il Self Portrait del 1967, i ritratti politici di Mao e Lenin e i ritratti di Mick Jagger, Billy Squier e Judy Garland di Warhol.",
-        "price": "12€",
-        "image": "https://www.letteraemme.it/wp-content/uploads/2021/11/08bf46b13c7d343f1be468f9ddbb1c34.jpg",
-        "date": "18/03"
+      "city": "Catania",
+  
+      "title": "Andy Warhol e Banksy a confronto",
+      "description": "Il famoso muro con la Bambina con l’Hula Hoop, per la prima volta in assoluto esposto in Italia, il dipinto di Kate Moss, Lincoln, Winston Churchill e la Regina Elisabetta di Banksy; il Self Portrait del 1967, i ritratti politici di Mao e Lenin e i ritratti di Mick Jagger, Billy Squier e Judy Garland di Warhol.",
+      "price": "12€",
+      "image": "https://www.letteraemme.it/wp-content/uploads/2021/11/08bf46b13c7d343f1be468f9ddbb1c34.jpg",
+      "date": "18/03"
     },
     {
-        "city": {
-            "id": "",
-            "name": "Siracusa"
-        },
-        "title": "I luoghi di Santa Lucia",
-        "description": "Il Centro Internazionale di Studi sul Barocco e la Scuola di Architettura dell’Università di Catania, organizzano un ciclo di seminari dal titolo 'Siracusa città di luce. I luoghi di Santa Lucia percorsi d'arte e spettacolarità barocca', che prevede una serie di incontri da dicembre 2021 ad aprile 2022.",
-        "price": "5€",
-        "image": "https://www.citymapsicilia.it/wp-content/uploads/2016/01/santa-lucia-quaglie_1200x789.jpg",
-        "date": "04/04"
+      "city": "Siracusa",
+      "title": "I luoghi di Santa Lucia",
+      "description": "Il Centro Internazionale di Studi sul Barocco e la Scuola di Architettura dell’Università di Catania, organizzano un ciclo di seminari dal titolo 'Siracusa città di luce. I luoghi di Santa Lucia percorsi d'arte e spettacolarità barocca', che prevede una serie di incontri da dicembre 2021 ad aprile 2022.",
+      "price": "5€",
+      "image": "https://www.citymapsicilia.it/wp-content/uploads/2016/01/santa-lucia-quaglie_1200x789.jpg",
+      "date": "04/04"
     },
     {
-        "city": {
-            "id": "",
-            "name": "Caltanissetta"
-        },
-        "title": "Ombre",
-        "description": "Nuovo spettacolo di Gaetano Aronica. La drammaturgia, scritta a quattro mani con Adriana Sabbatini, è asciutta, iperrealista, quasi cinematografica. La storia, portata in scena dallo stesso Aronica con la Compagnia del Teatro Pirandello è quella di un giudice siciliano da una parte e una studentessa in attesa di discutere la tesi dall'altra.",
-        "price": "12€",
-        "image": "https://www.scrivolibero.it/wordpress/wp-content/uploads/2017/12/gaetano-aronica.jpg",
-        "date": "11/03"
+      "city": "Caltanissetta",
+      "title": "Ombre",
+      "description": "Nuovo spettacolo di Gaetano Aronica. La drammaturgia, scritta a quattro mani con Adriana Sabbatini, è asciutta, iperrealista, quasi cinematografica. La storia, portata in scena dallo stesso Aronica con la Compagnia del Teatro Pirandello è quella di un giudice siciliano da una parte e una studentessa in attesa di discutere la tesi dall'altra.",
+      "price": "12€",
+      "image": "https://www.scrivolibero.it/wordpress/wp-content/uploads/2017/12/gaetano-aronica.jpg",
+      "date": "11/03"
     },
     {
-        "city": {
-            "id": "24",
-            "name": "Visita esclusiva a Palazzo Alliata"
-        },
-        "title": "Ombre",
-        "description": "Parliamo di Palazzo Alliata di Pietratagliata, una delle più significative dimore quattrocentesche della città, che apre le porte per ben 4 visite esclusive da febbraio a maggio, in naturale continuità con il RestArt, il festival che la scorsa estate ha aperto in notturna alcuni dei siti culturali più belli e più importanti della città.",
-        "price": "30€",
-        "image": "https://www.zankyou.it/images/card-main/ef6/3cce/550/475/w/346754/-/1535991016.jpg",
-        "date": "18/04"
+      "city": "Visita esclusiva a Palazzo Alliata",
+      "title": "Ombre",
+      "description": "Parliamo di Palazzo Alliata di Pietratagliata, una delle più significative dimore quattrocentesche della città, che apre le porte per ben 4 visite esclusive da febbraio a maggio, in naturale continuità con il RestArt, il festival che la scorsa estate ha aperto in notturna alcuni dei siti culturali più belli e più importanti della città.",
+      "price": "30€",
+      "image": "https://www.zankyou.it/images/card-main/ef6/3cce/550/475/w/346754/-/1535991016.jpg",
+      "date": "18/04"
     },
     {
-        "city": {
-            "id": "",
-            "name": "Messina"
-        },
-        "title": "Duo semiserio",
-        "description": "Poliedrico saxofonista e clarinettista Carmelo Coglitore insieme al solido contrabbasso di Pino Delfino.",
-        "price": "25€",
-        "image": "http://mararechichi.it/wp-content/uploads/2013/01/duojazz.jpg",
-        "date": "26/03"
+      "city": "Messina",
+      "title": "Duo semiserio",
+      "description": "Poliedrico saxofonista e clarinettista Carmelo Coglitore insieme al solido contrabbasso di Pino Delfino.",
+      "price": "25€",
+      "image": "http://mararechichi.it/wp-content/uploads/2013/01/duojazz.jpg",
+      "date": "26/03"
     },
     {
-        "city": {
-            "id": "",
-            "name": "Agrigento"
-        },
-        "title": "Visita alla cantina Di Giovanna con degustazione di tre vini",
-        "description": "Visita la cantina, scopri la sua storia di famiglia e la storia dei suoi vini. Partecipa a un viaggio sensoriale attraverso lo straordinario territorio delle Terre Sicane. Questa esperienza è un'opportunità unica dove potrai conoscere l'intero processo di produzione dei vini e scoprire come i vini e l'olio extra vergine di oliva vengono prodotti localmente.",
-        "price": "25€",
-        "image": "https://www.winemag.it/wp-content/uploads/2020/07/Cantine-e-ospitalit%C3%A0-in-Sicilia-vino-gastronomia-e-relax-baglio-donna-franca-2.jpg",
-        "date": "12/05"
+      "city": "Agrigento",
+      "title": "Visita alla cantina Di Giovanna con degustazione di tre vini",
+      "description": "Visita la cantina, scopri la sua storia di famiglia e la storia dei suoi vini. Partecipa a un viaggio sensoriale attraverso lo straordinario territorio delle Terre Sicane. Questa esperienza è un'opportunità unica dove potrai conoscere l'intero processo di produzione dei vini e scoprire come i vini e l'olio extra vergine di oliva vengono prodotti localmente.",
+      "price": "25€",
+      "image": "https://www.winemag.it/wp-content/uploads/2020/07/Cantine-e-ospitalit%C3%A0-in-Sicilia-vino-gastronomia-e-relax-baglio-donna-franca-2.jpg",
+      "date": "12/05"
     },
     {
-        "city": {
-            "id": "",
-            "name": "Selinunte"
-        },
-        "title": "Tour dell'Acropoli e delle spiagge bianche di Selinunte",
-        "description": "Unisciti a questo tour nella natura: i colori dorati e sabbiosi della terra bruciata dal sole renderanno la tua esperienza indimenticabile.",
-        "price": "151€",
-        "image": "https://www.castelvetranoselinunte.it/files/selinunte-vista-aerea.jpg",
-        "date": "30/03"
+      "city": "Selinunte",
+      "title": "Tour dell'Acropoli e delle spiagge bianche di Selinunte",
+      "description": "Unisciti a questo tour nella natura: i colori dorati e sabbiosi della terra bruciata dal sole renderanno la tua esperienza indimenticabile.",
+      "price": "151€",
+      "image": "https://www.castelvetranoselinunte.it/files/selinunte-vista-aerea.jpg",
+      "date": "30/03"
     },
     {
-        "city": {
-            "id": "",
-            "name": "Trapani"
-        },
-        "title": "Le quattro stagioni di Vivaldi",
-        "description": "La musica che rappresenta gli stati d'animo delle quattro stagioni è sempre stata popolare e compositori barocchi come Werner e Fischer, tra gli altri, hanno prodotto cicli di concerti che rappresentano le quattro stagioni.",
-        "price": "151€",
-        "image": "https://images.unsplash.com/photo-1508144753681-9986d4df99b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        "date": "27/04"
+      "city": "Trapani",
+      "title": "Le quattro stagioni di Vivaldi",
+      "description": "La musica che rappresenta gli stati d'animo delle quattro stagioni è sempre stata popolare e compositori barocchi come Werner e Fischer, tra gli altri, hanno prodotto cicli di concerti che rappresentano le quattro stagioni.",
+      "price": "151€",
+      "image": "https://images.unsplash.com/photo-1508144753681-9986d4df99b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "date": "27/04"
     },
     {
-        "city": {
-            "id": "",
-            "name": "Modica"
-        },
-        "title": "Tour privato di Modica da Catania con degustazione di cioccolato",
-        "description": "Trascorri una giornata esplorando la città di Modica, il suo straordinario centro medievale e la spettacolare cattedrale barocca. Entra in una vera fabbrica di cioccolato e scopri perché la città è famosa in tutto il mondo per 'l'arte del cioccolato'.",
-        "price": "130€",
-        "image": "https://images.unsplash.com/photo-1598451880945-b175e80d636e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80",
-        "date": "1/05"
+      "city": "Modica",
+      "title": "Tour privato di Modica da Catania con degustazione di cioccolato",
+      "description": "Trascorri una giornata esplorando la città di Modica, il suo straordinario centro medievale e la spettacolare cattedrale barocca. Entra in una vera fabbrica di cioccolato e scopri perché la città è famosa in tutto il mondo per 'l'arte del cioccolato'.",
+      "price": "130€",
+      "image": "https://images.unsplash.com/photo-1598451880945-b175e80d636e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80",
+      "date": "1/05"
     }
-]
+  ]
