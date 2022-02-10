@@ -1,6 +1,7 @@
 import styles from './DiscoverCard.module.scss';
 
 const DiscoverCard = ({ date, title, icon, description, price, image }) => {
+
     return (
         <div className={styles.discoverCard}>
             <div className={styles.title}>

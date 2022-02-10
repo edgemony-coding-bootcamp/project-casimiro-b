@@ -1,4 +1,8 @@
+
 import Menu from "../../Components/Menu"
+
+const Experience = () => {
+
 
 import styles from "./Experience.module.scss"
 
@@ -6,6 +10,7 @@ import styles from "./Experience.module.scss"
 const Experience = ({ city, }) => {
 
     return (
+
         <div className="wrapperPage">
 
             <div className={styles.hero}>
@@ -37,6 +42,7 @@ const Experience = ({ city, }) => {
             </div>
 
         </div>
+
 
     )
 }
