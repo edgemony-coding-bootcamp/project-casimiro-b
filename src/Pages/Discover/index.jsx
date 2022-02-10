@@ -12,13 +12,13 @@ import Modal from "./Modal";
 const data = require("../../Tools/discover.json");
 
 const Discover = () => {
+
   const [card, setCard] = useState();
 
   const [modalOpen, setModalOpen] = useState(false);
 
   const OpenModalFunc = () => {
       setModalOpen(!modalOpen);
-
   }
 
   useEffect(() => {
@@ -32,8 +32,6 @@ const Discover = () => {
         <div className={styles.discoverElementOne}>
           <DiscoverSelect />
           <DiscoverText />
-
-          {modalOpen && <Modal setOpenModal={setModalOpen}/>}
         </div>
 
         <div className={styles.discoverElementTwo}>
@@ -52,6 +50,7 @@ const Discover = () => {
                 image={item.image}
                 date={item.date}
               />
+               {modalOpen && <Modal setOpenModal={setModalOpen}/>}
             </div>
           ))}
 

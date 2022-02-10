@@ -5,23 +5,17 @@
   flex-direction: column;
 
   .discoverElementOne {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
+    width: 65vh;
   }
 
   .discoverElementTwo {
-    display: flex;
-    flex-direction: column;
-
-    height: 20%;
-
-    align-items: center;
+    display: none;
   }
 
   .containerCard {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    margin-left: 25%;
   }
 }
 
@@ -35,15 +29,27 @@
     }
 
     .discoverElementTwo {
+      display: block;
       width: 50%;
 
-      align-items: flex-start;
+      align-items: center;
     }
 
-    .containerCard {
+    .containerCard{
+      display: flex;
+      margin-top: 150px;
       flex-direction: row;
+      flex-wrap: wrap;
+      overflow: auto;
+      height: 850px;
+      width: 950px;
       margin-left: -50%;
-      overflow: hidden;
+    }
+    .containerCard::-webkit-scrollbar {
+    display: none;
+    }
+    .mobileMenu{
+      display: none;
     }
   }
 }
