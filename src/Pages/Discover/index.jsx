@@ -16,6 +16,11 @@ const Discover = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
 
+  const OpenModalFunc = () => {
+      setModalOpen(!modalOpen);
+
+  }
+
   useEffect(() => {
     setCard(data);
     console.log(data);
@@ -26,14 +31,6 @@ const Discover = () => {
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
           <DiscoverSelect />
-          <button
-            className={styles.openModalBtn}
-            onClick={() => {
-              setModalOpen(true);
-            }}
-          >
-            ciao
-          </button>
           <DiscoverText />
 
           {modalOpen && <Modal setOpenModal={setModalOpen}/>}
@@ -45,15 +42,17 @@ const Discover = () => {
 
         <div className={styles.containerCard}>
           {card?.map((item, index) => (
-            <DiscoverCard
-              key={index}
-              title={item.title}
-              description={item.description}
-              price={item.price}
-              icon={item.icon}
-              image={item.image}
-              date={item.date}
-            />
+            <div key={index} onClick={OpenModalFunc}>
+              <DiscoverCard
+                key={index}
+                title={item.title}
+                description={item.description}
+                price={item.price}
+                icon={item.icon}
+                image={item.image}
+                date={item.date}
+              />
+            </div>
           ))}
 
         </div>
