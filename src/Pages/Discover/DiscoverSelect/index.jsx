@@ -15,6 +15,8 @@ const DiscoverSelect = ({ sort, sorting }) => {
           <option value="Catania"> Catania </option>
           <option value="Messina"> Messina </option>
           <option value="Agrigento"> Agrigento </option>
+          <option value="Caltanissetta"> Caltanissetta </option>
+          <option value="Siracusa"> Siracusa </option>
         </select>
       </form>
     </>
