@@ -2,8 +2,8 @@ import styles from "./DiscoverSelect.module.scss";
 
 const DiscoverSelect = ({ sort, sorting }) => {
   return (
-    <>
-      <form className={styles.selectContainer}>
+    <div className={styles.selectContainer}>
+      <form>
         <label> Inserisci la tua città: </label>
         <select onChange={sorting} className={styles.selectCity} value={sort}>
           <option value="All"> All </option>
@@ -15,7 +15,8 @@ const DiscoverSelect = ({ sort, sorting }) => {
           <option value="Siracusa"> Siracusa </option>
         </select>
       </form>
-    </>
+
+    </div>
   );
 };
 
