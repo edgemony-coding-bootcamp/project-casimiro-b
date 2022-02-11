@@ -1,0 +1,77 @@
+[
+    {
+      "title": "Palermo",
+
+      "description": "La città si estende sulla pianura Conca d'Oro ed è bagnata dal suo golfo omonimo e circondata dalla barriera dei Monti di Palermo.",
+      
+      "imagecity": "https://images.unsplash.com/photo-1561280663-4d97bec12eb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+      
+    },
+    {
+        "title": "Catania",
+  
+        "description": "Fondata nel 729 a.C. dai Calcidesi della vicina Naxos, la città vanta una storia millenaria caratterizzata da un susseguirsi di svariate culture i cui resti ne arricchiscono il patrimonio artistico, architettonico e culturale.",
+        
+        "imagecity": "https://images.unsplash.com/photo-1584200215972-2bededed55c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1162&q=80"
+        
+      },
+      {
+        "title": "Siracusa",
+  
+        "description": "Posta sulla costa sud-orientale dell'isola, Siracusa possiede una storia millenaria: annoverata tra le più vaste metropoli dell'età classica, primeggiò per potenza e ricchezza con Atene, la quale tentò invano di assoggettarla",
+        
+        "imagecity": "https://images.unsplash.com/photo-1598976895865-af3631a92a2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80"
+        
+      },
+      {
+        "title": "Messina",
+  
+        "description": "Fondata dai Siculi con il nome di Zancle, che nella loro lingua significava falce, venne ripopolata da coloni greci venendo rinominata Messana.",
+        
+        "imagecity": "https://images.unsplash.com/photo-1586632567957-15eb0bd211dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        
+      },
+      {
+        "title": "Trapani",
+  
+        "description": "Trapani ha sviluppato nel tempo una fiorente attività economica legata all'estrazione e al commercio del sale, giovandosi della sua posizione naturale, proiettata sul Mediterraneo, e del suo porto, antico sbocco commerciale per Eryx (l'odierna Erice), sita sul monte omonimo che sovrasta Trapani.",
+        
+        "imagecity": "https://images.unsplash.com/photo-1602484162360-651e46557f2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80"
+        
+      },
+      {
+        "title": "Ragusa",
+  
+        "description": "La ricostruzione, avvenuta nel XVIII secolo, la divise in due grandi quartieri: da una parte Ragusa superiore, situata sull'altopiano, dall'altra Ragusa Ibla, sorta dalle rovine dell'antica città e ricostruita secondo l'antico impianto medioevale.",
+        
+        "imagecity": "https://images.unsplash.com/photo-1583313544923-68854ce7277b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+        
+      },
+      {
+        "title": "Agrigento",
+  
+        "description": "Fondata intorno al 581 a. C., Agrigento sorge in un territorio in cui si insediarono i vari popoli che lasciarono traccia nell'isola.",
+        
+        "imagecity": "https://images.unsplash.com/photo-1573905975434-fa12cde6b7b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        
+      },
+   
+      {
+        "title": "Enna",
+  
+        "description": "Nei tre millenni precedenti è stata roccaforte quasi inespugnabile di siculi, greci, romani, bizantini, arabi, normanni, svevi e aragonesi. I suoi principali monumenti storici sono il castello, la Rocca di Cerere ed il duomo. È sede dell'Università Kore.",
+        
+        "imagecity": "https://images.unsplash.com/photo-1625832400716-efd6be186b72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        
+      },
+      {
+        "title": "Caltanissetta",
+  
+        "description": "I primi ad abitare il territorio circostante furono i Sicani, che si stanziarono in diversi villaggi a partire dal XIX secolo a.C., ma l'odierna città fu fondata verosimilmente nel X secolo durante il periodo islamico in Sicilia, quando probabilmente nacque il toponimo Caltanissetta, sebbene siano state formulate nel tempo anche ipotesi alternative.",
+        
+        "imagecity": "https://images.unsplash.com/photo-1603534161742-5b3a26c9b015?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        
+      }
+      
+    
+  ]
