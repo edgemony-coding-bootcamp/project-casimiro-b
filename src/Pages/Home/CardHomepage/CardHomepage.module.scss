@@ -1,0 +1,44 @@
+@import "../../../Tools/General.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;0,800;1,200;1,300;1,400&display=swap");
+
+.container {
+  display: flex;
+
+  .CardHomepage {
+    display: flex;
+    justify-content: left;
+    width: 400px;
+    cursor: pointer;
+    height: 500px;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    opacity: 65%;
+
+    &:hover {
+      opacity: 90%;
+    }
+
+    .textcard {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      margin: 300px 0 0 0px;
+
+      width: 100%;
+
+      h3 {
+        font-size: 36px;
+        font-family: "Source Sans Pro", sans-serif;
+        margin-left: 20px;
+        font-weight: 700;
+        color: white;
+      }
+
+      p {
+        margin-left: 20px;
+        color: white;
+      }
+    }
+  }
+}
