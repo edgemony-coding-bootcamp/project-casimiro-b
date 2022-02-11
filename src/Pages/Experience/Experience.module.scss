@@ -3,7 +3,7 @@
 .hero {
     height: 650px;
     background: url("https://images.unsplash.com/photo-1603487831378-8cff3872abef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80") no-repeat;
-    background-position: -300px;
+    background-position: center;
     opacity: 0.7;
 
     h1 {
@@ -11,7 +11,7 @@
         color: $mainLighter;
         font-size: 40px;
         padding-top: 120px;
-        margin-left: 30px;
+        padding-left: 30px;
     }
 }
 
@@ -83,8 +83,8 @@
         
         h1 {
             font-size: 40px;
-            padding-top: 120px;
-            margin-left: 60px;
+            padding-top: 100px;
+            padding-left: 60px;
         }
     }
 
