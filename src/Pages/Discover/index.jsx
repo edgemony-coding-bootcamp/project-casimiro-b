@@ -1,5 +1,7 @@
 import DiscoverCard from "./DiscoverCard";
+import { FETCH_ALL_DATA } from '../../store/action';
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "../../Tools/discover.json";
 import styles from "./Discover.module.scss";
 
@@ -9,11 +11,15 @@ import DiscoverMenu from "../../Components/Menu";
 
 import Modal from "./Modal";
 
-const data = require("../../Tools/discover.json");
+// const data = require("../../Tools/discover.json");
 
 const Discover = () => {
-  const [card, setCard] = useState();
+  const dispatch = useDispatch();
+  // const [card, setCard] = useState();
   const [author, setAuthor] = useState("All");
+
+  const events = useSelector(state => state.events);
+  console.log(events)
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -22,10 +28,12 @@ const Discover = () => {
   };
 
   const sortingText = (e) => setAuthor(e.target.value);
-
+  const getData = () => { };
   useEffect(() => {
-    setCard(data);
-    console.log(data);
+    dispatch(
+      FETCH_ALL_DATA()
+    )
+    // setCard(data);
   }, []);
 
   return (
@@ -42,10 +50,10 @@ const Discover = () => {
 
         <div className={styles.discoverElementTwo}>
           <div className={styles.discoverMenuContainer}>
-          <DiscoverMenu />
+            <DiscoverMenu />
           </div>
           <div className={styles.containerCard}>
-            {card
+            {events
               ?.filter((el) => (author != "All" ? el.city === author : el))
               .map((item, index) => (
                 <div key={index} onClick={OpenModalFunc}>
