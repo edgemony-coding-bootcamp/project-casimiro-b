@@ -10,7 +10,7 @@ const Experience = ({ city, }) => {
 
     return (
 
-        <div className="wrapperPage">
+        <div>
 
             <div className={styles.hero}>
                 <h1>Your Experience,<br />your life.</h1>

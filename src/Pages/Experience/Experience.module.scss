@@ -1,22 +1,22 @@
 @import "../../Tools/General.scss";
 
 .hero {
-    margin-top: 120px;
-    height: 500px;
+    height: 650px;
     background: url("https://images.unsplash.com/photo-1603487831378-8cff3872abef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80") no-repeat;
     background-position: -300px;
     opacity: 0.7;
 
     h1 {
+        font-family: 'Source Sans Pro', sans-serif;
         color: $mainLighter;
         font-size: 40px;
-        padding-top: 30px;
+        padding-top: 120px;
         margin-left: 30px;
     }
 }
 
 .cityList {
-    margin: 30px auto;
+    margin: 40px 20px;
     letter-spacing: 5px;
 
     ul {
@@ -35,7 +35,7 @@
 .sectionCity {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin: 100px 40px 0;
 }
 
 .sectionHeader {
@@ -79,10 +79,11 @@
 @media screen and (min-width: 800px) {
 
     .hero {
-    
+        height: 550px;
+        
         h1 {
-            font-size: 50px;
-            padding-top: 80px;
+            font-size: 40px;
+            padding-top: 120px;
             margin-left: 60px;
         }
     }
@@ -100,6 +101,7 @@
 
         .sectionCity {
             display: block;
+            margin: 100px 70px 50px;
         }
 
         .sectionHeader {
