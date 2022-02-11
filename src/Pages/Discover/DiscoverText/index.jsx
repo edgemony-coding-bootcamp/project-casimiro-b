@@ -4,7 +4,7 @@ const DiscoverText = () => {
   return (
     <div className={styles.textContainer}>
 
-      <h1>William Shakespeare Hamlet <br></br> Prince of Denmark </h1>
+      <h1>William Shakespeare Hamlet</h1>
 
       <p>
         Anon comes in a fellow, takes off his crown, kisses it, pours poison in

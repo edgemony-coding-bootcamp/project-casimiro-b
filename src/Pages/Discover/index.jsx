@@ -41,25 +41,26 @@ const Discover = () => {
         </div>
 
         <div className={styles.discoverElementTwo}>
+          <div className={styles.discoverMenuContainer}>
           <DiscoverMenu />
-        </div>
-
-        <div className={styles.containerCard}>
-          {card
-            ?.filter((el) => (author != "All" ? el.city === author : el))
-            .map((item, index) => (
-              <div key={index} onClick={OpenModalFunc}>
-                <DiscoverCard
-                  key={index}
-                  title={item.title}
-                  description={item.description}
-                  price={item.price}
-                  icon={item.icon}
-                  image={item.image}
-                  date={item.date}
-                />
-              </div>
-            ))}
+          </div>
+          <div className={styles.containerCard}>
+            {card
+              ?.filter((el) => (author != "All" ? el.city === author : el))
+              .map((item, index) => (
+                <div key={index} onClick={OpenModalFunc}>
+                  <DiscoverCard
+                    key={index}
+                    title={item.title}
+                    description={item.description}
+                    price={item.price}
+                    icon={item.icon}
+                    image={item.image}
+                    date={item.date}
+                  />
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </div>
