@@ -1,14 +1,16 @@
 @import "./../../../Tools/General.scss";
 
 
-form {
+.selectContainer {
+
 
     display: flex;
     justify-content: left;
     flex-direction: column;
     width: 250px;
     height: auto;
-    margin: 80px 0px 0px 67px;
+    margin: 0 auto;
+    margin-top: 3rem;
 
 
     label {
@@ -26,7 +28,12 @@ form {
 
 }
 
+}
 
+@media screen and (min-width: 800px) {
 
+    .selectContainer {
+        margin: 0em;
+    }
 
 }

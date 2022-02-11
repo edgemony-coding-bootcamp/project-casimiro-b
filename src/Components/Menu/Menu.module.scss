@@ -1,27 +1,33 @@
 @import "../../Tools/General.scss";
 
-.discoverList {
-  margin-top: 100px;
-}
-
-.listItems {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  li {
-    color: #b2a1a1;
-    font-weight: 600;
-    padding: 0 20px;
-    letter-spacing: 8px;
-    text-align: center;
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 3rem;
+  
+    li {
+      color: #b2a1a1;
+      font-weight: 600;
+      padding: 0 30px;
+      letter-spacing: 8px;
+    }
   }
-}
+
+
 
 
 @media screen and (min-width: 800px) {
-  .listItems {
-    
-    flex-direction: row;
-  }
+
+
+  .menuItems  {
+
+    margin-top: 0;
+
+      
+      flex-direction: row;
+    }
+
+
 }

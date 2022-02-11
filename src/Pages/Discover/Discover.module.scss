@@ -6,48 +6,83 @@
 
   .discoverElementOne {
     display: block;
-    width: 65vh;
   }
 
   .discoverElementTwo {
+    .containerCard {
+      margin-left: 0;
+
+    }
+  }
+
+.discoverMenuContainer {
     display: none;
   }
 
-  .containerCard {
+  .mobileMenu {
     display: block;
+  }
+
+  .containerCard {
+
     margin-left: 25%;
   }
 }
 
 @media screen and (min-width: 800px) {
   .discoverContOne {
+    display: flex;
     flex-direction: row;
+    gap: 1rem;
+
+    .discoverMenuContainer {
+      display: block;
+    }
+
 
     .discoverElementOne {
-      justify-content: left;
-      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      justify-content: center;
+      padding: 6.5rem 67px;
+
+
+
+      min-width: 35vw;
+      max-width: 700px;
     }
 
     .discoverElementTwo {
-      display: block;
-      width: 50%;
+      
+      height: 100vh;
 
-      align-items: center;
-    }
-
-    .containerCard{
       display: flex;
-      margin-top: 150px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      overflow: auto;
-      height: 850px;
-      width: 950px;
-      margin-left: -50%;
+      justify-content: center;
+      flex-direction: column;
+      gap: 6rem;
+      // width: 50%;
+
+      min-width: 65vw;
+
+      
+      .containerCard{
+        display: flex;
+        justify-content: left;
+        // margin-top: 150px;
+        margin-left: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: auto;
+        height: 600px;
+      }
     }
-    .containerCard::-webkit-scrollbar {
-    display: none;
-    }
+
+
+    // .containerCard::-webkit-scrollbar {
+    // display: none;
+    // }
+
     .mobileMenu{
       display: none;
     }

@@ -1,34 +1,23 @@
-import styles from "./DiscoverSelect.module.scss"
+import styles from "./DiscoverSelect.module.scss";
 
+const DiscoverSelect = ({ sort, sorting }) => {
+  return (
+    <div className={styles.selectContainer}>
+      <form>
+        <label> Inserisci la tua città: </label>
+        <select onChange={sorting} className={styles.selectCity} value={sort}>
+          <option value="All"> All </option>
+          <option value="Palermo"> Palermo </option>
+          <option value="Catania"> Catania </option>
+          <option value="Messina"> Messina </option>
+          <option value="Agrigento"> Agrigento </option>
+          <option value="Caltanissetta"> Caltanissetta </option>
+          <option value="Siracusa"> Siracusa </option>
+        </select>
+      </form>
 
-
-const DiscoverSelect = () => {
-
-
-
-
-    return (
-
-        <>
-            <form className={styles.selectContainer}>
-                <label> Inserisci la tua città: </label>
-                <select className={styles.selectCity}>
-
-                    <option value="1">City1</option>
-                    <option value="2">City2</option>
-                    <option value="3">City3</option>
-                    <option value="4">City4</option>
-                    <option value="5">City5</option>
-
-                </select>
-            </form>
-        </>
-
-    )
-
-}
-
-
-
+    </div>
+  );
+};
 
 export default DiscoverSelect;
