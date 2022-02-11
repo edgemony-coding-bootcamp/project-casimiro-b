@@ -1,13 +1,13 @@
 import ParallaxComponent from "./ParallaxComponent";
 import CardHomepage from "./CardHomepage";
 import { useState, useEffect } from "react";
+
 import styles from "./Home.module.scss";
 
-const datacity = require("../../Tools/homecard.json")
+const datacity = require("../../Tools/homecard.json");
 
 const Home = () => {
-
-  const [cardcity, setCardcity] = useState ()
+  const [cardcity, setCardcity] = useState();
 
   useEffect(() => {
     setCardcity(datacity);
@@ -28,19 +28,34 @@ const Home = () => {
         ))}
       </div>
 
+      <h2 className={styles.titleContainer}>SCEGLI LA TUA META</h2>
+
+
+
+
       <div className={styles.containercity}>
 
-        {cardcity?.map ((item, index) => 
-        <CardHomepage
-          key={index}
-          title= {item.title}
-          descriptioncity= {item.description}
-          imagecity= {item.imagecity}
-        />)}
         
+        
+        {cardcity?.map((item, index) => (
+
+
+          <CardHomepage
+            key={index}
+            title={item.title}
+            descriptioncity={item.description}
+            imagecity={item.imagecity}
+          />
+
+
+        ))}
       
+ 
         
+     
       </div>
+
+
     </>
   );
 };
