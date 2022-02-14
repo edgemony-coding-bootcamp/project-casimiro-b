@@ -10,6 +10,7 @@ import styles from "./Modal.module.scss";
 
 const Modal = ({ handleClose, event }) => {
 
+  const date = new Date(event.date)
 
 
   return (
@@ -40,7 +41,7 @@ const Modal = ({ handleClose, event }) => {
             </div>
             <div className={styles.modalTextComponent}>
               <TextModal title="Price" text={event.price} />
-              <TextModal title="Date" text={event.date} />
+              <TextModal title="Date" text={`${date.getDate()}/${date.getMonth()}`} />
               <TextModal title="Location" text={event.city} />
             </div>
           </div>

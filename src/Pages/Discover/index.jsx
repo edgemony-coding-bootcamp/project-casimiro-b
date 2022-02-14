@@ -14,6 +14,12 @@ const Discover = () => {
   const dispatch = useDispatch();
   const [author, setAuthor] = useState("All");
 
+  const [popular, setPopular] = useState([]);
+
+  const [favorite, setFavorite] = useState([]);
+
+  const [reccomended, setReccomended] = useState([]);
+
   const events = useSelector((state) => state.events);
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,8 +27,23 @@ const Discover = () => {
   const [isClicked, setIsClicked] = useState([])
 
   const handleOpen = (id) => {
-    setIsClicked(events.find((idCard) => idCard.id == id));
+    setIsClicked(events.find((idCard) => idCard.id === id));
     setModalOpen(true)
+  }
+
+  const handlePopular = () => {
+    setPopular(events.filter((el) => (el.popular === true)));
+    console.log(popular)
+  }
+
+  const handleFavorite = () => {
+    setFavorite(events.filter((el) => (el.favorite === true)));
+    console.log(favorite)
+  }
+
+  const handleReccomended = () => {
+    setReccomended(events.filter((el) => (el.recommended === true)));
+    console.log(reccomended)
   }
 
   const handleClose = () => {
@@ -45,19 +66,19 @@ const Discover = () => {
         <div className={styles.discoverElementOne}>
           <DiscoverSelect sorting={sortingText} sort={author} />
           <div className={styles.mobileMenu}>
-            <DiscoverMenu />
+            <DiscoverMenu data={events} />
           </div>
           <DiscoverText />
         </div>
 
         <div className={styles.discoverElementTwo}>
           <div className={styles.discoverMenuContainer}>
-            <DiscoverMenu />
+            <DiscoverMenu handlePopular={handlePopular} handleFavorite={handleFavorite} handleRaccomended={handleReccomended} />
           </div>
 
           <div className={styles.containerCard}>
             {events
-              ?.filter((el) => (author != "All" ? el.city === author : el))
+              ?.filter((el) => (author !== "All" ? el.city === author : el))
               .sort((a, b) => a.date > b.date ? 1 : -1)
               .map((event, index) => (
                 <div key={index}>
