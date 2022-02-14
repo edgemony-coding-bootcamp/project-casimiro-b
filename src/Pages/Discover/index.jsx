@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./Discover.module.scss";
 
-import { useParams } from "react-router-dom";
-
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
 import DiscoverMenu from "../../Components/Menu";

@@ -5,15 +5,6 @@ import { useSelector, useDispatch } from "react-redux";
 
 
 const DiscoverMenu = () => {
-    const dispatch = useDispatch();
-    const events = useSelector(state => state.events);
-
-
-    useEffect(() => {
-        dispatch(
-            FETCH_ALL_DATA()
-        )
-    }, []);
 
     return (
 

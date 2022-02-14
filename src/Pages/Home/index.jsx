@@ -11,7 +11,6 @@ const Home = () => {
 
   useEffect(() => {
     setCardcity(datacity);
-    console.log(datacity);
   }, []);
 
   const images = [
@@ -35,8 +34,8 @@ const Home = () => {
 
       <div className={styles.containercity}>
 
-        
-        
+
+
         {cardcity?.map((item, index) => (
 
 
@@ -49,10 +48,10 @@ const Home = () => {
 
 
         ))}
-      
- 
-        
-     
+
+
+
+
       </div>
 
 
