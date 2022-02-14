@@ -17,7 +17,7 @@
   .resp_menu {
     color: $mainLighter;
   }
-  
+
   .menuItems a {
     color: $mainLighter;
   }
@@ -44,11 +44,11 @@
     display: block;
     letter-spacing: 5px;
   }
-  
+
   a {
     padding: 10px 25px;
-    
-    &::selection{
+
+    &::selection {
       color: none;
       border: none;
       background-color: none;
@@ -57,8 +57,8 @@
 }
 
 .active {
-        border-bottom: 2px solid $secondary;
-      }
+  border-bottom: 2px solid $secondary;
+}
 
 .resp_menu {
   float: right;
@@ -84,7 +84,6 @@
 }
 
 @media screen and (min-width: 800px) {
-
   .header {
     display: flex;
     background: $light-shadow;
@@ -92,7 +91,7 @@
 
   .headerResp {
     background-color: $main;
-    
+
     .menuItems a {
       color: $mainDarker;
     }
@@ -103,36 +102,31 @@
   }
 
   .menuItems {
-          position: relative;
-          top: 0px;
-          display: flex;
-          justify-content: center;
-          flex-direction: row;
-          height: 50px;
-          font-size: small;
-    
-          a {
-            transition: $baseTransition;
-            color: $mainLighter;
-    
-            &:hover {
-              color: $secondary;
-            }
-          }
-        }
-      
-    
-      .active {
-        border-bottom: 2px solid $secondary;
+    position: relative;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 50px;
+    font-size: small;
+
+    a {
+      transition: $baseTransition;
+      color: $mainLighter;
+
+      &:hover {
+        color: $secondary;
       }
+    }
+  }
 
-      .resp_menu {
-        display: block;
-        float: right;
-        display: none;
-      }
+  .active {
+    border-bottom: 2px solid $secondary;
+  }
 
-
+  .resp_menu {
+    display: block;
+    float: right;
+    display: none;
+  }
 }
-
-

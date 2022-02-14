@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import logo from "./Ddocubianco.svg";
+
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
+import Logo from "./Components/Logo";
 
 const Home = lazy(() => import("./Pages/Home"));
 const Discover = lazy(() => import("./Pages/Discover"));
@@ -11,8 +12,9 @@ const Experience = lazy(() => import("./Pages/Experience"));
 const AboutUs = lazy(() => import("./Pages/AboutUs"));
 
 const INIT_STATE = {
-  name: <img src={logo} />,
+  name: <Logo  />,
   nav: [
+
     { link: "/", label: "HOME" },
     { link: "/AboutUs", label: "ABOUT US" },
     { link: "/Discover", label: "DISCOVER" },
