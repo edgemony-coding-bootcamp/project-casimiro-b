@@ -26,6 +26,14 @@
 .logo {
   margin: 0;
   padding: 0;
+  color: black;
+  font-size: 24px;
+  font-family: 'Lora', serif;
+}
+
+.logoActive { 
+  color : white;
+  
 }
 
 .menuItems {
@@ -99,7 +107,16 @@
 
   .logo {
     margin-left: 70px;
+    color: white;
+    font-size: 32px;
+  
   }
+
+  .logoActive { 
+    color : black;
+    
+  }
+  
 
   .menuItems {
     position: relative;
