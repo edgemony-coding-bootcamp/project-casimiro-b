@@ -1,9 +1,7 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { FiMenu } from 'react-icons/fi';
-import { MdClose } from 'react-icons/md';
-
-
+import { FiMenu } from "react-icons/fi";
+import { MdClose } from "react-icons/md";
 import styles from "./Header.module.scss";
 
 const Header = (props) => {
@@ -12,10 +10,10 @@ const Header = (props) => {
 
   const CheckActive = (link) => {
     const resolved = useResolvedPath(link);
-    const match = useMatch({ path: resolved.pathname, end: true })
+    const match = useMatch({ path: resolved.pathname, end: true });
 
     return match ? styles.active : "";
-  }
+  };
 
   const [isActive, setIsActive] = useState(false);
   const [navScroll, setNavScroll] = useState(false);
@@ -23,43 +21,42 @@ const Header = (props) => {
   const handleMenu = (e) => {
     e.preventDefault();
     setIsActive(!isActive);
-  }
+  };
 
   const scrollNav = () => {
     if (window.scrollY >= 100) {
-      setNavScroll(true)
+      setNavScroll(true);
     } else {
-      setNavScroll(false)
+      setNavScroll(false);
     }
-  }
+  };
 
   useEffect(() => {
-    scrollNav()
-    window.addEventListener("scroll", scrollNav)
-  }, [])
-
+    scrollNav();
+    window.addEventListener("scroll", scrollNav);
+  }, []);
 
   return (
-    <header className={`${styles.header} ${isActive || navScroll ? styles.headerResp : ''}`}>
-
+    <header
+      className={`${styles.header} ${
+        isActive || navScroll ? styles.headerResp : ""
+      }`}
+    >
       <a className={styles.logo}>{name}</a>
       <button className={styles.resp_menu} onClick={handleMenu}>
         {isActive ? <MdClose className={styles.icon_menu} /> : <FiMenu />}
       </button>
-      <ul className={`${styles.menuItems} ${isActive ? styles.showMenu : ''}`}>
+      <ul className={`${styles.menuItems} ${isActive ? styles.showMenu : ""}`}>
         {links.map((item, index) => (
           <li key={index}>
-            <Link to={item.link} className={CheckActive(item.link)}>{item.label}</Link>
+            <Link to={item.link} className={CheckActive(item.link)}>
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>
     </header>
-
-
-  )
-
+  );
 };
 
 export default Header;
-
-
