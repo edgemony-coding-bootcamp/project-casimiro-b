@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 const DiscoverMenu = () => {
     const dispatch = useDispatch();
     const events = useSelector(state => state.events);
-    console.log(events[0]);
 
 
     useEffect(() => {
