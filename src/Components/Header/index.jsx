@@ -42,7 +42,9 @@ const Header = (props) => {
         isActive || navScroll ? styles.headerResp : ""
       }`}
     >
-      <a className={styles.logo}>{name}</a>
+      <a className={`${styles.logo} ${
+        isActive || navScroll ? styles.logoActive : ""
+      }`}>{name}</a>
       <button className={styles.resp_menu} onClick={handleMenu}>
         {isActive ? <MdClose className={styles.icon_menu} /> : <FiMenu />}
       </button>
