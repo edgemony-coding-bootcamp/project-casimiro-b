@@ -18,7 +18,7 @@ export const FETCH_ALL_DATA = () => async (dispatch) => {
     })
 
     try {
-        const { data: events } = await axios.get('https://ddocu-api.herokuapp.com/activities');
+        const { data: events } = await axios.get('https://ddocu-api.herokuapp.com/events');
 
         dispatch({
             type: FETCH_ALL_DATA_SUCCESS,

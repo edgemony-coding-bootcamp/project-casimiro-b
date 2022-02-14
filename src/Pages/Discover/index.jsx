@@ -2,7 +2,6 @@ import DiscoverCard from "./DiscoverCard";
 import { FETCH_ALL_DATA } from '../../store/action';
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import "../../Tools/discover.json";
 import styles from "./Discover.module.scss";
 
 import DiscoverSelect from "./DiscoverSelect";
@@ -11,11 +10,8 @@ import DiscoverMenu from "../../Components/Menu";
 
 import Modal from "./Modal";
 
-// const data = require("../../Tools/discover.json");
-
 const Discover = () => {
   const dispatch = useDispatch();
-  // const [card, setCard] = useState();
   const [author, setAuthor] = useState("All");
 
   const events = useSelector(state => state.events);
@@ -28,12 +24,10 @@ const Discover = () => {
   };
 
   const sortingText = (e) => setAuthor(e.target.value);
-  const getData = () => { };
   useEffect(() => {
     dispatch(
       FETCH_ALL_DATA()
     )
-    // setCard(data);
   }, []);
 
   return (
