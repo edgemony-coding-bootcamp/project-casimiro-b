@@ -1,18 +1,17 @@
 import styles from './DiscoverCard.module.scss';
 
-const DiscoverCard = ({ date, title, icon, description, price, image }) => {
+const DiscoverCard = ({ event, handleOpen }) => {
 
     return (
-        <div className={styles.discoverCard}>
+        <div className={styles.discoverCard}  onClick={() => handleOpen(event.id)}>
             <div className={styles.title}>
-                <h2>{date}</h2>
-                <h4>{title}</h4>
-                <img src={icon} alt='prova' />
+                <h2>{event.date}</h2>
+                <h4>{event.title}</h4>
+                <img src={event.icon} alt={event.id} />
             </div>
             <div className={styles.description}>
-                <img src={image} alt='prova' />
-                <p>{description}</p>
-                
+                <img src={event.image} alt={event.title} />
+                <p>{event.description}</p>
             </div>
         </div>
     )

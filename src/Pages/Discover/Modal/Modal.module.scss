@@ -1,29 +1,27 @@
 .modalBackground {
-  margin: 0 10px;
-  padding: 0;
   z-index: 1;
+
   width: 100vw;
-  height: auto;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  height: 100vh;
+  margin: -100px -40px;
 }
 
 .modalContainer {
   display: flex;
   flex-direction: column;
-  position: relative;
 
   box-shadow: 0 0 0 2000px rgba(24, 22, 22, 0.8);
+
+
   opacity: 1;
 
-  margin: 0 auto;
+  margin: 0px 42px;
 
   padding: 3rem;
 
-  width: 400px;
-  height: auto;
+  width: 350px;
+
 
   background-color: #fff;
 
@@ -57,7 +55,7 @@
 
   .modalImg {
     margin-top: 2rem;
-    height: 200px;
+    height: 130px;
     object-fit: cover;
     object-position: end;
   }
@@ -106,14 +104,17 @@
 }
 
 @media screen and (min-width: 800px) {
-  .modalBackground {
-    margin: -945px -28px -60px -40px;
-    position: fixed;
-  }
 
   .modalContainer {
     width: 700px;
     height: 700px;
+    
+    margin: 12vh auto;
+
+    .modalImg {
+      height: 200px;
+    }
+
 
     .modalBodyContainer {
       flex-direction: row;
