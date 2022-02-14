@@ -42,7 +42,7 @@ const Discover = () => {
 
   return (
     <div className="wrapperPage">
-      {modalOpen &&  <Modal event={isClicked} handleClose={handleClose} />}
+      {modalOpen && <Modal event={isClicked} handleClose={handleClose} />}
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
           <DiscoverSelect sorting={sortingText} sort={author} />
@@ -60,6 +60,7 @@ const Discover = () => {
           <div className={styles.containerCard}>
             {events
               ?.filter((el) => (author != "All" ? el.city === author : el))
+              .sort((a, b) => a.date > b.date ? 1 : -1)
               .map((event, index) => (
                 <div key={index}>
                   <DiscoverCard
