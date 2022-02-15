@@ -1,11 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import "./App.css" 
+import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
 import City from "./Pages/City";
-
 
 const Home = lazy(() => import("./Pages/Home"));
 const Discover = lazy(() => import("./Pages/Discover"));
@@ -15,11 +14,10 @@ const AboutUs = lazy(() => import("./Pages/AboutUs"));
 const INIT_STATE = {
   name: "'Ddocu",
   nav: [
-
     { link: "/", label: "HOME" },
-    { link: "/AboutUs", label: "ABOUT US" },
     { link: "/Discover", label: "DISCOVER" },
     { link: "/Experience", label: "EXPERIENCE" },
+    { link: "/AboutUs", label: "ABOUT US" },
   ],
 };
 
@@ -72,8 +70,7 @@ function App() {
       </Routes>
 
       <Footer />
-     </>
-    
+    </>
   );
 }
 export default App;
