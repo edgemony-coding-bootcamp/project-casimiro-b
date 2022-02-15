@@ -1,8 +1,10 @@
-import { FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL } from './constance';
+import { FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL } from './constance';
 
 const INIT_STATE = {
     events: [],
     experience: [],
+    card: [],
+    cities: {},
     error: null,
     loading: false,
 }
@@ -20,6 +22,18 @@ export const myReducer = (state = INIT_STATE, action) => {
                 ...state,
                 loading: false,
                 events: action.payload
+            }
+        case FETCH_ALL_DATA_SUCCESS_CARD:
+            return {
+                ...state,
+                loading: false,
+                card: action.payload
+            }
+        case FETCH_ALL_DATA_SUCCESS_CITIES:
+            return {
+                ...state,
+                loading: false,
+                cities: action.payload
             }
         case FETCH_ALL_DATA_SUCCESS_EX:
             return {

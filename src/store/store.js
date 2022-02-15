@@ -5,6 +5,8 @@ import thunk from 'redux-thunk';
 const INIT_STATE = {
     events: [],
     experience: [],
+    card: [],
+    cities: {},
     error: null,
     loading: false,
 }

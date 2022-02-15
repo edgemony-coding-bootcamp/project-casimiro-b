@@ -4,6 +4,7 @@ import "./App.css"
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
+import City from "./Pages/City";
 
 
 const Home = lazy(() => import("./Pages/Home"));
@@ -33,6 +34,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/:id"
+          element={
+            <Suspense fallback={<Loading />}>
+              <City />
             </Suspense>
           }
         />
