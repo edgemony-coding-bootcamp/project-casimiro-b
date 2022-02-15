@@ -4,15 +4,19 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 150px;
     bottom: 0;
     padding: 20px;
-    margin-top: 30px;
     background-color: $main;
 }
 
 .footerText {
     text-align: center;
     margin: 0 auto 20px;
+
+    p {
+        font-family: 'Lora', serif;
+    }
 
     p:nth-child(2) {
         font-style: italic;

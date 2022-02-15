@@ -1,43 +1,79 @@
-import Footer from "./Components/Footer";
-import Header from './Components/Header';
-import Discover from './Pages/Discover';
-import Home from './Pages/Home';
 import { Routes, Route } from "react-router-dom";
-import Experience from './Pages/Experience';
-import AboutUs from './Pages/AboutUs';
+import { Suspense, lazy } from "react";
+import "./App.css" 
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Loading from "./Components/Loading";
+import City from "./Pages/City";
 
 
-
+const Home = lazy(() => import("./Pages/Home"));
+const Discover = lazy(() => import("./Pages/Discover"));
+const Experience = lazy(() => import("./Pages/Experience"));
+const AboutUs = lazy(() => import("./Pages/AboutUs"));
 
 const INIT_STATE = {
   name: "'Ddocu",
   nav: [
-    { link: "/", label: "Home" },
-    { link: "/AboutUs", label: "AboutUs" },
 
-    { link: "/Discover", label: "Discover" },
-    { link: "/Experience", label: "Experience" },
+    { link: "/", label: "HOME" },
+    { link: "/AboutUs", label: "ABOUT US" },
+    { link: "/Discover", label: "DISCOVER" },
+    { link: "/Experience", label: "EXPERIENCE" },
   ],
-  productsPreview: [],
 };
-
-
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header name={INIT_STATE.name} links={INIT_STATE.nav} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
 
-        <Route path="/Discover" element={<Discover />} />
-        <Route path="/Experience" element={<Experience />} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/:id"
+          element={
+            <Suspense fallback={<Loading />}>
+              <City />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/AboutUs"
+          element={
+            <Suspense fallback={<Loading />}>
+              <AboutUs />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/Discover"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Discover />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/Experience"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Experience />
+            </Suspense>
+          }
+        />
       </Routes>
 
       <Footer />
-
-    </div>
+     </>
+    
   );
 }
 export default App;

@@ -1,0 +1,140 @@
+@import "../../Tools/General.scss";
+
+.hero {
+    height: 650px;
+    background: url("https://images.unsplash.com/photo-1603487831378-8cff3872abef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80") no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+
+    h1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: $mainLighter;
+        font-size: 40px;
+        padding-top: 100px;
+        padding-left: 30px;
+    }
+}
+
+.cityList {
+    margin: 40px 20px;
+    letter-spacing: 5px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.sectionCity {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 40px 0;
+}
+
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+
+    h1 {
+        color: $secondary;
+    }
+}
+
+.sectionMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 30px 0;
+}
+
+.sectionBlock {
+    width: 300px;
+    height: 450px;
+    margin-bottom: 40px;
+    padding-top: 30px;
+    background: url("https://images.unsplash.com/photo-1524835208047-0ed22b4dbc82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80") no-repeat;
+    opacity: 0.8;
+
+    >* {
+        color: $mainLighter;
+        text-align: center;
+    }
+}
+
+.sectionCard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+@media screen and (min-width: 800px) {
+
+    .hero {
+        height: 550px;
+        
+        h1 {
+            font-size: 40px;
+            padding-top: 150px;
+            padding-left: 60px;
+        }
+    }
+
+    .cityList {
+    
+            li {
+                padding: 0 15px;
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+
+
+        }
+
+        .sectionCity {
+            display: block;
+            margin: 100px 70px 50px;
+        }
+
+        .sectionHeader {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-around;
+        }
+        
+        .sectionMain {
+            flex-direction: row;
+        }
+        
+        .sectionBlock {
+            margin-right: 70px;
+        }
+
+        .sectionCard {
+            flex-direction: row;
+            max-width: 700px;
+            height: 600px;
+            overflow: auto;
+        }
+
+            .sectionCard::-webkit-scrollbar {
+            display: none;
+    }
+        
+  
+  }

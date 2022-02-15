@@ -1,0 +1,59 @@
+@import "../../../Tools/General.scss";
+
+.customBg {
+  opacity: 0.75;
+  max-height: 100vh;
+}
+
+.parallaxContainer {
+  color: #fff;
+
+  text-align: center;
+  margin-top: 50vh;
+
+
+  height: 100vh;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 0.5em;
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .parallaxText {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .customBg {
+
+    opacity: 0.75;
+  }
+
+  .parallaxContainer {
+    color: #fff;
+
+    text-align: left;
+
+    margin-top: 65vh;
+    margin-left: 10vh;
+
+    padding: 20px;
+
+
+    h2 {
+      margin-bottom: 0.5em;
+      font-size: 48px
+    }
+    
+    p {
+      font-size: 24px;
+    }
+
+  }
+}
