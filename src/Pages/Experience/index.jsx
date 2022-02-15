@@ -19,7 +19,7 @@ const Experience = () => {
     useEffect(() => {
         dispatch(FETCH_ALL_DATA_EXPERIENCE(cityId));
     }, [cityId]);
-    console.log(experience.data);
+    // console.log(experience.data[0].city.name);
 
 
     return (
@@ -42,7 +42,14 @@ const Experience = () => {
 
             <div className={styles.sectionCity}>
                 <div className={styles.sectionHeader}>
-                    <h1>experience.data</h1>
+                    <h1>{
+                        cityId === 24 && "Palermo" ||
+                        cityId === 15 && "Catania" ||
+                        cityId === 572 && "Messina" ||
+                        cityId === 587 && "Trapani" ||
+                        cityId === 265 && "Agrigento" ||
+                        cityId === 147 && "Siracusa"
+                    }</h1>
                     <Menu />
                 </div>
                 <div className={styles.sectionMain}>
@@ -51,14 +58,14 @@ const Experience = () => {
                         <p>Margherita risolve conflitti</p>
                     </div>
                     <div className={styles.sectionCard}>
-                        <CardExperience />
-                        <CardExperience />
-                        <CardExperience />
+                        {experience.data?.map((item, index) => (
+                            <CardExperience key={index} image={item.cover_image_url} title={item.title} description={item.description} />
+                        ))}
                     </div>
                 </div>
             </div>
 
-        </div >
+        </div>
     )
 }
 
