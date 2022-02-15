@@ -47,18 +47,23 @@
   .container {
     .CardHomepage {
       margin: 15px;
-    }
 
-    .textcard {
-      margin: 300px 0 0 0px;
-      justify-content: left;
+      .textcard {
+        margin: 200px 0 0px 0px;
+        background-color: black;
+        opacity: 70%;
+        
 
-      h3 {
-        margin-left: 20px;
-      }
+        justify-content: left;
+        text-align: left;
 
-      p {
-        margin-left: 20px;
+        h3 {
+          margin-left: 20px;
+        }
+
+        p {
+          margin-left: 20px;
+        }
       }
     }
   }
