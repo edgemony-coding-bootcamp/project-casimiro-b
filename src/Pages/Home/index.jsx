@@ -1,17 +1,21 @@
 import ParallaxComponent from "./ParallaxComponent";
 import CardHomepage from "./CardHomepage";
 import { useState, useEffect } from "react";
-import Carousel from 'react-elastic-carousel'
+import Carousel from 'react-elastic-carousel';
+import { useSelector, useDispatch } from "react-redux";
+import { FETCH_ALL_DATA_CARD } from "../../store/action";
 
 import styles from "./Home.module.scss";
-
-const datacity = require("../../Tools/homecard.json");
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [cardcity, setCardcity] = useState();
+  const dispatch = useDispatch();
+
+  const card = useSelector((state) => state.card);
+
 
   useEffect(() => {
-    setCardcity(datacity);
+    dispatch(FETCH_ALL_DATA_CARD());
   }, []);
 
   const images = [
@@ -28,6 +32,7 @@ const Home = () => {
     { width: 1200, itemsToShow: 4 },
   ];
 
+
   
   return (
     <>
@@ -40,21 +45,20 @@ const Home = () => {
       <h2 className={styles.titleContainer}>SCEGLI LA TUA META</h2>
 
 
-
-
       <div className={styles.containercity}>
 
       <Carousel breakPoints={breakPoints}>
 
-        {cardcity?.map((item, index) => (
+        {card?.map((item, index) => (
 
-
+          <Link key={index} to={`/${item.id}`}>
           <CardHomepage
             key={index}
             title={item.title}
             descriptioncity={item.description}
             imagecity={item.imagecity}
           />
+          </Link>
 
 
         ))}
