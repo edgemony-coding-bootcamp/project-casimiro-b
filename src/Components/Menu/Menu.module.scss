@@ -11,14 +11,14 @@
       cursor: pointer;
       color: #b2a1a1;
       font-weight: 600; 
-      padding: 0 30px;
+      padding:  0 30px 10px;
       letter-spacing: 8px;
     }
   }
 
-
-
-
+.active {
+  border-bottom: 2px solid $secondary;
+}
 @media screen and (min-width: 800px) {
 
 
