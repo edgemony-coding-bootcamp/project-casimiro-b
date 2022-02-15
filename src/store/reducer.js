@@ -1,7 +1,8 @@
-import { FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL } from './constance';
+import { FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL } from './constance';
 
 const INIT_STATE = {
     events: [],
+    experience: [],
     error: null,
     loading: false,
 }
@@ -19,6 +20,12 @@ export const myReducer = (state = INIT_STATE, action) => {
                 ...state,
                 loading: false,
                 events: action.payload
+            }
+        case FETCH_ALL_DATA_SUCCESS_EX:
+            return {
+                ...state,
+                loading: false,
+                experience: action.payload
             }
         case FETCH_ALL_DATA_FAIL:
             return {
