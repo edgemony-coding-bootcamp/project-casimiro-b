@@ -8,15 +8,17 @@ const CardHomepage = ({title, descriptioncity, imagecity}) => {
 
 
         <div className={styles.CardHomepage} style= {{backgroundImage: `url(${imagecity})`}}>  
+
            
             <div className={styles.opacity}></div>
 
-            <div className={styles.textcard} > 
+            <div className={styles.textcard}> 
             
             <h3>{title}</h3>
             <p>{descriptioncity}</p>
             
             </div>
+            
 
         </div>
         

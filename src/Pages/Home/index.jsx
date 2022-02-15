@@ -1,6 +1,7 @@
 import ParallaxComponent from "./ParallaxComponent";
 import CardHomepage from "./CardHomepage";
 import { useState, useEffect } from "react";
+import Carousel from 'react-elastic-carousel'
 
 import styles from "./Home.module.scss";
 
@@ -19,6 +20,15 @@ const Home = () => {
     "https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
   ];
 
+
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 4 },
+  ];
+
+  
   return (
     <>
       <div className={styles.parallaxDiv}>
@@ -34,7 +44,7 @@ const Home = () => {
 
       <div className={styles.containercity}>
 
-
+      <Carousel breakPoints={breakPoints}>
 
         {cardcity?.map((item, index) => (
 
@@ -48,6 +58,8 @@ const Home = () => {
 
 
         ))}
+
+        </Carousel>
 
 
 
