@@ -14,11 +14,11 @@ const Discover = () => {
   const dispatch = useDispatch();
   const [author, setAuthor] = useState("All");
 
-  const [popular, setPopular] = useState([]);
+  const [popular, setPopular] = useState(false);
 
-  const [favorite, setFavorite] = useState([]);
+  const [favorite, setFavorite] = useState(false);
 
-  const [reccomended, setReccomended] = useState([]);
+  const [reccomended, setReccomended] = useState(false);
 
   const events = useSelector((state) => state.events);
 
@@ -32,18 +32,24 @@ const Discover = () => {
   }
 
   const handlePopular = () => {
-    setPopular(events.filter((el) => (el.popular === true)));
-    console.log(popular)
+    setReccomended(false);
+    setFavorite(false);
+    setPopular(!popular);
+    console.log('popular ' + popular);
   }
 
   const handleFavorite = () => {
-    setFavorite(events.filter((el) => (el.favorite === true)));
-    console.log(favorite)
+    setReccomended(false);
+    setPopular(false);
+    setFavorite(!favorite);
+    console.log(' favorite ' + favorite);
   }
 
   const handleReccomended = () => {
-    setReccomended(events.filter((el) => (el.recommended === true)));
-    console.log(reccomended)
+    setPopular(false);
+    setFavorite(false);
+    setReccomended(!reccomended);
+    console.log('reccomended ' + reccomended);
   }
 
   const handleClose = () => {
@@ -77,19 +83,66 @@ const Discover = () => {
           </div>
 
           <div className={styles.containerCard}>
-            {events
-              ?.filter((el) => (author !== "All" ? el.city === author : el))
-              .sort((a, b) => a.date > b.date ? 1 : -1)
-              .map((event, index) => (
-                <div key={index}>
-                  <DiscoverCard
-                    key={index}
-                    handleOpen={handleOpen}
-                    event={event}
-                    id={event.id}
-                  />
-                </div>
-              ))}
+            <div className={favorite ? styles.containerCard : styles.favorite}>
+              {events
+                ?.filter((el) => (el.favorite === true))
+                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .map((event, index) => (
+                  <div key={index}>
+                    <DiscoverCard
+                      key={index}
+                      handleOpen={handleOpen}
+                      event={event}
+                      id={event.id}
+                    />
+                  </div>
+                ))}
+            </div>
+            <div className={popular ? styles.containerCard : styles.popular}>
+              {events
+                ?.filter((el) => (el.popular === true))
+                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .map((event, index) => (
+                  <div key={index}>
+                    <DiscoverCard
+                      key={index}
+                      handleOpen={handleOpen}
+                      event={event}
+                      id={event.id}
+                    />
+                  </div>
+                ))}
+            </div>
+            <div className={reccomended ? styles.containerCard : styles.reccomended}>
+              {events
+                ?.filter((el) => (el.recommended === true))
+                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .map((event, index) => (
+                  <div key={index}>
+                    <DiscoverCard
+                      key={index}
+                      handleOpen={handleOpen}
+                      event={event}
+                      id={event.id}
+                    />
+                  </div>
+                ))}
+            </div>
+            <div className={favorite || reccomended || popular ? styles.allCard : styles.containerCard}>
+              {events
+                ?.filter((el) => (author !== "All" ? el.city === author : el))
+                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .map((event, index) => (
+                  <div key={index}>
+                    <DiscoverCard
+                      key={index}
+                      handleOpen={handleOpen}
+                      event={event}
+                      id={event.id}
+                    />
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </div>

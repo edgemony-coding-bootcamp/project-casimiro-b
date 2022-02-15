@@ -1,5 +1,9 @@
 @import "../../Tools/General.scss";
 
+.popular, .favorite, .reccomended, .allCard{
+  display: none;
+}
+
 .discoverContOne {
   display: flex;
   flex-direction: column;
