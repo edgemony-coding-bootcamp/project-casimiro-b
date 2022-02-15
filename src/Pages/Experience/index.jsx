@@ -1,12 +1,26 @@
 
 import Menu from "../../Components/Menu";
 import CardExperience from "./CardExperience";
+import { useSelector, useDispatch } from "react-redux";
+import { useState, useEffect } from 'react';
+import { FETCH_ALL_DATA_EXPERIENCE } from "../../store/action";
 
 
 import styles from "./Experience.module.scss";
 
 
-const Experience = ({ city, }) => {
+const Experience = () => {
+
+    const [cityId, setCityId] = useState(24);
+
+    const dispatch = useDispatch();
+    const experience = useSelector((state) => state.experience);
+
+    useEffect(() => {
+        dispatch(FETCH_ALL_DATA_EXPERIENCE(cityId));
+    }, [cityId]);
+    console.log(experience.data);
+
 
     return (
 
@@ -17,18 +31,18 @@ const Experience = ({ city, }) => {
             </div>
             <div className={styles.cityList}>
                 <ul>
-                    <li><a href="">PALERMO</a></li>
-                    <li><a href="">CATANIA</a></li>
-                    <li><a href="">MESSINA</a></li>
-                    <li><a href="">TRAPANI</a></li>
-                    <li><a href="">AGRIGENTO</a></li>
-                    <li><a href="">SIRACUSA</a></li>
+                    <li onClick={() => setCityId(24)}>PALERMO</li>
+                    <li onClick={() => setCityId(15)}>CATANIA</li>
+                    <li onClick={() => setCityId(572)}>MESSINA</li>
+                    <li onClick={() => setCityId(587)}>TRAPANI</li>
+                    <li onClick={() => setCityId(265)}>AGRIGENTO</li>
+                    <li onClick={() => setCityId(147)}>SIRACUSA</li>
                 </ul>
             </div>
 
             <div className={styles.sectionCity}>
                 <div className={styles.sectionHeader}>
-                    <h1>{city}Prova</h1>
+                    <h1>experience.data</h1>
                     <Menu />
                 </div>
                 <div className={styles.sectionMain}>
@@ -44,7 +58,7 @@ const Experience = ({ city, }) => {
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 

@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 
 const INIT_STATE = {
     events: [],
+    experience: [],
     error: null,
     loading: false,
 }
