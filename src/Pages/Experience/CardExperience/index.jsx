@@ -1,13 +1,13 @@
 import styles from "./CardExperience.module.scss";
 
-const CardExperience = ({ image, title, description }) => {
+const CardExperience = ({ handleOpen, event }) => {
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => handleOpen(event.uuid)}>
 
             <div className={styles.description}>
-                <img src={image}></img>
-                <h4>{title}</h4>
-                <p>{description}</p>
+                <img src={event.cover_image_url}></img>
+                <h3>{event.title}</h3>
+                <p>{event.description}</p>
 
             </div>
         </div>
