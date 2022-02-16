@@ -32,8 +32,8 @@
   @media screen and (min-width: 800px) {
     .carouselDiv {
 
-    
       height: 100vh;
+      justify-content: end;
     
       .containercity {
         display: flex;
@@ -44,6 +44,7 @@
         max-width: 100vw;
         height: 600px;
         gap: 2rem;
+        margin-bottom: 2.5rem;
       }
       
       .titleContainer {
@@ -56,3 +57,26 @@
     }
   }
 
+
+  .bgScroll {
+    background-color: #F4EFEF;
+    height: 100%;
+    text-align: center;
+  }
+
+  .section_3 {
+
+    
+    background-image: url('./../../Img/arance_ddocu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+  }
