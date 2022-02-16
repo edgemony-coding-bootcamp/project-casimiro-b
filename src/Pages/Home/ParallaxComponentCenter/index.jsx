@@ -1,14 +1,17 @@
 
 import { Parallax } from "react-parallax";
-import styles from "./ParallaxComponent.module.scss";
+import styles from "./ParallaxComponentCenter.module.scss";
 
-const ParallaxComponent = ({ image, description }) => {
+const ParallaxComponentCenter = ({ image, description }) => {
   return (
     <>
-      <Parallax bgImage={image} strength={700} className={styles.customBg}>
+      <Parallax strength={700} className={styles.customBg}>
         <div className={styles.parallaxContainer}>
           <div className={styles.parallaxText}>
             <h2>Lorem ipsum ponosm.</h2>
+            <p>
+             {description}
+            </p>
             <p>
              {description}
             </p>
@@ -19,4 +22,4 @@ const ParallaxComponent = ({ image, description }) => {
   );
 };
 
-export default ParallaxComponent;
+export default ParallaxComponentCenter;
