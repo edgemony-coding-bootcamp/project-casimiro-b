@@ -3,10 +3,12 @@ import Menu from "../../Components/Menu";
 import CardExperience from "./CardExperience";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from 'react';
-import { FETCH_ALL_DATA_EXPERIENCE } from "../../store/action";
+import { FETCH_ALL_DATA_EXPERIENCE, FETCH_ALL_DATA_CARD } from "../../store/action";
 
 
 import styles from "./Experience.module.scss";
+
+
 
 
 const Experience = () => {
@@ -15,18 +17,30 @@ const Experience = () => {
 
     const dispatch = useDispatch();
     const experience = useSelector((state) => state.experience);
+    const infoCity = useSelector((state) => state.card);
+
+    const info = infoCity.filter(el => el.id == cityId)
 
     useEffect(() => {
         dispatch(FETCH_ALL_DATA_EXPERIENCE(cityId));
+        dispatch(FETCH_ALL_DATA_CARD());
     }, [cityId]);
+
     // console.log(experience.data[0].city.name);
+    // console.log(image[0].imagecity)
+    const ImageStyle = {
+        hero: {
+            backgroundImage: `url(${info[0]?.imagecity})`,
+            objectFit: "cover"
+        }
+    }
 
 
     return (
 
         <div>
 
-            <div className={styles.hero}>
+            <div className={styles.heroMain}>
                 <h1>Your Experience,<br />your life.</h1>
             </div>
             <div className={styles.cityList}>
@@ -53,9 +67,11 @@ const Experience = () => {
                     <Menu />
                 </div>
                 <div className={styles.sectionMain}>
-                    <div className={styles.sectionBlock}>
-                        <h3>LOREM IPSUM</h3>
-                        <p>Margherita risolve conflitti</p>
+                    <div className={styles.sectionBlock} style={ImageStyle.hero}>
+                        <div className={styles.sectionBlock_text}>
+                            <h3>{info[0]?.title}</h3>
+                            <p>{info[0]?.description}</p>
+                        </div>
                     </div>
                     <div className={styles.sectionCard}>
                         {experience.data?.map((item, index) => (
