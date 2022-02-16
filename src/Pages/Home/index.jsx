@@ -60,7 +60,7 @@ const Home = () => {
               <CardHomepage
                 key={index}
                 title={item.title}
-                descriptioncity={item.description}
+                
                 imagecity={item.imagecity}
               />
             </Link>
