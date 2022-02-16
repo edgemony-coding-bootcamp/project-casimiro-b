@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Header name={INIT_STATE.name} links={INIT_STATE.nav} />
-
+    
       <Routes>
         <Route
           path="/"
@@ -68,6 +68,7 @@ function App() {
           }
         />
       </Routes>
+      
 
       <Footer />
     </>
