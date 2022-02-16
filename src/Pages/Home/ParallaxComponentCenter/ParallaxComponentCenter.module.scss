@@ -8,57 +8,46 @@
 
 .parallaxContainer {
   display: flex;
+  justify-content: center;
 
-
-  color: #fff;
-
-  text-align: center;
+  padding: 3.5rem;
 
   height: 100vh;
-  padding: 3rem;
 
   .parallaxText {
     display: flex;
     flex-direction: column;
+    color: black;
+    margin: 0 auto;
+
     justify-content: center;
-    
+
     h2 {
       margin-bottom: 0.5em;
       font-size: 28px;
+      text-align: center;
     }
 
     p {
+      padding-top: 1rem;
       font-size: 16px;
     }
   }
 }
 
 @media screen and (min-width: 800px) {
-  .customBg {
-    opacity: 0.75;
-  }
-
   .parallaxContainer {
-    color: #fff;
-
-  
-    margin-left: 10vh;
-
-    padding: 20px;
+    padding: 25rem;
 
     .parallaxText {
-      text-align: left;
-      justify-content: end;
-      padding-bottom: 10vh;
-
-      width: 40%;
       h2 {
         margin-bottom: 0.5em;
         font-size: 48px;
       }
 
       p {
-        font-size: 24px;
+        font-family: "Lora", sans-serif;
+        font-size: 32px;
       }
     }
   }
