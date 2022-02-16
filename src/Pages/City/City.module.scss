@@ -29,15 +29,16 @@
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
-        height: 100vh;
+        height: auto;
     
         text-align: center;
-        padding: 3rem 3rem 0 3rem;
+        padding: 3rem;
     
         text-align: left;
     
         h1 {
           font-family: "Source Sans Pro", sans-serif;
+          font-size: 48px;
         }
     
         h2 {
@@ -116,13 +117,13 @@
     
 
         .containerFour {
-            padding: 5rem;
+            padding: 10rem 5rem;
             width: 50vw;
             overflow-y: scroll;
             height: 100vh;
 
             .containerTwo {
-                padding-top: 0;
+                padding-bottom: 5rem;
                 .coords {
                     font-size: 14px;
                     font-weight: bold;
