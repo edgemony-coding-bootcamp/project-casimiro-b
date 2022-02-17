@@ -47,7 +47,7 @@
     margin-bottom: 70px;
 
     h1 {
-        color: $secondary;
+        color: black;
     }
 }
 
@@ -64,6 +64,7 @@
     height: 600px;
     margin-bottom: 40px;
     background-repeat: no-repeat;
+    opacity: 86%;
     background-size: 100vw 600px;
 }
 
@@ -142,6 +143,7 @@
             height: 600px;
             margin-right: 70px;
             background-size: 500px 600px;
+            
         }
         
         .sectionBlock_text{
