@@ -49,7 +49,8 @@
 @media screen and (min-width: 800px) {
 
     .footer {
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: row;
+        padding: 3rem 18rem;
     }
 }
