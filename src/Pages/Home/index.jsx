@@ -112,18 +112,6 @@ const Home = () => {
           </Carousel>
         </div>
       </div>
-      {/* <div className={styles.parallaxDiv}>
-        <ParallaxComponent
-          className={styles.parallaxOne}
-          image={images[0]}
-          description={description[0]}
-        />
-        <ParallaxComponentCenter  description={description[1]} />
-        <ParallaxComponent  image={images[1]} description={description[0]}/>
-
-      </div> */}
-
-      </div>
 
 
     <div className={styles.carouselDiv}>
