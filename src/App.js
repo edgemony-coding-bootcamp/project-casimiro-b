@@ -4,12 +4,13 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
-import City from "./Pages/City";
 
 const Home = lazy(() => import("./Pages/Home"));
 const Discover = lazy(() => import("./Pages/Discover"));
 const Experience = lazy(() => import("./Pages/Experience"));
 const AboutUs = lazy(() => import("./Pages/AboutUs"));
+const City = lazy(() => import("./Pages/City"));
+const LogIn = lazy(() => import("./Pages/LogIn"));
 
 const INIT_STATE = {
   name: "'Ddocu",
@@ -18,6 +19,7 @@ const INIT_STATE = {
     { link: "/Discover", label: "DISCOVER" },
     { link: "/Experience", label: "EXPERIENCE" },
     { link: "/AboutUs", label: "ABOUT US" },
+    { link: "/Log", label: "LOG IN/SIGN IN" },
   ],
 };
 
@@ -64,6 +66,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <Experience />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/Log"
+          element={
+            <Suspense fallback={<Loading />}>
+              <LogIn />
             </Suspense>
           }
         />
