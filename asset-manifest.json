@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/project-casimiro-b/static/css/main.de9fd53e.css",
+    "main.js": "/project-casimiro-b/static/js/main.d8a4624f.js",
+    "static/css/51.adea0b96.chunk.css": "/project-casimiro-b/static/css/51.adea0b96.chunk.css",
+    "static/js/51.e9f2420f.chunk.js": "/project-casimiro-b/static/js/51.e9f2420f.chunk.js",
+    "static/css/542.98549730.chunk.css": "/project-casimiro-b/static/css/542.98549730.chunk.css",
+    "static/js/542.d0f2d7b5.chunk.js": "/project-casimiro-b/static/js/542.d0f2d7b5.chunk.js",
+    "static/css/878.97090d3d.chunk.css": "/project-casimiro-b/static/css/878.97090d3d.chunk.css",
+    "static/js/878.3a08d08d.chunk.js": "/project-casimiro-b/static/js/878.3a08d08d.chunk.js",
+    "static/css/421.20629e37.chunk.css": "/project-casimiro-b/static/css/421.20629e37.chunk.css",
+    "static/js/421.38c91bc5.chunk.js": "/project-casimiro-b/static/js/421.38c91bc5.chunk.js",
+    "static/js/787.2ddcf0e3.chunk.js": "/project-casimiro-b/static/js/787.2ddcf0e3.chunk.js",
+    "static/js/693.8ba1fd7a.chunk.js": "/project-casimiro-b/static/js/693.8ba1fd7a.chunk.js",
+    "static/media/arance_ddocu.jpg": "/project-casimiro-b/static/media/arance_ddocu.0cbc48e1fa4ec228ab95.jpg",
+    "index.html": "/project-casimiro-b/index.html",
+    "main.de9fd53e.css.map": "/project-casimiro-b/static/css/main.de9fd53e.css.map",
+    "main.d8a4624f.js.map": "/project-casimiro-b/static/js/main.d8a4624f.js.map",
+    "51.adea0b96.chunk.css.map": "/project-casimiro-b/static/css/51.adea0b96.chunk.css.map",
+    "51.e9f2420f.chunk.js.map": "/project-casimiro-b/static/js/51.e9f2420f.chunk.js.map",
+    "542.98549730.chunk.css.map": "/project-casimiro-b/static/css/542.98549730.chunk.css.map",
+    "542.d0f2d7b5.chunk.js.map": "/project-casimiro-b/static/js/542.d0f2d7b5.chunk.js.map",
+    "878.97090d3d.chunk.css.map": "/project-casimiro-b/static/css/878.97090d3d.chunk.css.map",
+    "878.3a08d08d.chunk.js.map": "/project-casimiro-b/static/js/878.3a08d08d.chunk.js.map",
+    "421.20629e37.chunk.css.map": "/project-casimiro-b/static/css/421.20629e37.chunk.css.map",
+    "421.38c91bc5.chunk.js.map": "/project-casimiro-b/static/js/421.38c91bc5.chunk.js.map",
+    "787.2ddcf0e3.chunk.js.map": "/project-casimiro-b/static/js/787.2ddcf0e3.chunk.js.map",
+    "693.8ba1fd7a.chunk.js.map": "/project-casimiro-b/static/js/693.8ba1fd7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de9fd53e.css",
+    "static/js/main.d8a4624f.js"
+  ]
+}
