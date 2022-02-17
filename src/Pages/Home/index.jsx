@@ -50,7 +50,7 @@ const Home = () => {
     { width: 1200, itemsToShow: 4 },
   ];
 
-  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+  const ZoomInScrollOut = batch(StickyIn(), Fade());
   const FadeUp = batch(Fade(), Sticky(), Move());
 
   return (
@@ -59,14 +59,15 @@ const Home = () => {
         <ScrollPage page={0}>
           <div className={styles.bgScroll}>
             <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
-              <h2>37°35′21″N / 14°08′53″E</h2>
+              <h2>37°35′21″N / 14°08′53″E </h2>
+              <h5>Sicily, Italy.</h5>
             </Animator>
           </div>
         </ScrollPage>
         <ScrollPage page={1}>
           <div className={styles.bgScroll}>
             <Animator animation={ZoomInScrollOut}>
-              <h3>è l'odore della terra</h3>
+              <h3>C'era la terra nei miei ricordi,</h3>
             </Animator>
           </div>
         </ScrollPage>
@@ -81,7 +82,7 @@ const Home = () => {
         <ScrollPage page={3}>
           <div className={styles.bgScroll}>
             <Animator animation={FadeUp}>
-              <h3>è il vento che sa di mare</h3>
+              <h3>c'era il vento che sapeva di mare</h3>
             </Animator>
           </div>
         </ScrollPage>
@@ -95,7 +96,7 @@ const Home = () => {
               <img src="https://images.unsplash.com/photo-1617103099853-6dd647eb1489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
             </Animator>
             <Animator animation={FadeUp}>
-            <h2 className={styles.sky}>è il cielo che non finisce mai.</h2>
+            <h2 className={styles.sky}>ed un cielo che non finiva mai.</h2>
             </Animator>
         </ScrollPage>
         {/* <ScrollPage page={2}>
@@ -121,7 +122,7 @@ const Home = () => {
         <ScrollPage page={6}>
           <div className={styles.bgScrollMin}>
             <Animator animation={batch(Fade(), Sticky())}>
-              <h2>SCEGLI LA TUA META.</h2>
+              <h2>Scegli la tua meta, <br></br> scegli il tuo ricordo.</h2>
             </Animator>
           </div>
         </ScrollPage>

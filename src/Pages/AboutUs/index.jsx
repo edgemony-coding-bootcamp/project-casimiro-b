@@ -3,31 +3,36 @@ import styles from "./AboutUs.module.scss";
 const AboutUs = () => {
   return (
     <div className={styles.containerBase}>
-
-
       <div className={styles.containerBaseTwo}>
         <div className={styles.containerOne}>
-          <h3>About us</h3>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          
+          <h2>
+            'Ddocu è una parola proveniente dal dialetto siciliano, in italiano
+            vuol dire "lì".
+          </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
-            doloribus accusantium nihil. Velit, reiciendis quos veritatis
-            dolores, alias, consequatur nisi repellat aliquid aspernatur natus
-            odit accusantium omnis! Ratione, eum tenetur! Lorem, ipsum dolor sit
-            amet consectetur adipisicing elit. Incidunt ea quidem dicta ipsam
-            explicabo minus earum neque quisquam! A similique rerum nulla
-            repellendus at necessitatibus reprehenderit sequi, perspiciatis sit
-            quam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Excepturi aliquid neque itaque! Eaque, quasi quisquam qui expedita,
-            voluptates consectetur perspiciatis dolore iusto ut fuga enim
-            reprehenderit neque culpa consequatur blanditiis?
+            Siamo cinque ragazzi siciliani che nel 2022 hanno deciso di creare
+            una startup, avete presente il classico salto nel vuoto? Ecco,
+            questo è quello che abbiamo fatto, una stanza, mille idee e tanto
+            coraggio; da questa avventura è nata 'Ddocu e quella che prima era
+            una scommessa, piano piano si è trasformata in una certezza.
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-            veniam alias facere labore eligendi? Illum delectus beatae excepturi
-            explicabo in magnam, eligendi enim voluptatem deleniti soluta
-            accusamus possimus dignissimos molestiae!
+            Il nostro obbiettivo è la valorizzazione del territorio, vogliamo
+            condividere con voi la Sicilia autentica, farvi innamorare di questa
+            terra così come lo siamo noi, innamorati di un'isola, bella e
+            dannata, profumata e fiera, vi accompagneremo lungo il vostro
+            viaggio consigliandovi i luoghi più suggestivi, i luoghi simbolo
+            della Sicilia, ma ve ne faremo scoprire anche gli angoli più
+            nascosti e silenziosamente affascinanti.
+          </p>
+          <p className={styles.quote}>
+            "Quegli odori di alga seccata al sole e di capperi e di fichi maturi
+            <br></br>
+            non li ritroverà mai da nessuna parte; quelle coste arse e
+            profumate,<br></br>quei marosi ribollenti, quei gelsomini che si sfaldano al
+            sole." <br></br> - Dacia Maraini
           </p>
         </div>
 
@@ -38,7 +43,6 @@ const AboutUs = () => {
           <h3>Join our newsletter</h3>
           <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h4>
 
-         
           <input type="email" placeholder="Inserisci la tua email" />
 
           <button>Submit</button>

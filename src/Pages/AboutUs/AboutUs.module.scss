@@ -8,8 +8,8 @@
     align-items: center;
   }
   .containerOne {
-    height: 100vh;
-    padding: 10rem 3rem 3rem 6rem;
+    height: auto;
+    padding: 10rem 3rem 3rem 3rem;
     text-align: left;
 
     h3 {
@@ -20,18 +20,25 @@
 
     p {
       margin-top: 40px;
+      line-height: 1.5;
+    }
+
+    .quote {
+      font-family: quote($string: "");
+      margin-top: 10rem;
+      line-height: 26px;
+      text-align: right;
     }
   }
 
   .containerTwo {
     height: 40vh;
-    width: 40vh;
-    background-image: url("https://images.unsplash.com/photo-1512119587817-57d771d650c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
-    margin-top: 250px;
-    opacity: 65%;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1497400338895-940f2d01a6f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80");
+    margin-top: 5rem;
 
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
   }
 
@@ -40,8 +47,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 80vh;
-    padding: 12rem 3rem 3rem 3rem;
+    height: auto;
+    padding: 5rem 3rem 3rem 3rem;
 
     form {
       display: flex;
@@ -82,9 +89,9 @@
       height: 33px;
       box-shadow: none;
       border: none;
+      background-color: #f4efef;
     }
     .privacy {
-      margin-top: 10rem;
       font-size: 10px;
     }
   }
@@ -100,24 +107,28 @@
       flex-direction: row;
 
       .containerOne {
+        margin-left: 3rem;
+        margin-right: 5rem;
         width: 50%;
         text-align: left;
 
         h3 {
-          margin-top: 10rem;
+          margin-top: 2.5rem;
           text-align: left;
         }
       }
 
       .containerTwo {
         height: 100vh;
-
+        background-position: center;
         width: 50%;
         margin-top: 0px;
       }
     }
 
     .newsletter {
+      padding: 10rem 3rem 3rem 3rem;
+
       form {
         h3 {
           font-size: 36px;
