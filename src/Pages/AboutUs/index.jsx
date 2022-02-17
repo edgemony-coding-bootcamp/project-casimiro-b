@@ -47,7 +47,7 @@ const AboutUs = () => {
             By signing up you agree to our User Agreement (including the class
             action waiver and arbitration provisions), our Privacy Policy &
             Cookie Statement and to receive marketing and account-related emails
-            from ‘ Ddocu. You can unsubscribe at any time.
+            from ‘ Ddocu. <br /> You can unsubscribe at any time.
           </p>
         </form>
       </div>

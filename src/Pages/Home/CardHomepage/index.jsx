@@ -15,7 +15,6 @@ const CardHomepage = ({title, descriptioncity, imagecity}) => {
             <div className={styles.textcard}> 
             
             <h3>{title}</h3>
-            <p>{descriptioncity}</p>
             
             </div>
             
