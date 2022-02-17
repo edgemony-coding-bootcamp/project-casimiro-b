@@ -8,7 +8,7 @@ import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
 import DiscoverMenu from "../../Components/Menu";
 
-import Modal from "./Modal";
+import Modal from "../../Components/Modal";
 
 const Discover = () => {
   const dispatch = useDispatch();
@@ -30,6 +30,7 @@ const Discover = () => {
     setIsClicked(events.find((idCard) => idCard.id === id));
     setModalOpen(true);
   };
+  console.log(isClicked)
 
   const handlePopular = () => {
     setReccomended(false);
@@ -61,8 +62,17 @@ const Discover = () => {
   }, []);
 
   return (
-    <div className="wrapperPage">
-      {modalOpen && <Modal event={isClicked} handleClose={handleClose} />}
+    <div>
+      {modalOpen && <Modal
+        event={isClicked}
+        discover={true}
+        image={isClicked.image}
+        title={isClicked.title}
+        price={isClicked.price}
+        description={isClicked.description}
+        city={isClicked.city}
+        handleClose={handleClose} />}
+
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
           <DiscoverSelect sorting={sortingText} sort={author} />

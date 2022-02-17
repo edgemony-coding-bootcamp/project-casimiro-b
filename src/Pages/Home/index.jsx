@@ -120,7 +120,32 @@ const Home = () => {
         />
         <ParallaxComponentCenter  description={description[1]} />
         <ParallaxComponent  image={images[1]} description={description[0]}/>
+
       </div> */}
+
+      </div>
+
+
+    <div className={styles.carouselDiv}>
+
+      <h2 className={styles.titleContainer}>SCEGLI LA TUA META</h2>
+
+      <div className={styles.containercity}>
+        <Carousel breakPoints={breakPoints}>
+          {card?.map((item, index) => (
+            <Link key={index} to={`/${item.id}`}>
+              <CardHomepage
+                key={index}
+                title={item.title}
+                
+                imagecity={item.imagecity}
+              />
+            </Link>
+          ))}
+        </Carousel>
+      </div>
+    </div>
+
     </>
   );
 };

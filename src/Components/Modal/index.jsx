@@ -8,7 +8,7 @@ import { MdClose } from "react-icons/md";
 
 import styles from "./Modal.module.scss";
 
-const Modal = ({ handleClose, event }) => {
+const Modal = ({ handleClose, event, discover, image, title, price, description, city }) => {
 
   const date = new Date(event.date)
 
@@ -26,23 +26,24 @@ const Modal = ({ handleClose, event }) => {
         {/* PARTE 1 - IMMAGINE */}
         <img
           className={styles.modalImg}
-          src={event.image}
-          alt={event.title}
+          src={image}
+          alt={title}
         />
         {/* PARTE 2 - TITOLO/DATA MODALE */}
         <div className={styles.modalTitle}>
-          <h1>{event.title}</h1>
+          <h1>{title}</h1>
         </div>
         {/*PARTE 3 - TESTI/DESCRIZIONE - PREZZO - LOCATION */}
         <div className={styles.modalBodyContainer}>
           <div className={styles.modalTextContainer}>
             <div className={styles.modalTextDescription}>
-              <TextModal title="Description" text={event.description} />
+              <TextModal title="Description" text={description} />
             </div>
             <div className={styles.modalTextComponent}>
-              <TextModal title="Price" text={event.price} />
-              <TextModal title="Date" text={`${date.getDate()}/${date.getMonth()}`} />
-              <TextModal title="Location" text={event.city} />
+              <TextModal title="Price" text={price} />
+              {discover &&
+                <TextModal title="Date" text={`${date.getDate()}/${date.getMonth()}`} />}
+              <TextModal title="Location" text={city} />
             </div>
           </div>
         </div>
