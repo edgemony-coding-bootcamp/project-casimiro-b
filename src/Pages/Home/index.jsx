@@ -96,27 +96,8 @@ const Home = () => {
         </ScrollPage>
       </ScrollContainer>
 
-      <div className={styles.carouselDiv}>
-        <div className={styles.containercity}>
-          <Carousel breakPoints={breakPoints}>
-            {card?.map((item, index) => (
-              <Link key={index} to={`/${item.id}`}>
-                <CardHomepage
-                  key={index}
-                  title={item.title}
-                  descriptioncity={item.description}
-                  imagecity={item.imagecity}
-                />
-              </Link>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
 
     <div className={styles.carouselDiv}>
-
-      <h2 className={styles.titleContainer}>SCEGLI LA TUA META</h2>
 
       <div className={styles.containercity}>
         <Carousel breakPoints={breakPoints}>
@@ -125,7 +106,6 @@ const Home = () => {
               <CardHomepage
                 key={index}
                 title={item.title}
-                
                 imagecity={item.imagecity}
               />
             </Link>
