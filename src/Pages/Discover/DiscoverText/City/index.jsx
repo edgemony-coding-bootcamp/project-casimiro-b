@@ -1,7 +1,7 @@
 import { useMatch, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { FETCH_ALL_DATA_CITIES } from "../../store/action";
+import { FETCH_ALL_DATA_CITIES } from "../../../../store/action";
 
 import styles from "./City.module.scss";
 const City = () => {

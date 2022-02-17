@@ -1,6 +1,6 @@
 @import "../../Tools/General.scss";
 
-.hero {
+.heroMain {
     height: 650px;
     background: url("https://images.unsplash.com/photo-1603487831378-8cff3872abef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80") no-repeat;
     background-position: center;
@@ -55,21 +55,31 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     margin: 30px 0;
 }
 
 .sectionBlock {
-    width: 300px;
-    height: 450px;
+    width: 100vw;
+    height: 600px;
     margin-bottom: 40px;
-    padding-top: 30px;
-    background: url("https://images.unsplash.com/photo-1524835208047-0ed22b4dbc82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80") no-repeat;
-    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: 100vw 600px;
+}
 
-    >* {
-        color: $mainLighter;
-        text-align: center;
+.sectionBlock_text {
+    color: $mainLighter;
+    margin: 220px 0 0;
+    padding: 50px 70px;
+    height: 50%;
+    text-align: left;
+    font-size: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    h2 {
+    font-size: 48px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 20px;
     }
 }
 
@@ -83,7 +93,11 @@
 
 @media screen and (min-width: 800px) {
 
-    .hero {
+    .wrapperModal{
+        margin-top: -570px;
+    }
+
+    .heroMain {
         height: 550px;
         
         h1 {
@@ -114,21 +128,34 @@
         .sectionHeader {
             flex-direction: row;
             align-items: baseline;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         
         .sectionMain {
+            justify-content: space-between;
             flex-direction: row;
+            align-items: flex-start;
         }
         
         .sectionBlock {
+            width: 500px;
+            height: 600px;
             margin-right: 70px;
+            background-size: 500px 600px;
+        }
+        
+        .sectionBlock_text{
+        margin: 300px 0 0;
+
         }
 
         .sectionCard {
             flex-direction: row;
-            max-width: 700px;
+            // max-width: 700px;
+            width: 70vw;
+            row-gap: 50px;
             height: 600px;
+            // column-gap: 20px;
             overflow: auto;
         }
 

@@ -38,13 +38,11 @@ const Header = (props) => {
 
   return (
     <header
-      className={`${styles.header} ${
-        isActive || navScroll ? styles.headerResp : ""
-      }`}
+      className={`${styles.header} ${isActive || navScroll ? styles.headerResp : ""
+        }`}
     >
-    <Link to="/">  <a className={`${styles.logo} ${
-        isActive || navScroll ? styles.logoActive : ""
-      }`}>{name}</a></Link>
+      <Link to="/">  <p className={`${styles.logo} ${isActive || navScroll ? styles.logoActive : ""
+        }`}>{name}</p></Link>
       <button className={styles.resp_menu} onClick={handleMenu}>
         {isActive ? <MdClose className={styles.icon_menu} /> : <FiMenu />}
       </button>

@@ -7,14 +7,20 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.footerText}>
-                 <p>&copy; 'Ddocu</p>
-                <p>ddocu@gmail.com</p>
-            </div>
             <div className={styles.footerSocial}>
                 <FaFacebookF className={styles.social_icon} />
                 <FiInstagram className={styles.social_icon} />
                 <AiOutlineTwitter className={styles.social_icon} />
+            </div>
+            <div className={styles.footerText}>
+                 <p>&copy; Copyright 2022 ' Ddocu</p>
+                 <p>All Rights Reserved – gampStudio </p>
+                 <h4>hi@ddocu.com</h4>
+            </div>
+            <div className={styles.footerContact}>
+            <p>Contattaci</p>
+            <p>Iscriviti</p>
+            <p>Servizio Clienti</p>
             </div>
         </footer>
     );

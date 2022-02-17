@@ -7,7 +7,7 @@ const CardHomepage = ({title, descriptioncity, imagecity}) => {
 
 
 
-        <div className={styles.CardHomepage} style= {{backgroundImage: `url(${imagecity})`}}>  
+        <div className={styles.CardHomepage} style={{backgroundImage: `url(${imagecity})`}}>  
 
            
             <div className={styles.opacity}></div>
@@ -15,7 +15,6 @@ const CardHomepage = ({title, descriptioncity, imagecity}) => {
             <div className={styles.textcard}> 
             
             <h3>{title}</h3>
-            <p>{descriptioncity}</p>
             
             </div>
             

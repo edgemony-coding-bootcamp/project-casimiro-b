@@ -7,6 +7,8 @@
 .discoverContOne {
   display: flex;
   flex-direction: column;
+  margin: 0 40px;
+  padding: 100px 0;
 
   .discoverElementOne {
     display: block;
@@ -39,6 +41,8 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    margin: 0;
+    padding: 200px 70px 50px;
 
     .discoverMenuContainer {
       display: block;

@@ -23,7 +23,7 @@
       object-fit: cover;
     }
 
-    h4 {
+    h3 {
         margin-top: 20px;
       }
   }
@@ -32,7 +32,13 @@
 @media screen and (min-width: 800px) {
 
   .card {
-    padding: 0 30px;
+    width: 400px;
+    padding: 0 30px; 
+  
+  .description{
+  img {
+      width: 400px;
+    }
   }
-
+}
 }

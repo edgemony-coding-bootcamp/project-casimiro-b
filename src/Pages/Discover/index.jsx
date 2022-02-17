@@ -8,7 +8,7 @@ import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
 import DiscoverMenu from "../../Components/Menu";
 
-import Modal from "./Modal";
+import Modal from "../../Components/Modal";
 
 const Discover = () => {
   const dispatch = useDispatch();
@@ -24,36 +24,36 @@ const Discover = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
 
-  const [isClicked, setIsClicked] = useState([])
+  const [isClicked, setIsClicked] = useState([]);
 
   const handleOpen = (id) => {
     setIsClicked(events.find((idCard) => idCard.id === id));
-    setModalOpen(true)
-  }
+    setModalOpen(true);
+  };
+  console.log(isClicked)
 
   const handlePopular = () => {
     setReccomended(false);
     setFavorite(false);
     setPopular(!popular);
-  }
+  };
 
   const handleFavorite = () => {
     setReccomended(false);
     setPopular(false);
     setFavorite(!favorite);
-  }
+  };
 
   const handleReccomended = () => {
     setPopular(false);
     setFavorite(false);
     setReccomended(!reccomended);
-  }
+  };
 
   const handleClose = () => {
-    setModalOpen(false)
+    setModalOpen(false);
     setIsClicked([]);
-  }
-
+  };
 
   const sortingText = (e) => setAuthor(e.target.value);
 
@@ -61,30 +61,52 @@ const Discover = () => {
     dispatch(FETCH_ALL_DATA());
   }, []);
 
-
   return (
-    <div className="wrapperPage">
-      {modalOpen && <Modal event={isClicked} handleClose={handleClose} />}
+    <div>
+      {modalOpen && <Modal
+        event={isClicked}
+        discover={true}
+        image={isClicked.image}
+        title={isClicked.title}
+        price={isClicked.price}
+        description={isClicked.description}
+        city={isClicked.city}
+        handleClose={handleClose} />}
+
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
           <DiscoverSelect sorting={sortingText} sort={author} />
           <div className={styles.mobileMenu}>
-            <DiscoverMenu popular={popular} favorite={favorite} reccomended={reccomended} handlePopular={handlePopular} handleFavorite={handleFavorite} handleRaccomended={handleReccomended} />
+            <DiscoverMenu
+              popular={popular}
+              favorite={favorite}
+              reccomended={reccomended}
+              handlePopular={handlePopular}
+              handleFavorite={handleFavorite}
+              handleRaccomended={handleReccomended}
+            />
           </div>
           <DiscoverText />
         </div>
 
         <div className={styles.discoverElementTwo}>
           <div className={styles.discoverMenuContainer}>
-            <DiscoverMenu popular={popular} favorite={favorite} reccomended={reccomended} handlePopular={handlePopular} handleFavorite={handleFavorite} handleRaccomended={handleReccomended} />
+            <DiscoverMenu
+              popular={popular}
+              favorite={favorite}
+              reccomended={reccomended}
+              handlePopular={handlePopular}
+              handleFavorite={handleFavorite}
+              handleRaccomended={handleReccomended}
+            />
           </div>
 
           <div className={styles.containerCard}>
             <div className={favorite ? styles.containerCard : styles.favorite}>
               {events
-                ?.filter((el) => (el.favorite === true))
+                ?.filter((el) => el.favorite === true)
                 .filter((el) => (author !== "All" ? el.city === author : el))
-                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
                     <DiscoverCard
@@ -98,9 +120,9 @@ const Discover = () => {
             </div>
             <div className={popular ? styles.containerCard : styles.popular}>
               {events
-                ?.filter((el) => (el.popular === true))
+                ?.filter((el) => el.popular === true)
                 .filter((el) => (author !== "All" ? el.city === author : el))
-                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
                     <DiscoverCard
@@ -112,11 +134,15 @@ const Discover = () => {
                   </div>
                 ))}
             </div>
-            <div className={reccomended ? styles.containerCard : styles.reccomended}>
+            <div
+              className={
+                reccomended ? styles.containerCard : styles.reccomended
+              }
+            >
               {events
-                ?.filter((el) => (el.recommended === true))
+                ?.filter((el) => el.recommended === true)
                 .filter((el) => (author !== "All" ? el.city === author : el))
-                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
                     <DiscoverCard
@@ -128,10 +154,16 @@ const Discover = () => {
                   </div>
                 ))}
             </div>
-            <div className={favorite || reccomended || popular ? styles.allCard : styles.containerCard}>
+            <div
+              className={
+                favorite || reccomended || popular
+                  ? styles.allCard
+                  : styles.containerCard
+              }
+            >
               {events
                 ?.filter((el) => (author !== "All" ? el.city === author : el))
-                .sort((a, b) => a.date > b.date ? 1 : -1)
+                .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
                     <DiscoverCard
