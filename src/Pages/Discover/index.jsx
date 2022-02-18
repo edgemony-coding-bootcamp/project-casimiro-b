@@ -3,7 +3,6 @@ import { FETCH_ALL_DATA } from "../../store/action";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./Discover.module.scss";
-
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
 import DiscoverMenu from "../../Components/Menu";
@@ -11,9 +10,12 @@ import DiscoverMenu from "../../Components/Menu";
 import Modal from "../../Components/Modal";
 
 const Discover = () => {
+  const user = useSelector((state) => state.user)
+
   const dispatch = useDispatch();
   const [author, setAuthor] = useState("All");
 
+  console.log(user);
   const [popular, setPopular] = useState(false);
 
   const [favorite, setFavorite] = useState(false);
@@ -63,15 +65,17 @@ const Discover = () => {
 
   return (
     <div>
-      {modalOpen && <Modal
-        event={isClicked}
-        discover={true}
-        image={isClicked.image}
-        title={isClicked.title}
-        price={isClicked.price}
-        description={isClicked.description}
-        city={isClicked.city}
-        handleClose={handleClose} />}
+      {
+        modalOpen && <Modal
+          event={isClicked}
+          discover={true}
+          image={isClicked.image}
+          title={isClicked.title}
+          price={isClicked.price}
+          description={isClicked.description}
+          city={isClicked.city}
+          handleClose={handleClose} />
+      }
 
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
