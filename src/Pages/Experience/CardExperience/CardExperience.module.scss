@@ -22,9 +22,17 @@
       
     }
 
-    img {
-      width: 300px;
+
+    .img_border {
+
+     
+      width: 100%;
       height: 300px;
+      border-radius:10px;
+    }
+    
+    img {
+      
       object-fit: cover;
       
     }
