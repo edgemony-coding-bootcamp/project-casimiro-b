@@ -2,6 +2,9 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
+import { auth } from '../../firebase-config';
+import { signOut } from 'firebase/auth';
+import { FaUserAlt, FaUserAltSlash } from "react-icons/fa";
 import styles from "./Header.module.scss";
 
 const Header = (props) => {
@@ -35,7 +38,7 @@ const Header = (props) => {
     scrollNav();
     window.addEventListener("scroll", scrollNav);
   }, []);
-
+  console.log(props.user)
   return (
     <header
       className={`${styles.header} ${isActive || navScroll ? styles.headerResp : ""
@@ -55,6 +58,8 @@ const Header = (props) => {
           </li>
         ))}
       </ul>
+      <p><Link to={props.dash}><FaUserAlt /></Link></p>
+      <p onClick={props.logOut}><FaUserAltSlash /></p>
     </header>
   );
 };

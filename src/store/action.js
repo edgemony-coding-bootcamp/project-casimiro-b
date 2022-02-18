@@ -1,18 +1,60 @@
 import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL } from './constance';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
 
-export const USER_SIGNUP = (userLog) => async (dispatch) => {
+export const LOG_OUT = () => async (dispatch) => {
+    try {
+        const user = {}
+
+        dispatch(
+            {
+                type: USER_LOGGED_SUCCESS,
+                payload: user
+            }
+        )
+    }
+    catch (err) {
+        console.log(err)
+        console.log('Email o password non valide');
+    }
+}
+
+export const USER_SIGNUP = (auth, setRegisterEmail, setRegisterPassword, registerEmail, registerPassword) => async (dispatch) => {
 
     try {
+        const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
+        console.log(user);
+        setRegisterEmail('');
+        setRegisterPassword('');
+
+
         dispatch({
             type: USER_LOGGED_SUCCESS,
-            payload: userLog
+            payload: user
         })
     }
 
-    catch (err) {
 
+    catch (err) {
+        console.log(err)
+        console.log('Email o password non valide');
+
+    }
+}
+
+export const USER_LOGIN = (auth, loginEmail, loginPassword) => async (dispatch) => {
+    try {
+        const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+        console.log(user)
+
+        dispatch({
+            type: USER_LOGGED_SUCCESS,
+            payload: user
+        })
+    }
+    catch (err) {
+        console.log(err)
+        console.log('Email o password non valide');
     }
 }
 

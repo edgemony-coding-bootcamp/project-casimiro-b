@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import "./App.css";
+import { useEffect } from 'react'
+import { USER_LOGIN, LOG_OUT } from "./store/action";
+import { useSelector, useDispatch } from "react-redux";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
@@ -12,6 +15,7 @@ const AboutUs = lazy(() => import("./Pages/AboutUs"));
 const City = lazy(() => import("./Pages/City"));
 const LogIn = lazy(() => import("./Pages/LogIn"));
 const SignIn = lazy(() => import("./Pages/SignIn"));
+const Dashboard = lazy(() => import("./Pages/Dashboard"));
 
 const INIT_STATE = {
   name: "'Ddocu",
@@ -26,9 +30,20 @@ const INIT_STATE = {
 };
 
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user)
+
+  useEffect(() => {
+    dispatch(USER_LOGIN())
+  }, [])
+
+  const LogOut = () => {
+    dispatch(LOG_OUT())
+  }
+
   return (
     <>
-      <Header name={INIT_STATE.name} links={INIT_STATE.nav} />
+      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
       <Routes>
         <Route
@@ -84,6 +99,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <SignIn />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Dashboard />
             </Suspense>
           }
         />
