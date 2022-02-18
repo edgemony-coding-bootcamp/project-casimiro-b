@@ -12,13 +12,10 @@ import {
   ScrollPage,
   batch,
   Fade,
-  FadeIn,
   Move,
-  MoveIn,
   MoveOut,
   Sticky,
   StickyIn,
-  ZoomIn,
 } from "react-scroll-motion";
 
 import styles from "./Home.module.scss";
@@ -33,15 +30,7 @@ const Home = () => {
     dispatch(FETCH_ALL_DATA_CARD());
   }, []);
 
-  const images = [
-    "https://images.unsplash.com/photo-1559424092-88b61cb7a6c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    "https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-  ];
-
-  const description = [
-    `‘Ddocu è ipsum ponosm entiv. Pregt aferade. Folingar bast, biosam,lorem ipsum ponosm entiv. ‘Ddocu è ipsum ponosm entiv. Pregt aferade. Folingar bast, biosam,lorem ipsum ponosm entiv.`,
-    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error esse eius quod incidunt consequuntur omnis quae ab pariatur. Adipisci cumque neque iste dignissimos dolore velit assumenda, iure quaerat eius nemo?`,
-  ];
+  
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -72,12 +61,9 @@ const Home = () => {
           </div>
         </ScrollPage>
         <ScrollPage page={2}>
-            <Animator animation={batch(Fade(), Sticky())}>
-
-
-              <img src="https://images.unsplash.com/photo-1605447781678-2a5baca0e07b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"/>
-
-            </Animator>
+          <Animator animation={batch(Fade(), Sticky())}>
+            <img src="https://images.unsplash.com/photo-1605447781678-2a5baca0e07b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" />
+          </Animator>
         </ScrollPage>
         <ScrollPage page={3}>
           <div className={styles.bgScroll}>
@@ -87,17 +73,17 @@ const Home = () => {
           </div>
         </ScrollPage>
         <ScrollPage page={4}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <img src="https://images.unsplash.com/photo-1601324353981-5f920af43146?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"/>
-            </Animator>
+          <Animator animation={batch(Fade(), Sticky())}>
+            <img src="https://images.unsplash.com/photo-1601324353981-5f920af43146?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" />
+          </Animator>
         </ScrollPage>
         <ScrollPage page={5}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <img src="https://images.unsplash.com/photo-1617103099853-6dd647eb1489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </Animator>
-            <Animator animation={FadeUp}>
-            <h2 className={styles.sky}>ed un cielo che non finiva mai.</h2>
-            </Animator>
+          <Animator animation={batch(Fade(), Sticky())}>
+            <img src="https://images.unsplash.com/photo-1617103099853-6dd647eb1489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+          </Animator>
+          <Animator animation={FadeUp}>
+            <h3 className={styles.sky}>ed un cielo che non finiva mai.</h3>
+          </Animator>
         </ScrollPage>
         {/* <ScrollPage page={2}>
           <div className={styles.section_3}>
@@ -118,11 +104,12 @@ const Home = () => {
           </div>
         </ScrollPage> */}
 
-
         <ScrollPage page={6}>
           <div className={styles.bgScrollMin}>
             <Animator animation={batch(Fade(), Sticky())}>
-              <h2>Scegli la tua meta, <br></br> scegli il tuo ricordo.</h2>
+              <h2>
+                Scegli la tua meta, <br></br> scegli il tuo ricordo.
+              </h2>
             </Animator>
           </div>
         </ScrollPage>

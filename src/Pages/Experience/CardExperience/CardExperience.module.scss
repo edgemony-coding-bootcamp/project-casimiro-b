@@ -11,7 +11,7 @@
     flex-direction: column;
     overflow: hidden;
     align-items: center;
-
+    border-radius: 10px;
 
     p {
       margin-top: 20px;
@@ -24,21 +24,20 @@
     }
 
     h3 {
-        margin-top: 20px;
-      }
+      margin-top: 20px;
+    }
   }
 }
 
 @media screen and (min-width: 800px) {
-
   .card {
     width: 400px;
-    padding: 0 30px; 
-  
-  .description{
-  img {
-      width: 400px;
+    padding: 0 30px;
+
+    .description {
+      img {
+        width: 400px;
+      }
     }
   }
-}
 }
