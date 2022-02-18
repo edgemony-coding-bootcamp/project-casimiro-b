@@ -50,7 +50,7 @@ const LogIn = () => {
     await signOut(auth);
   }
   useEffect(() => {
-    user.email ? setIsLogged(true) : setIsLogged(false);
+    user?.email ? setIsLogged(true) : setIsLogged(false);
   }, [user])
 
   return (
