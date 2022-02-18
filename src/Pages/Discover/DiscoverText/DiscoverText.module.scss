@@ -1,10 +1,11 @@
 @import "./../../../Tools/General.scss";
 
 .textContainer {
-
+  display: flex;
   margin: 50px 30px;
 
   text-align: left;
+  flex-direction: column;
 
   h1 {
     font-family: "Source Sans Pro", sans-serif;
@@ -16,40 +17,49 @@
     font-size: 30px;
   }
 
+
   .quote {
     font-family: "Source Sans Pro", sans-serif;
     margin-top: 30px;
 
     font-size: 20px;
-    line-height: 34px;
+    line-height: 24px;
     font-weight: 400;
-    margin-bottom: 50px;
+
+    
+
+    span {
+      display: block;
+      text-align: right;
+      font-size: 14px;
+    }
   }
 }
 
 @media screen and (min-width: 800px) {
   .textContainer {
-
     margin: 0;
+    height: 700px;
+    max-width: 400px;
 
-    max-width: 500px;
+    overflow: hidden;
 
-    
-    justify-content: left;
+    flex-direction: column;
+
+    justify-content: end;
+
     text-align: left;
 
-
-   
-
     h1 {
-    
-      font-size: 50px;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 14px;
     }
 
     .quote {
-      
-      font-size: 24px;
-     
+      font-size: 16px;
     }
   }
 }

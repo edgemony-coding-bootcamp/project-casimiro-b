@@ -12,10 +12,15 @@
     margin: 0 auto;
     margin-top: 3rem;
 
+    select {
+        padding: 0.5rem;
+    }
+
 
     label {
         
         font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
     }
 
 .selectCity {

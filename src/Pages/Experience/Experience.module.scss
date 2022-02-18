@@ -1,6 +1,7 @@
 @import "../../Tools/General.scss";
 
 .heroMain {
+
     height: 650px;
     background: url("https://images.unsplash.com/photo-1603487831378-8cff3872abef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80") no-repeat;
     background-position: center;
@@ -28,6 +29,13 @@
         li {
             padding: 10px 15px;
             cursor: pointer;
+            color: $secondary;
+            font-weight: bold;
+
+            &:hover {
+                color: #000;
+            }
+
         }
     }
 }
@@ -160,6 +168,9 @@
             height: 600px;
             // column-gap: 20px;
             overflow: auto;
+            box-shadow: 0px 0px 10px 5px rgb(244, 239, 239, 0.6);
+            border-radius: 10px;
+            padding: 1.5rem;
         }
 
             .sectionCard::-webkit-scrollbar {
