@@ -56,7 +56,7 @@ const Home = () => {
         <ScrollPage page={1}>
           <div className={styles.bgScroll}>
             <Animator animation={ZoomInScrollOut}>
-              <h3>C'era la terra nei miei ricordi,</h3>
+              <h3>C'è la terra nei miei ricordi,</h3>
             </Animator>
           </div>
         </ScrollPage>
@@ -68,7 +68,7 @@ const Home = () => {
         <ScrollPage page={3}>
           <div className={styles.bgScroll}>
             <Animator animation={FadeUp}>
-              <h3>c'era il vento che sapeva di mare</h3>
+              <h3>c'è il vento che sa di mare</h3>
             </Animator>
           </div>
         </ScrollPage>
@@ -82,29 +82,11 @@ const Home = () => {
             <img src="https://images.unsplash.com/photo-1617103099853-6dd647eb1489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
           </Animator>
           <Animator animation={FadeUp}>
-            <h3 className={styles.sky}>ed un cielo che non finiva mai.</h3>
+            <h3 className={styles.sky}>ed un cielo che non finisce mai.</h3>
           </Animator>
         </ScrollPage>
-        {/* <ScrollPage page={2}>
-          <div className={styles.section_3}>
-            <h2>
-              <Animator animation={MoveIn(-1000, 0)}>land</Animator>
-              <Animator animation={MoveIn(1000, 0)}>water</Animator>
-              <Animator animation={MoveOut(1000, 0)}>air</Animator>
-              <Animator animation={MoveOut(-1000, 0)}>fire</Animator>
-            </h2>
-          </div>
-        </ScrollPage> */}
-
-        {/* <ScrollPage page={6}>
-          <div className={styles.bgScroll}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <h3>è il cielo che non finisce mai.</h3>
-            </Animator>
-          </div>
-        </ScrollPage> */}
-
-        <ScrollPage page={6}>
+      
+      <ScrollPage page={6}>
           <div className={styles.bgScrollMin}>
             <Animator animation={batch(Fade(), Sticky())}>
               <h2>
