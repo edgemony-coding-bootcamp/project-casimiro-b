@@ -3,10 +3,12 @@
 
 .container {
   display: flex;
+  
 
   .CardHomepage {
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 
     cursor: pointer;
     height: 450px;
@@ -27,6 +29,7 @@
       flex-direction: column;
       justify-content: center;
       margin: 100% 0 0 0;
+      border-radius: 10px;
 
       width: 100%;
       padding: 10px 5px 0;
@@ -48,6 +51,8 @@
 @media screen and (min-width: 800px) {
   .container {
     .CardHomepage {
+      
+
       margin: 15px;
       padding: 0px;
       justify-content: center;
