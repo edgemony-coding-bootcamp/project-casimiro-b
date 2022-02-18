@@ -13,7 +13,7 @@ const DiscoverCard = ({ event, handleOpen }) => {
             </div>
             <div className={styles.description}>
                 <img src={event.image} alt={event.title} />
-                <p>{event.description}</p>
+                
             </div>
         </div>
     )
