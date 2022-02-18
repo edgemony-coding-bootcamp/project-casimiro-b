@@ -11,6 +11,7 @@ const Experience = lazy(() => import("./Pages/Experience"));
 const AboutUs = lazy(() => import("./Pages/AboutUs"));
 const City = lazy(() => import("./Pages/City"));
 const LogIn = lazy(() => import("./Pages/LogIn"));
+const SignIn = lazy(() => import("./Pages/SignIn"));
 
 const INIT_STATE = {
   name: "'Ddocu",
@@ -19,7 +20,8 @@ const INIT_STATE = {
     { link: "/Discover", label: "DISCOVER" },
     { link: "/Experience", label: "EXPERIENCE" },
     { link: "/AboutUs", label: "ABOUT US" },
-    { link: "/Log", label: "LOG IN/SIGN IN" },
+    { link: "/Log", label: "LOG IN" },
+    { link: "/sign", label: "SIGN IN" },
   ],
 };
 
@@ -27,7 +29,7 @@ function App() {
   return (
     <>
       <Header name={INIT_STATE.name} links={INIT_STATE.nav} />
-    
+
       <Routes>
         <Route
           path="/"
@@ -77,8 +79,16 @@ function App() {
             </Suspense>
           }
         />
+        <Route
+          path="/sign"
+          element={
+            <Suspense fallback={<Loading />}>
+              <SignIn />
+            </Suspense>
+          }
+        />
       </Routes>
-      
+
 
       <Footer />
     </>
