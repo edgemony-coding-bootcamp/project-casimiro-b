@@ -12,11 +12,12 @@ const DiscoverCard = ({ event, handleOpen }) => {
     >
       <div className={styles.icon}>
           <img src={event.icon} alt={event.title} />
+          <p>{`${date.getDate()}/${date.getMonth()}`}</p>
       </div>
       <div className={styles.description_container}>
         <div className={styles.title}>
           <h1>{event.title}</h1>
-          <p>{`${date.getDate()}/${date.getMonth()}`}</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         </div>
         <div className={styles.btn_title}>
           <button onClick={() => handleOpen(event.id)}>

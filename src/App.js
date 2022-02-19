@@ -79,7 +79,7 @@ function App() {
           }
         />
         <Route
-          path="/Experience"
+          path="/Esperienze"
           element={
             <Suspense fallback={<Loading />}>
               <Experience />

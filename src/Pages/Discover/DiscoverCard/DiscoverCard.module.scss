@@ -8,7 +8,7 @@
 
   background-repeat: no-repeat;
   background-size: cover;
-  filter: opacity(80%);
+  filter: opacity(85%);
 
   box-shadow: 0px 0px 10px 5px rgb(244, 239, 239, 0.8);
   border-radius: 22px;
@@ -17,6 +17,20 @@
   .icon {
     padding: 1.5rem;
     color: white;
+
+    display: flex;
+    
+    justify-content: space-between;
+
+  
+    p {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 600;
+      font-size: 26px;
+      
+
+      
+    }
 
     img {
       width: 30px;
@@ -48,11 +62,14 @@
 
       p {
         font-family: "Source Sans Pro", sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 14px;
-
-        width: 250px;
+        width: 280px;
+        
+  
+        
       }
+  
     }
 
     .btn_title {
