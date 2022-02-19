@@ -9,10 +9,10 @@
     display: flex;
     justify-content: center;
     border-radius: 10px;
-
+    box-shadow: 0px 0px 1px;
     cursor: pointer;
-    height: 450px;
-    width: 360px;
+    height: 600px;
+    width: 380px;
     margin: 15px 0;
     background-size: cover;
     background-position: center;
@@ -27,15 +27,15 @@
     .textcard {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: left;
       margin: 100% 0 0 0;
       border-radius: 10px;
-
+      
       width: 100%;
       padding: 10px 5px 0;
-      text-align: center;
-      background-color: black;
-      opacity: 60%;
+      
+      
+      
 
       h3 {
         font-size: 26px;
@@ -58,10 +58,11 @@
       justify-content: center;
 
       .textcard {
-        margin: 350px 0 0px 0px;
-
-        justify-content: center;
-        text-align: center;
+        margin: 500px 0 0px 20px;
+        
+        
+        justify-content: left;
+        text-align: left;
       }
     }
   }

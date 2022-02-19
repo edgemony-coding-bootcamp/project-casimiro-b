@@ -48,7 +48,7 @@ const Home = () => {
         <ScrollPage page={0}>
           <div className={styles.bgScroll}>
             <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
-              <h2>37°35′21″N / 14°08′53″E </h2>
+              <h2>37°35′21″N / 14°08′53″E</h2>
               <h5>Sicily, Italy.</h5>
             </Animator>
           </div>
@@ -62,7 +62,7 @@ const Home = () => {
         </ScrollPage>
         <ScrollPage page={2}>
           <Animator animation={batch(Fade(), Sticky())}>
-            <img src="https://images.unsplash.com/photo-1605447781678-2a5baca0e07b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" />
+            <img src="https://images.unsplash.com/photo-1570720212222-6c41c9bc0706?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2233&q=80" />
           </Animator>
         </ScrollPage>
         <ScrollPage page={3}>
@@ -74,12 +74,12 @@ const Home = () => {
         </ScrollPage>
         <ScrollPage page={4}>
           <Animator animation={batch(Fade(), Sticky())}>
-            <img src="https://images.unsplash.com/photo-1601324353981-5f920af43146?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" />
+            <img src="https://images.unsplash.com/photo-1598976895839-9cb03d135e4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" />
           </Animator>
         </ScrollPage>
         <ScrollPage page={5}>
           <Animator animation={batch(Fade(), Sticky())}>
-            <img src="https://images.unsplash.com/photo-1617103099853-6dd647eb1489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+            <img src="https://images.unsplash.com/photo-1586729150659-40c989036a30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" />
           </Animator>
           <Animator animation={FadeUp}>
             <h3 className={styles.sky}>ed un cielo che non finisce mai.</h3>
@@ -98,6 +98,7 @@ const Home = () => {
       </ScrollContainer>
 
       <div className={styles.carouselDiv}>
+        <h1>'Ddocu consiglia</h1>
         <div className={styles.containercity}>
           <Carousel breakPoints={breakPoints}>
             {card?.map((item, index) => (
