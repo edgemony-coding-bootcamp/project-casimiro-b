@@ -1,6 +1,6 @@
 .discover_card {
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 400px;
 
   display: flex;
   flex-direction: column;
@@ -19,17 +19,13 @@
     color: white;
 
     display: flex;
-    
+
     justify-content: space-between;
 
-  
     p {
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 600;
       font-size: 26px;
-      
-
-      
     }
 
     img {
@@ -39,12 +35,12 @@
 
   .description_container {
     background-color: #fff;
-    height: 90px;
+    height: 150px;
     width: 100%;
     border-radius: 20px;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
     padding: 1rem;
@@ -53,6 +49,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 1rem;
 
       h1 {
         font-size: 14px;
@@ -65,17 +62,14 @@
         font-weight: 500;
         font-size: 14px;
         width: 280px;
-        
-  
-        
       }
-  
     }
 
     .btn_title {
+      display: flex;
+      justify-content: center;
+
       button {
-        cursor: pointer;
-        margin-top: 0.6rem;
         padding: 0.5rem;
         // border: 1px solid #000;
         border: none;
@@ -87,41 +81,49 @@
           font-weight: 600;
           font-size: 12px;
         }
-
-        &:hover {
-          color: white;
-          background-color: #bc6e7e;
-          border: 1px solid #fff;
-        }
       }
     }
   }
 }
 
-@media screen and (min-width: 800px) {
-  .discoverCard {
-    width: 400px;
-    justify-content: space-between;
 
+@media screen and (min-width: 800px) {
+  
+  .discover_card {
+    width: 400px;
+    height: 250px;
+  
+    flex-direction: column;
+  
     // &:hover {
     //   transform: scale(1.02);
     // }
-  }
+    .description_container {
+      height: 100px;
+      flex-direction: row;
+      padding: 1rem;
 
-  .title {
-    display: flex;
-    flex-direction: column;
+      .btn_title {
+        display: inline-block;
 
-    h4 {
-      width: 180px;
+
+        
+        button {
+          margin-top: 1rem;
+          cursor: pointer;
+  
+          &:hover {
+            color: white;
+            background-color: #bc6e7e;
+            border: 1px solid #fff;
+          }
+        }
+      }
     }
 
-    img {
-      position: relative;
-      left: 0;
-
-      width: 50px;
-      height: 50px;
-    }
   }
+
+
 }
+ 
+

@@ -5,10 +5,11 @@
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
-    margin-top: 3rem;
-    justify-content: center;
+    
+    justify-content: left;
   
     li {
+     
       cursor: pointer;
       color: $secondary;
       font-weight: 600; 

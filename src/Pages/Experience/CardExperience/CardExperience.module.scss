@@ -1,8 +1,8 @@
 @import "../../../Tools/General.scss";
 
 .experience_card {
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 400px;
 
   display: flex;
   flex-direction: column;
@@ -47,12 +47,12 @@
 
   .description_container {
     background-color: #fff;
-    height: 90px;
+    height: 150px;
     width: 100%;
     border-radius: 20px;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     
     
@@ -79,6 +79,8 @@
     }
   
     .btn_title {
+      display: flex;
+      justify-content: center;
       button {
         cursor: pointer;
         margin-top: 0.6rem;
@@ -107,20 +109,20 @@
 }
 
 @media screen and (min-width: 800px) {
-  .card {
-    width: 300px;
-    padding: 0;
+  .experience_card {
+    width: 400px;
+    height: 250px;
+    
 
     &:hover {
       transform: scale(1.02);
     }
-
-
-    .description {
-      img {
-        width: 400px;
-        
+    
+      .description_container {
+        height: 90px;
+    
+        flex-direction: row;
       }
-    }
   }
+
 }

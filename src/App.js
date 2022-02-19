@@ -43,7 +43,10 @@ function App() {
 
   return (
     <>
+ 
       <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
+
+  
 
       <Routes>
         <Route

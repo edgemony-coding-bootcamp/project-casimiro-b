@@ -11,16 +11,15 @@
   padding: 100px 0;
 
   .discoverElementOne {
-
     display: block;
   }
 
   .discoverElementTwo {
     .containerCard {
-      margin-left: 0;
-      
-
-      
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+   
 
     }
   }
@@ -35,14 +34,15 @@
 
   .containerCard {
 
-    margin-left: 25%;
+
+    margin-left: 0;
   }
 }
 
 
 @media screen and (min-width: 800px) {
   .discoverContOne {
-    display: flex;
+  
     flex-direction: row;
     gap: 1rem;
     margin: 0;
@@ -62,7 +62,8 @@
       justify-content: space-between;
       gap: 6rem;
       
-      padding: 6.5rem 0;
+      padding-top: 4rem;
+      padding-bottom: 6.5rem;
       padding-left: 67px;
 
 
@@ -89,10 +90,11 @@
 
       
       .containerCard{
-        display: flex;
-        justify-content: space-around;
+        
+        gap: 3rem;
+        justify-content: left;
         // margin-top: 150px;
-        margin-left: 0;
+        
         flex-direction: row;
         flex-wrap: wrap;
         overflow: auto;

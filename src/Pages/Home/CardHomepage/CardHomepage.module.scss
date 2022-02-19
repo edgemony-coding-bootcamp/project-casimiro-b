@@ -3,6 +3,8 @@
 
 .container {
   display: flex;
+
+
   
 
   .CardHomepage {
@@ -13,12 +15,14 @@
     cursor: pointer;
     // height: 400px;
     width: 300px;
-    margin: 15px 0;
+    
     background-size: cover;
     background-position: center;
 
     background-repeat: no-repeat;
     opacity: 65%;
+
+    
 
     &:hover {
       opacity: 90%;
@@ -53,9 +57,13 @@
     .CardHomepage {
 
       height: 350px;
+
+      margin: 2rem;
+
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
       
 
-      margin: 15px;
+    
       padding: 0px;
       justify-content: center;
 
@@ -65,6 +73,11 @@
         
         justify-content: center;
         text-align: center;
+      }
+
+
+      &:hover {
+        transform: scale(1.02);
       }
     }
   }

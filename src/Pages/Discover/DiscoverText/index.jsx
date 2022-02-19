@@ -1,10 +1,12 @@
 import styles from "./DiscoverText.module.scss";
 
-const DiscoverText = () => {
+const DiscoverText = (props) => {
+
+
   return (
     <div className={styles.textContainer}>
 
-      <h1>Eventi in città.</h1>
+      <h1>{props.author}.</h1>
 
       <p>
         Anon comes in a fellow, takes off his crown, kisses it, pours poison in
