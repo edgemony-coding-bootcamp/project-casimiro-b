@@ -1,79 +1,94 @@
-@import "../../../Tools/General.scss";
-
-.discoverCard {
-  padding: $sidePadding;
-
-  flex-direction: column;
+.discover_card {
+  width: 400px;
+  height: 250px;
 
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(80%);
 
-  box-shadow: 0px 0px 10px 5px rgb(244, 239, 239, 0.6);
-  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgb(244, 239, 239, 0.8);
+  border-radius: 22px;
   margin-bottom: 1.5rem;
-}
 
-.title {
-  display: flex;
-  flex-direction: column;
+  .icon {
+    padding: 1.5rem;
+    color: white;
 
-  h2 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 700;
-  }
-  h4 {
-    padding: 1rem 0;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
-    width: 250px;
+    img {
+      width: 30px;
+    }
   }
 
-  img {
-    position: absolute;
-    margin-top: 8px;
-    right: 95px;
-    width: 25px;
-    height: 25px;
+  .description_container {
+    background-color: #fff;
+    height: 90px;
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-    object-fit: cover;
-  }
-}
+    padding: 1rem;
 
-.description {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-  p {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 250px;
-  }
+      h1 {
+        font-size: 14px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 700;
+      }
 
-  img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+      p {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+
+        width: 250px;
+      }
+    }
+
+    .btn_title {
+      button {
+        cursor: pointer;
+        margin-top: 0.6rem;
+        padding: 0.5rem;
+        // border: 1px solid #000;
+        border: none;
+        border-radius: 10px;
+        // background-color: #fff;
+        color: #000;
+
+        p {
+          font-weight: 600;
+          font-size: 12px;
+        }
+
+        &:hover {
+          color: white;
+          background-color: #bc6e7e;
+          border: 1px solid #fff;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 800px) {
   .discoverCard {
-    flex-direction: row;
-
-    width: 500px;
+    width: 400px;
     justify-content: space-between;
 
-    
-  box-shadow: none;
-
-    &:hover {
-      transform: scale(1.02);
-    }
+    // &:hover {
+    //   transform: scale(1.02);
+    // }
   }
 
   .title {

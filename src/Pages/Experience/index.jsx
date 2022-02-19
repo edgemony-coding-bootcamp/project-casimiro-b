@@ -81,16 +81,16 @@ const Experience = () => {
 
             <div className={styles.sectionCity}>
                 <div className={styles.sectionHeader}>
-                    <h1>{info[0]?.title}</h1>
-                    <Menu />
+                    <h1>{info[0]?.title}.</h1>
+                    {/* <Menu /> */}
                 </div>
                 <div className={styles.sectionMain}>
-                    <div className={styles.sectionBlock} style={ImageStyle.hero}>
+                    {/* <div className={styles.sectionBlock} style={ImageStyle.hero}>
                         <div className={styles.sectionBlock_text}>
                             <h2>Vivi La Sicilia</h2>
                             <p>Le migliori esperienze da vivere nella tua città preferita</p>
                         </div>
-                    </div>
+                    </div> */}
                     <div className={styles.sectionCard}>
                         {experience.data?.map((item, index) => (
                             <CardExperience

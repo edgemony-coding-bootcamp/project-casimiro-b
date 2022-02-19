@@ -4,7 +4,7 @@ const DiscoverText = () => {
   return (
     <div className={styles.textContainer}>
 
-      <h1>Discover.</h1>
+      <h1>Eventi in città.</h1>
 
       <p>
         Anon comes in a fellow, takes off his crown, kisses it, pours poison in

@@ -21,8 +21,8 @@ const INIT_STATE = {
   name: "'Ddocu",
   nav: [
     { link: "/", label: "HOME" },
-    { link: "/Discover", label: "DISCOVER" },
-    { link: "/Experience", label: "EXPERIENCE" },
+    { link: "/Eventi", label: "EVENTI" },
+    { link: "/Esperienze", label: "ESPERIENZE" },
     { link: "/AboutUs", label: "ABOUT US" },
     { link: "/Log", label: "LOG IN" },
     { link: "/sign", label: "SIGN IN" },
@@ -71,7 +71,7 @@ function App() {
           }
         />
         <Route
-          path="/Discover"
+          path="/Eventi"
           element={
             <Suspense fallback={<Loading />}>
               <Discover />
