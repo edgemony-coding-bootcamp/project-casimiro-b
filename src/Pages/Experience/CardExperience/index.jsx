@@ -2,7 +2,7 @@ import styles from "./CardExperience.module.scss";
 
 const CardExperience = ({ handleOpen, event }) => {
 
-    console.log(event.verticals)
+    
   return (
     <div
       className={styles.experience_card}
@@ -16,7 +16,7 @@ const CardExperience = ({ handleOpen, event }) => {
       <div className={styles.description_container}>
         <div className={styles.title}>
         <h1>{event.title}</h1>
-        <p></p>
+        <p>{event.retail_price.formatted_iso_value}</p>
           {/* <p>{event.description}</p> */}
         </div>
         <div className={styles.btn_title}>

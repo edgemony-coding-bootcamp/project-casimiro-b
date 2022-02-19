@@ -51,10 +51,12 @@
 @media screen and (min-width: 800px) {
 
     .footer {
+      height: 10vh;
         display: grid;
         align-items: start;
         grid-template-columns: repeat(3, 1fr);
         padding: 2rem 0;
+        
 
         .footerSocial {
           padding-top: 0;

@@ -47,7 +47,7 @@
 
   .description_container {
     background-color: #fff;
-    height: 150px;
+    height: 180px;
     width: 100%;
     border-radius: 20px;
     position: relative;
@@ -73,6 +73,8 @@
         font-family: "Source Sans Pro", sans-serif;
         font-weight: 600;
         font-size: 14px;
+
+        padding: 1.5rem 0;
   
         width: 250px;
       }
@@ -81,9 +83,10 @@
     .btn_title {
       display: flex;
       justify-content: center;
+      
       button {
-        cursor: pointer;
-        margin-top: 0.6rem;
+       width: 100%;
+      
         padding: 0.5rem;
         // border: 1px solid #000;
         border: none;
@@ -111,7 +114,7 @@
 @media screen and (min-width: 800px) {
   .experience_card {
     width: 400px;
-    height: 250px;
+    height: 350px;
     
 
     &:hover {
@@ -119,10 +122,19 @@
     }
     
       .description_container {
-        height: 90px;
+        height: 180px;
     
-        flex-direction: row;
+    
+
+        .btn_title {
+          cursor: pointer;
+          display: inline-block;
+
+      
+  
+        }
+    }
       }
-  }
+
 
 }

@@ -1,4 +1,4 @@
-import Menu from "../../Components/Menu";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Modal from "../../Components/Modal";
 import CardExperience from "./CardExperience";
 import { useSelector, useDispatch } from "react-redux";
@@ -62,25 +62,39 @@ const Experience = () => {
           handleClose={handleClose}
         />
       )}
-    
+
+
+    <div className={styles.container_hero}>
           <div className={styles.heroMain}>
+            <div className={styles.title}>
+
             <h1>
               Your Experience,
               <br />
               your life.
             </h1>
-          </div>
+            <p>Le migliori esperienze selezionate per te.</p>
+            </div>
           <div className={styles.cityList}>
             <ul>
-              <li onClick={() => setCityId(24)}>PALERMO</li>
-              <li onClick={() => setCityId(15)}>CATANIA</li>
-              <li onClick={() => setCityId(572)}>MESSINA</li>
-              <li onClick={() => setCityId(587)}>TRAPANI</li>
-              <li onClick={() => setCityId(265)}>AGRIGENTO</li>
-              <li onClick={() => setCityId(147)}>SIRACUSA</li>
+              <AnchorLink href='#city'> <li onClick={() => setCityId(24)}>PALERMO</li> </AnchorLink>
+          
+              <AnchorLink href='#city'><li onClick={() => setCityId(15)}>CATANIA</li> </AnchorLink>
+           
+              <AnchorLink href='#city'><li onClick={() => setCityId(572)}>MESSINA</li> </AnchorLink>
+       
+              <AnchorLink href='#city'> <li onClick={() => setCityId(587)}>TRAPANI</li> </AnchorLink>
+       
+              <AnchorLink href='#city'> <li onClick={() => setCityId(265)}>AGRIGENTO</li> </AnchorLink>
+         
+              <AnchorLink href='#city'> <li onClick={() => setCityId(147)}>SIRACUSA</li> </AnchorLink>
             </ul>
           </div>
-       
+          </div>
+
+    </div>
+
+    <div  id="city" className={styles.container_two}>
 
           <div className={styles.sectionCity}>
             <div className={styles.sectionHeader}>
@@ -100,6 +114,9 @@ const Experience = () => {
             </div>
           </div>
         
+    </div>
+       
+
      
     </div>
   );
