@@ -82,6 +82,14 @@ function App() {
           }
         />
         <Route
+          path="/Eventi/:id"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Discover />
+            </Suspense>
+          }
+        />
+        <Route
           path="/Esperienze"
           element={
             <Suspense fallback={<Loading />}>

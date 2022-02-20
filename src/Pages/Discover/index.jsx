@@ -2,6 +2,7 @@ import DiscoverCard from "./DiscoverCard";
 import { FETCH_ALL_DATA } from "../../store/action";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useMatch } from "react-router-dom";
 import styles from "./Discover.module.scss";
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
@@ -15,7 +16,6 @@ const Discover = () => {
   const dispatch = useDispatch();
   const [author, setAuthor] = useState("Tutti gli eventi");
 
-  console.log(user);
   const [popular, setPopular] = useState(false);
 
   const [favorite, setFavorite] = useState(false);
@@ -28,7 +28,10 @@ const Discover = () => {
 
   const [isClicked, setIsClicked] = useState([]);
 
-  console.log(author);
+  const match = useMatch("eventi/:id");
+
+
+  // console.log(match.params.id);
 
   const handleOpen = (id) => {
     setIsClicked(events.find((idCard) => idCard.id === id));

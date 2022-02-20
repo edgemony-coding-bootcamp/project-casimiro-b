@@ -73,12 +73,34 @@
 
     .sectionHeader {
       display: flex;
+      flex-direction: column;
+      
       
       margin-bottom: 70px;
 
       h1 {
-        margin: 0 auto;
+
+        margin: 2rem auto;
+        margin-bottom: 1rem;
         color: #000;
+      }
+
+      button{
+        margin: 0 auto;
+        display: block;
+
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $secondary;
+          color: #fff;
+          transform: scale(1.02);
+          transition: 0.3s all ease;
+        }
       }
     }
 

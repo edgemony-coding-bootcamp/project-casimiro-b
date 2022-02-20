@@ -3,6 +3,7 @@ import Modal from "../../Components/Modal";
 import CardExperience from "./CardExperience";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   FETCH_ALL_DATA_EXPERIENCE,
   FETCH_ALL_DATA_CARD,
@@ -16,6 +17,8 @@ const Experience = () => {
   const [isClicked, setIsClicked] = useState([]);
 
   const [cityId, setCityId] = useState(24);
+
+  console.log(cityId)
 
   const dispatch = useDispatch();
   const experience = useSelector((state) => state.experience);
@@ -76,7 +79,6 @@ const Experience = () => {
           <div className={styles.cityList}>
             <ul>
               <AnchorLink href="#city">
-                {" "}
                 <li onClick={() => setCityId(24)}>PALERMO</li>{" "}
               </AnchorLink>
 
@@ -89,17 +91,14 @@ const Experience = () => {
               </AnchorLink>
 
               <AnchorLink href="#city">
-                {" "}
                 <li onClick={() => setCityId(587)}>TRAPANI</li>{" "}
               </AnchorLink>
 
               <AnchorLink href="#city">
-                {" "}
                 <li onClick={() => setCityId(265)}>AGRIGENTO</li>{" "}
               </AnchorLink>
 
               <AnchorLink href="#city">
-                {" "}
                 <li onClick={() => setCityId(147)}>SIRACUSA</li>{" "}
               </AnchorLink>
             </ul>
@@ -111,19 +110,21 @@ const Experience = () => {
         <div className={styles.sectionCity}>
           <div className={styles.sectionHeader}>
             <h1>{info[0]?.title}.</h1>
+            <Link to={`/${cityId}`}>
+            <button>scopri di più sulla città</button>
+            </Link>
           </div>
-         
-            <div className={styles.sectionCard}>
-              {experience.data?.map((item, index) => (
-                <CardExperience
-                  key={index}
-                  uuid={item.uuid}
-                  event={item}
-                  handleOpen={handleOpen}
-                />
-              ))}
-            </div>
-         
+
+          <div className={styles.sectionCard}>
+            {experience.data?.map((item, index) => (
+              <CardExperience
+                key={index}
+                uuid={item.uuid}
+                event={item}
+                handleOpen={handleOpen}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
