@@ -1,4 +1,3 @@
-
 import CardHomepage from "./CardHomepage";
 import { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
@@ -78,10 +77,10 @@ const Home = () => {
         </ScrollPage>
 
         <ScrollPage page={5}>
-        <div className={styles.bgScroll}>
-          <Animator animation={FadeUp}>
-            <h3>ed un cielo che non finisce mai.</h3>
-          </Animator>
+          <div className={styles.bgScroll}>
+            <Animator animation={FadeUp}>
+              <h3>ed un cielo che non finisce mai.</h3>
+            </Animator>
           </div>
         </ScrollPage>
 
@@ -90,7 +89,6 @@ const Home = () => {
             <img src="https://images.unsplash.com/photo-1586729150659-40c989036a30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" />
           </Animator>
         </ScrollPage>
-
 
         <ScrollPage page={7}>
           <div className={styles.bgScroll}>
@@ -106,26 +104,24 @@ const Home = () => {
           {/* <div className={styles.bgScrollMin}>
 
           </div> */}
-      <div className={styles.carouselDiv}>
-        <h1>Destinazioni popolari</h1>
-        <div className={styles.containercity}>
-          <Carousel breakPoints={breakPoints}>
-            {card?.map((item, index) => (
-              <Link key={index} to={`/${item.id}`}>
-                <CardHomepage
-                  key={index}
-                  title={item.title}
-                  imagecity={item.imagecity}
-                />
-              </Link>
-            ))}
-          </Carousel>
-        </div>
-      </div>
+          <div className={styles.carouselDiv}>
+            <h1>Destinazioni popolari</h1>
+            <div className={styles.containercity}>
+              <Carousel breakPoints={breakPoints}>
+                {card?.map((item, index) => (
+                  <Link key={index} to={`/${item.id}`}>
+                    <CardHomepage
+                      key={index}
+                      title={item.title}
+                      imagecity={item.imagecity}
+                    />
+                  </Link>
+                ))}
+              </Carousel>
+            </div>
+          </div>
         </ScrollPage>
-
       </ScrollContainer>
-
     </>
   );
 };

@@ -1,5 +1,5 @@
 .discover_card {
-  width: 300px;
+ 
   height: 400px;
 
   display: flex;
@@ -12,7 +12,7 @@
 
   box-shadow: 0px 0px 10px 5px rgb(244, 239, 239, 0.8);
   border-radius: 22px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
   .icon {
     padding: 1.5rem;
@@ -22,14 +22,15 @@
 
     justify-content: space-between;
 
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
     p {
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 600;
       font-size: 26px;
-    }
-
-    img {
-      width: 30px;
     }
   }
 
@@ -70,6 +71,7 @@
       justify-content: center;
 
       button {
+        width: 100%;
         padding: 0.5rem;
         // border: 1px solid #000;
         border: none;
@@ -86,32 +88,31 @@
   }
 }
 
-
 @media screen and (min-width: 800px) {
-  
   .discover_card {
     width: 400px;
-    height: 250px;
-  
-    flex-direction: column;
-  
-    // &:hover {
-    //   transform: scale(1.02);
-    // }
+    height: 350px;
+
+    margin-bottom: 1rem;
+
+   
+
+    &:hover {
+      transform: scale(1.02);
+    }
+    
     .description_container {
-      height: 100px;
-      flex-direction: row;
-      padding: 1rem;
+      
+      
+      
 
       .btn_title {
-        display: inline-block;
-
-
         
+
         button {
-          margin-top: 1rem;
+          
           cursor: pointer;
-  
+
           &:hover {
             color: white;
             background-color: #bc6e7e;
@@ -120,10 +121,5 @@
         }
       }
     }
-
   }
-
-
 }
- 
-
