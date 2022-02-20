@@ -8,13 +8,16 @@
 .modalContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   box-shadow: 0 0 0 2000px rgba(24, 22, 22, 0.8);
 
 
   opacity: 1;
 
-  margin: 0px 42px;
+  // margin: 0px 42px;
+  margin: 2rem auto;
+  
 
   padding: 3rem;
 
@@ -43,6 +46,7 @@
     font-weight: 800;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 10px;
     
   }
 
@@ -57,10 +61,12 @@
   }
 
   .modalImg {
+   
     margin-top: 2rem;
     height: 130px;
     object-fit: cover;
     object-position: end;
+    border-radius: 10px;
   }
 
   .modalBodyContainer {
@@ -102,6 +108,8 @@
       gap: 1rem;
       margin-top: 0.8rem;
       margin-bottom: 0.8rem;
+      
+  
     }
   }
 }

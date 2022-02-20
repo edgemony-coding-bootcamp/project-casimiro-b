@@ -2,8 +2,8 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { auth } from '../../firebase-config';
-import { signOut } from 'firebase/auth';
+import { auth } from "../../firebase-config";
+import { signOut } from "firebase/auth";
 import { FaUserAlt, FaUserAltSlash } from "react-icons/fa";
 import styles from "./Header.module.scss";
 
@@ -38,14 +38,23 @@ const Header = (props) => {
     scrollNav();
     window.addEventListener("scroll", scrollNav);
   }, []);
-  console.log(props.user)
+  console.log(props.user);
   return (
     <header
-      className={`${styles.header} ${isActive || navScroll ? styles.headerResp : ""
-        }`}
+      className={`${styles.header} ${
+        isActive || navScroll ? styles.headerResp : ""
+      }`}
     >
-      <Link to="/">  <p className={`${styles.logo} ${isActive || navScroll ? styles.logoActive : ""
-        }`}>{name}</p></Link>
+      <Link to="/">
+        {" "}
+        <p
+          className={`${styles.logo} ${
+            isActive || navScroll ? styles.logoActive : ""
+          }`}
+        >
+          {name}
+        </p>
+      </Link>
       <button className={styles.resp_menu} onClick={handleMenu}>
         {isActive ? <MdClose className={styles.icon_menu} /> : <FiMenu />}
       </button>
@@ -58,8 +67,14 @@ const Header = (props) => {
           </li>
         ))}
       </ul>
-      <p><Link to={props.dash}><FaUserAlt /></Link></p>
-      <p onClick={props.logOut}><FaUserAltSlash /></p>
+      <p>
+        <Link to={props.dash}>
+          <FaUserAlt />
+        </Link>
+      </p>
+      <p onClick={props.logOut}>
+        <FaUserAltSlash />
+      </p>
     </header>
   );
 };

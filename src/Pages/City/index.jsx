@@ -50,14 +50,14 @@ const City = () => {
           </div>
         </div>
         <div className={styles.containerThree}>
-          <Link to={"/discover"}>
+          <Link to={`/eventi/${cities.id}`}>
             <div className={styles.citiesEvents}>
               <h2>
                 Gli eventi in <br /> città
               </h2>
             </div>
           </Link>
-          <Link to={"/experience"}>
+          <Link to={"/esperienze"}>
             <div className={styles.citiesExperience}>
               <h2>
                 Esperienze <br /> da vivere

@@ -2,6 +2,7 @@ import DiscoverCard from "./DiscoverCard";
 import { FETCH_ALL_DATA } from "../../store/action";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useMatch } from "react-router-dom";
 import styles from "./Discover.module.scss";
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
@@ -10,12 +11,11 @@ import DiscoverMenu from "../../Components/Menu";
 import Modal from "../../Components/Modal";
 
 const Discover = () => {
-  const user = useSelector((state) => state.user)
+  const user = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
-  const [author, setAuthor] = useState("All");
+  const [author, setAuthor] = useState("Tutti gli eventi");
 
-  console.log(user);
   const [popular, setPopular] = useState(false);
 
   const [favorite, setFavorite] = useState(false);
@@ -28,11 +28,15 @@ const Discover = () => {
 
   const [isClicked, setIsClicked] = useState([]);
 
+  const match = useMatch("eventi/:id");
+
+
+  // console.log(match.params.id);
+
   const handleOpen = (id) => {
     setIsClicked(events.find((idCard) => idCard.id === id));
     setModalOpen(true);
   };
-  console.log(isClicked)
 
   const handlePopular = () => {
     setReccomended(false);
@@ -65,8 +69,8 @@ const Discover = () => {
 
   return (
     <div>
-      {
-        modalOpen && <Modal
+      {modalOpen && (
+        <Modal
           event={isClicked}
           discover={true}
           image={isClicked.image}
@@ -74,8 +78,9 @@ const Discover = () => {
           price={isClicked.price}
           description={isClicked.description}
           city={isClicked.city}
-          handleClose={handleClose} />
-      }
+          handleClose={handleClose}
+        />
+      )}
 
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
@@ -90,7 +95,7 @@ const Discover = () => {
               handleRaccomended={handleReccomended}
             />
           </div>
-          <DiscoverText />
+          <DiscoverText author={author} />
         </div>
 
         <div className={styles.discoverElementTwo}>
@@ -109,7 +114,7 @@ const Discover = () => {
             <div className={favorite ? styles.containerCard : styles.favorite}>
               {events
                 ?.filter((el) => el.favorite === true)
-                .filter((el) => (author !== "All" ? el.city === author : el))
+                .filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
@@ -125,7 +130,7 @@ const Discover = () => {
             <div className={popular ? styles.containerCard : styles.popular}>
               {events
                 ?.filter((el) => el.popular === true)
-                .filter((el) => (author !== "All" ? el.city === author : el))
+                .filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
@@ -145,7 +150,7 @@ const Discover = () => {
             >
               {events
                 ?.filter((el) => el.recommended === true)
-                .filter((el) => (author !== "All" ? el.city === author : el))
+                .filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
@@ -166,7 +171,7 @@ const Discover = () => {
               }
             >
               {events
-                ?.filter((el) => (author !== "All" ? el.city === author : el))
+                ?.filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>

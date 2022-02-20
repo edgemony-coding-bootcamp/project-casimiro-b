@@ -8,10 +8,10 @@
 
   width: 100%;
   height: auto;
-  bottom: 0;
   background-color: $main;
 
   padding: 0 2rem;
+  border-radius: 20px 20px 0 0;
 
   text-align: center;
 
@@ -51,10 +51,12 @@
 @media screen and (min-width: 800px) {
 
     .footer {
+   
         display: grid;
         align-items: start;
         grid-template-columns: repeat(3, 1fr);
-        padding: 20px 0;
+        padding: 2rem 0;
+        
 
         .footerSocial {
           padding-top: 0;

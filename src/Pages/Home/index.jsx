@@ -1,5 +1,3 @@
-import ParallaxComponent from "./ParallaxComponent";
-import ParallaxComponentCenter from "./ParallaxComponentCenter";
 import CardHomepage from "./CardHomepage";
 import { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
@@ -30,13 +28,12 @@ const Home = () => {
     dispatch(FETCH_ALL_DATA_CARD());
   }, []);
 
-  
-
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
-    { width: 768, itemsToShow: 3 },
+    { width: 970, itemsToShow: 3 },
     { width: 1200, itemsToShow: 4 },
+    { width: 1600, itemsToShow: 5 },
   ];
 
   const ZoomInScrollOut = batch(StickyIn(), Fade());
@@ -55,7 +52,7 @@ const Home = () => {
         </ScrollPage>
         <ScrollPage page={1}>
           <div className={styles.bgScroll}>
-            <Animator animation={ZoomInScrollOut}>
+            <Animator animation={FadeUp}>
               <h3>C'è la terra nei miei ricordi,</h3>
             </Animator>
           </div>
@@ -72,47 +69,59 @@ const Home = () => {
             </Animator>
           </div>
         </ScrollPage>
+
         <ScrollPage page={4}>
           <Animator animation={batch(Fade(), Sticky())}>
             <img src="https://images.unsplash.com/photo-1598976895839-9cb03d135e4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" />
           </Animator>
         </ScrollPage>
+
         <ScrollPage page={5}>
-          <Animator animation={batch(Fade(), Sticky())}>
-            <img src="https://images.unsplash.com/photo-1586729150659-40c989036a30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" />
-          </Animator>
-          <Animator animation={FadeUp}>
-            <h3 className={styles.sky}>ed un cielo che non finisce mai.</h3>
-          </Animator>
-        </ScrollPage>
-      
-      <ScrollPage page={6}>
-          <div className={styles.bgScrollMin}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <h2>
-                Scegli la tua meta, <br></br> scegli il tuo ricordo.
-              </h2>
+          <div className={styles.bgScroll}>
+            <Animator animation={FadeUp}>
+              <h3>ed un cielo che non finisce mai.</h3>
             </Animator>
           </div>
         </ScrollPage>
-      </ScrollContainer>
 
-      <div className={styles.carouselDiv}>
-        <h1>'Ddocu consiglia</h1>
-        <div className={styles.containercity}>
-          <Carousel breakPoints={breakPoints}>
-            {card?.map((item, index) => (
-              <Link key={index} to={`/${item.id}`}>
-                <CardHomepage
-                  key={index}
-                  title={item.title}
-                  imagecity={item.imagecity}
-                />
-              </Link>
-            ))}
-          </Carousel>
-        </div>
-      </div>
+        <ScrollPage page={6}>
+          <Animator animation={batch(Fade(), Sticky())}>
+            <img src="https://images.unsplash.com/photo-1586729150659-40c989036a30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" />
+          </Animator>
+        </ScrollPage>
+
+        <ScrollPage page={7}>
+          <div className={styles.bgScroll}>
+            <Animator animation={batch(Fade(), Sticky())}>
+              <h3>
+                Scegli la tua meta, <br></br> scegli il tuo ricordo.
+              </h3>
+            </Animator>
+          </div>
+        </ScrollPage>
+
+        <ScrollPage page={8}>
+          {/* <div className={styles.bgScrollMin}>
+
+          </div> */}
+          <div className={styles.carouselDiv}>
+            <h1>Destinazioni popolari</h1>
+            <div className={styles.containercity}>
+              <Carousel breakPoints={breakPoints}>
+                {card?.map((item, index) => (
+                  <Link key={index} to={`/${item.id}`}>
+                    <CardHomepage
+                      key={index}
+                      title={item.title}
+                      imagecity={item.imagecity}
+                    />
+                  </Link>
+                ))}
+              </Carousel>
+            </div>
+          </div>
+        </ScrollPage>
+      </ScrollContainer>
     </>
   );
 };

@@ -1,183 +1,200 @@
 @import "../../Tools/General.scss";
 
-.heroMain {
+.container_hero {
+  height: 100vh;
 
-    height: 650px;
-    background: url("https://images.unsplash.com/photo-1603487831378-8cff3872abef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80") no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.7;
+  background: url("https://images.unsplash.com/photo-1603487831378-8cff3872abef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
 
-    h1 {
-        font-family: 'Source Sans Pro', sans-serif;
+  .heroMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+
+    height: 100vh;
+
+    .title {
+      h1 {
+        font-family: "Source Sans Pro", sans-serif;
         color: $mainLighter;
         font-size: 40px;
-        padding-top: 100px;
-        padding-left: 30px;
+        text-align: center;
+      }
+
+      p {
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        font-size: 14px;
+
+        padding-top: 1rem;
+      }
     }
-}
 
-.cityList {
-    margin: 40px 20px;
-    letter-spacing: 5px;
+    .cityList {
+      background-color: $main;
+      margin: 40px 40px;
+      margin-bottom: -5rem;
 
-    ul {
+      letter-spacing: 5px;
+      border-radius: 25px;
+      padding: 2rem 0;
+
+      ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
 
         li {
-            padding: 10px 15px;
-            cursor: pointer;
-            color: $secondary;
-            font-weight: bold;
-
-            &:hover {
-                color: #000;
-            }
-
+          padding: 30px 15px;
+          cursor: pointer;
+          color: #000;
+          font-weight: bold;
         }
+      }
     }
+  }
 }
 
+.container_two {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-
-.sectionCity {
+  .sectionCity {
     display: flex;
     flex-direction: column;
-    margin: 100px 40px 0;
-}
+    
 
-.sectionHeader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 70px;
+    .sectionHeader {
+      display: flex;
+      flex-direction: column;
+      
+      
+      margin-bottom: 70px;
 
-    h1 {
-        color: black;
+      h1 {
+
+        margin: 2rem auto;
+        margin-bottom: 1rem;
+        color: #000;
+      }
+
+      button{
+        margin: 0 auto;
+        display: block;
+
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $secondary;
+          color: #fff;
+          transform: scale(1.02);
+          transition: 0.3s all ease;
+        }
+      }
     }
-}
 
-.sectionMain {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 30px 0;
-}
+    
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: space-around;
+      // align-items: center;
+      // margin: 30px 0;
 
-.sectionBlock {
-    width: 100vw;
-    height: 600px;
-    margin-bottom: 40px;
-    background-repeat: no-repeat;
-    opacity: 86%;
-    background-size: 100vw 600px;
-    border-radius: 10px;
-}
+      .sectionCard {
 
-.sectionBlock_text {
-    color: $mainLighter;
-    margin: 220px 0 0;
-    padding: 50px 70px;
-    height: 50%;
-    text-align: left;
-    font-size: 25px;
-    font-family: 'Source Sans Pro', sans-serif;
+        // gap: 3rem;
+        
+       
+        display: flex;
+ 
+        flex-direction: row;
+        overflow-x: scroll;
+        
 
-    h2 {
-    font-size: 48px;
-    font-family: 'Source Sans Pro', sans-serif;
-    padding-bottom: 20px;
-    }
-}
-
-.sectionCard {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 30px;
+       
+        justify-content: space-between;
+        
+      }
+    
+  }
 }
 
 @media screen and (min-width: 800px) {
-
-    .wrapperModal{
-        margin-top: -570px;
-    }
+  .container_hero {
+    background-position-y: -150px;
 
     .heroMain {
-        height: 550px;
-        
+      gap: 10rem;
+
+      .title {
         h1 {
-            font-size: 40px;
-            padding-top: 150px;
-            padding-left: 60px;
+          font-size: 56px;
         }
-    }
 
-    .cityList {
-    
-            li {
-                padding: 0 15px;
+        p {
+          font-size: 24px;
+        }
+      }
 
-                &:hover {
-                    color: $secondary;
-                }
+      .cityList {
+        margin: 0 auto;
+        width: auto;
+        padding: 3rem 5rem;
+        border-radius: 35px;
+
+        ul {
+          li {
+            padding: 0 15px;
+
+            &:hover {
+              color: $secondary;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .container_two {
+    .sectionCity {
+      margin: 60px 70px 50px;
+      height: 80vh;
 
 
-        }
-
-        .sectionCity {
-            display: block;
-            margin: 60px 70px 50px;
-        }
-
-        .sectionHeader {
-            flex-direction: row;
-            align-items: baseline;
-            justify-content: center;
-        }
-        
-        .sectionMain {
-            justify-content: space-between;
-            flex-direction: row;
-            align-items: flex-start;
-        }
-        
-        .sectionBlock {
-            width: 500px;
-            height: 600px;
-            margin-right: 70px;
-            background-size: 500px 600px;
-            
-        }
-        
-        .sectionBlock_text{
-        margin: 300px 0 0;
-
-        }
+  
 
         .sectionCard {
-            flex-direction: row;
-            justify-content: space-around;
-            // max-width: 700px;
-            width: 100vw;
-            gap: 2rem;
-            row-gap: 3rem;
-            height: 600px;
-            // column-gap: 20px;
-            overflow: auto;
-            // box-shadow: 0px 0px 10px 5px rgb(244, 239, 239, 0.6);
-            border-radius: 10px;
-            padding: 1.5rem;
+          
+          gap: 3rem;
+          // max-width: 700px;
+         
+          
+          flex-wrap: wrap;
+    
+          height: 900px;
+          // column-gap: 20px;
+          overflow: scroll;
+          // box-shadow: 0px 0px 10px 5px rgb(244, 239, 239, 0.6);
+          border-radius: 10px;
+          padding: 1.5rem 4rem;
+         
         }
 
-            .sectionCard::-webkit-scrollbar {
-            display: none;
+        .sectionCard::-webkit-scrollbar {
+          display: none;
+        }
+      
     }
-        
-  
   }
+}
