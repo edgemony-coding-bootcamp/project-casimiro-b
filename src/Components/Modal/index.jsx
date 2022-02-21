@@ -8,7 +8,7 @@ import { MdClose } from "react-icons/md";
 
 import styles from "./Modal.module.scss";
 
-const Modal = ({ handleClose, event, discover, image, title, price, description, city }) => {
+const Modal = ({ handleClose, event, discover, image, title, price, description, city, Add }) => {
 
   const date = new Date(event.date)
 
@@ -56,7 +56,7 @@ const Modal = ({ handleClose, event, discover, image, title, price, description,
           <div className={styles.modalFormInput}>
             <InputModal type="text" text="Nome e Congnome" />
             <InputModal type="text" text="E-mail" />
-            <ButtonModal text="Prenota" />
+            <ButtonModal text="Aggiungi al carrello" Add={Add} />
           </div>
         </div>
       </div>;

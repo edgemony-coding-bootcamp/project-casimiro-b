@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import {
   FETCH_ALL_DATA_EXPERIENCE,
   FETCH_ALL_DATA_CARD,
+  ADD_CART,
 } from "../../store/action";
 
 import styles from "./Experience.module.scss";
@@ -23,6 +24,7 @@ const Experience = () => {
   const dispatch = useDispatch();
   const experience = useSelector((state) => state.experience);
   const infoCity = useSelector((state) => state.card);
+  const cart = useSelector((state) => state.cart);
 
   const info = infoCity.filter((el) => el.id == cityId);
 
@@ -42,14 +44,17 @@ const Experience = () => {
     dispatch(FETCH_ALL_DATA_CARD());
   }, [cityId]);
 
+  const addToCart = () => {
+    dispatch(ADD_CART({
+      id: `${isClicked.id}`,
+      image: `${isClicked.cover_image_url}`,
+      title: `${isClicked.title}`,
+      price: `${isClicked.retail_price.formatted_iso_value}`,
+    }))
+  };
+
   // console.log(experience.data[0].city.name);
   // console.log(image[0].imagecity)
-  const ImageStyle = {
-    hero: {
-      backgroundImage: `url(${"https://images.unsplash.com/photo-1576582356030-846623155e47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"})`,
-      objectFit: "cover",
-    },
-  };
 
   return (
     <div className={styles.prova_container}>
@@ -63,6 +68,7 @@ const Experience = () => {
           description={isClicked.description}
           city={isClicked.city.name}
           handleClose={handleClose}
+          Add={addToCart}
         />
       )}
 
@@ -79,27 +85,27 @@ const Experience = () => {
           <div className={styles.cityList}>
             <ul>
               <AnchorLink href="#city">
-                <li onClick={() => setCityId(24)}>PALERMO</li>{" "}
+                <li onClick={() => setCityId(24)}>PALERMO</li>
               </AnchorLink>
 
               <AnchorLink href="#city">
-                <li onClick={() => setCityId(15)}>CATANIA</li>{" "}
+                <li onClick={() => setCityId(15)}>CATANIA</li>
               </AnchorLink>
 
               <AnchorLink href="#city">
-                <li onClick={() => setCityId(572)}>MESSINA</li>{" "}
+                <li onClick={() => setCityId(572)}>MESSINA</li>
               </AnchorLink>
 
               <AnchorLink href="#city">
-                <li onClick={() => setCityId(587)}>TRAPANI</li>{" "}
+                <li onClick={() => setCityId(587)}>TRAPANI</li>
               </AnchorLink>
 
               <AnchorLink href="#city">
-                <li onClick={() => setCityId(265)}>AGRIGENTO</li>{" "}
+                <li onClick={() => setCityId(265)}>AGRIGENTO</li>
               </AnchorLink>
 
               <AnchorLink href="#city">
-                <li onClick={() => setCityId(147)}>SIRACUSA</li>{" "}
+                <li onClick={() => setCityId(147)}>SIRACUSA</li>
               </AnchorLink>
             </ul>
           </div>
@@ -113,6 +119,9 @@ const Experience = () => {
             <Link to={`/${cityId}`}>
             <button>scopri di più sulla città</button>
             </Link>
+            <Link to="/sidecart">
+            <button>carrello</button>
+          </Link>
           </div>
 
           <div className={styles.sectionCard}>

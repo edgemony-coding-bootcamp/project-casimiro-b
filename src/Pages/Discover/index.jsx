@@ -1,5 +1,6 @@
 import DiscoverCard from "./DiscoverCard";
-import { FETCH_ALL_DATA } from "../../store/action";
+import { Link } from "react-router-dom";
+import { FETCH_ALL_DATA, ADD_CART } from "../../store/action";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useMatch } from "react-router-dom";
@@ -11,9 +12,11 @@ import DiscoverMenu from "../../Components/Menu";
 import Modal from "../../Components/Modal";
 
 const Discover = () => {
-  const user = useSelector((state) => state.user);
-
   const dispatch = useDispatch();
+  // const user = useSelector((state) => state.user);
+
+  const cart = useSelector((state) => state.cart);
+
   const [author, setAuthor] = useState("Tutti gli eventi");
 
   const [popular, setPopular] = useState(false);
@@ -29,10 +32,7 @@ const Discover = () => {
   const [isClicked, setIsClicked] = useState([]);
 
   const match = useMatch("eventi/:id");
-
-
-  // console.log(match.params.id);
-
+  
   const handleOpen = (id) => {
     setIsClicked(events.find((idCard) => idCard.id === id));
     setModalOpen(true);
@@ -63,6 +63,15 @@ const Discover = () => {
 
   const sortingText = (e) => setAuthor(e.target.value);
 
+  const addToCart = () => {
+    dispatch(ADD_CART({
+      id: `${isClicked.id}`,
+      image: `${isClicked.image}`,
+      title: `${isClicked.title}`,
+      price: `${isClicked.price}`,
+    }))
+  };
+
   useEffect(() => {
     dispatch(FETCH_ALL_DATA());
   }, []);
@@ -79,6 +88,7 @@ const Discover = () => {
           description={isClicked.description}
           city={isClicked.city}
           handleClose={handleClose}
+          Add={addToCart}
         />
       )}
 
@@ -95,6 +105,8 @@ const Discover = () => {
               handleRaccomended={handleReccomended}
             />
           </div>
+
+
           <DiscoverText author={author} />
         </div>
 
@@ -114,7 +126,9 @@ const Discover = () => {
             <div className={favorite ? styles.containerCard : styles.favorite}>
               {events
                 ?.filter((el) => el.favorite === true)
-                .filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
+                .filter((el) =>
+                  author !== "Tutti gli eventi" ? el.city === author : el
+                )
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
@@ -130,7 +144,9 @@ const Discover = () => {
             <div className={popular ? styles.containerCard : styles.popular}>
               {events
                 ?.filter((el) => el.popular === true)
-                .filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
+                .filter((el) =>
+                  author !== "Tutti gli eventi" ? el.city === author : el
+                )
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
@@ -150,7 +166,9 @@ const Discover = () => {
             >
               {events
                 ?.filter((el) => el.recommended === true)
-                .filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
+                .filter((el) =>
+                  author !== "Tutti gli eventi" ? el.city === author : el
+                )
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
@@ -171,7 +189,9 @@ const Discover = () => {
               }
             >
               {events
-                ?.filter((el) => (author !== "Tutti gli eventi" ? el.city === author : el))
+                ?.filter((el) =>
+                  author !== "Tutti gli eventi" ? el.city === author : el
+                )
                 .sort((a, b) => (a.date > b.date ? 1 : -1))
                 .map((event, index) => (
                   <div key={index}>
