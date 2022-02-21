@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { FETCH_ALL_DATA_CARD } from "../../store/action";
-import {CgScrollV} from "react-icons/cg" 
+import { CgScrollV } from "react-icons/cg";
 import {
   Animator,
   ScrollContainer,
@@ -45,49 +45,48 @@ const Home = () => {
       <ScrollContainer>
         <ScrollPage page={0}>
           <div className={styles.bgScroll}>
+
             <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
 
-          <div className={styles.firstScroll}>
+              <div className={styles.firstScroll}>
+               
 
-           
+              <div className={styles.secondText}>
 
-          <div className={styles.firstText}>
+                  <h1>'Ddocu</h1>
+                  
+              
+                 <button>Conosci l'isola.</button>
 
+                  <h3>
+                    Scopri gli eventi previsti in città, <br></br>
+                    prenota l'esperienza che ti ispira di più <br></br> e scopri
+                    l'isola insieme a noi.
+                  </h3>
+                
 
-
-          <h3>Scopri gli eventi previsti in città, <br></br>
-          prenota l'esperienza che ti ispira di più <br></br> e scopri l'isola insieme a noi.
-          </h3>
-
-        
-
+                
               </div>
 
-<div className={styles.elements}>
-  <h4>Inizia il viaggio.</h4>
-  <CgScrollV className={styles.iconScroll}/>
-       </div>       
-
-          <div className={styles.secondText}>
+              
+              
 
 
-      
-          <h1>'Ddocu</h1>
-          <h2>La nostra Sicilia per voi</h2>
 
 
-          </div>
+                <div className={styles.elements}>
+                  <h4>Inizia il viaggio.</h4>
+                  <CgScrollV className={styles.iconScroll} />
+                </div>
 
-
-         
-         
-
-          </div>
+               
+              </div>
 
 
             </Animator>
           </div>
         </ScrollPage>
+        
         <ScrollPage page={1}>
           <div className={styles.bgScroll}>
             <Animator animation={FadeUp}>
@@ -128,16 +127,13 @@ const Home = () => {
           </Animator>
         </ScrollPage>
 
-      
-
         <ScrollPage page={7}>
-         
           <div className={styles.carouselDiv}>
-            
             <div className={styles.leftText}>
-
-            <h1>Scegli la tua meta, <br></br> scegli il tuo ricordo.</h1>
-</div>
+              <h1>
+                Scegli la tua meta, <br></br> scegli il tuo ricordo.
+              </h1>
+            </div>
 
             <div className={styles.containercity}>
               <Carousel breakPoints={breakPoints}>
@@ -154,8 +150,6 @@ const Home = () => {
             </div>
           </div>
         </ScrollPage>
-
-
       </ScrollContainer>
     </>
   );

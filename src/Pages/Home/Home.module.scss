@@ -17,38 +17,18 @@
 .firstScroll {
   display: flex;
   flex-direction: column;
-  background-image: url("https://images.unsplash.com/photo-1558989835-97812eb9cf31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1772&q=80");
+  background-image: url("https://images.unsplash.com/photo-1632415002756-caf843f8c5c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
   height: 100vh;
   width: 100vw;
   color: white;
-
-  .firstText {
-    text-align: center;
-    margin: 80% 0% 0% 0%;
-    padding: 10px;
-    height: 100px;
-    width: 100%;
-    background-color: rgba(76, 79, 83, 0.281);
-    
-
-    
-    
-    color: rgb(255, 255, 255);
-    opacity: 80%;
-
-    h3 {
-      font-size: 20px;
-    }
-
-  }
+  
 
   .secondText {
-    margin: 28% 0% 0% 0%;
     text-align: center;
-    
 
     h1 {
       font-family: "Lora", serif;
+      font-weight: 500;
       font-size: 50px;
     }
 
@@ -58,42 +38,120 @@
     }
   }
 
-
   .elements {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40%;
-   
     
+
     .iconScroll {
       color: white;
-      
+
       width: 70px;
       height: 70px;
-      
     }
-  
   }
-  
 
-
-
-img {
-filter: opacity(85%);
-height: 100vh;
-width: 100vw;
-object-fit: cover;
-}
-
-
-
+  img {
+    filter: opacity(85%);
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 800px) {
+
   
+
+ 
+ 
+
+  
+  .firstScroll {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+    .secondText {
+      margin-top: 12%;
+      
+
+
+      h1 {
+        font-family: "Lora", serif;
+        font-size: 150px;
+        margin-bottom: 1rem;
+      }
+
+     
+     h3 {
+       margin-top: 3rem;}
+     
+
+      button {
+
+        
+        width: 300px;
+        height: 70px;
+        border-radius: 35px;
+        background-color:white;
+        border: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+       
+        
+        &:hover { background-color: rgb(219, 215, 210);}
+      }
+    }
+
+   
+    
+
+    .elements {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 10px;
+      
+
+      .iconScroll {
+        color: white;
+        margin-top: 10px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  .bgScroll {
+   
+    
+   background: linear-gradient(0deg, rgba(135, 172, 207, 0.301) 10%, rgba(77, 189, 223, 0.432) 100%);
+   width: 100vw;
+   height: 100vh;
+   color: white;
+
+  }
+
+  img {
+    
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+ 
+
   .carouselDiv {
     display: flex;
     flex-direction: row;
@@ -114,77 +172,7 @@ object-fit: cover;
     .containercity {
       width: 80%;
       gap: 2rem;
-      
     }
   }
-
-  .firstScroll {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    filter: brightness(90%);
-
-   
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-
-    .firstText {
-      text-align: center;
-      margin: 12% 0% 0% 0%;
-      padding: 40px;
-      height: 160px;
-      width: 600px;
-      border-radius: 10px;
-      
-
-      text-align: left;
-     
-      color: rgb(255, 255, 255);
-      opacity: 80%;
-
-      h3 {
-        font-size: 24px;
-      }
-    }
-
-    .secondText {
-      margin: 26% 10% 0% 0%;
-
-      h1 {
-        font-family: "Lora", serif;
-        font-size: 150px;
-      }
-
-      h2 {
-        margin-top: -22px;
-        font-size: 24px;
-      }
-    }
- 
-    .elements {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 40%;
-  
-  .iconScroll {
-    color: white;
-    margin-top: 10px;
-    width: 70px;
-    height: 70px;
-    
-  }}
 }
 
-img {
-  filter: opacity(85%);
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-}
- }

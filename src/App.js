@@ -18,7 +18,7 @@ const SignIn = lazy(() => import("./Pages/SignIn"));
 const Dashboard = lazy(() => import("./Pages/Dashboard"));
 
 const INIT_STATE = {
-  name: "'Ddocu",
+  name: "'D",
   nav: [
     { link: "/", label: "HOME" },
     { link: "/Eventi", label: "EVENTI" },

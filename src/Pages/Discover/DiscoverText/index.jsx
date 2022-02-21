@@ -9,19 +9,21 @@ const DiscoverText = (props) => {
       <h1>{props.author}.</h1>
 
       <p>
-        Anon comes in a fellow, takes off his crown, kisses it, pours poison in
-        the king's ears, and exit. The Queen returns, finds the King dead, and
-        makes passionate action.
+
+       All'interno di questa sezione troverai tutti gli eventi previsti nella città da te seleziona tramite il menù presente qui sopra.
+       In Sicilia è molto comune organizzare eventi all'aperto grazie al clima spesso favorevole, non mancano però quelli al chiuso, i musei ed i teatri più belli dell'Isola sono pronti ad accogliervi.
+
       </p>
 
       <p className={styles.quote}>
 
 
-        " The dead body is carried away. The Poisoner wooes the Queen with
-        gifts; she seems loth and unwilling awhile, but in the end accepts his
-        love."
+        "L'arte scuote dall'anima la polvere accumulata nella vita di tutti i giorni."
+
+
+
         <br></br>
-        <span>- R.Hollie</span>
+        <span>- P.Picasso</span>
         
       </p>
 
