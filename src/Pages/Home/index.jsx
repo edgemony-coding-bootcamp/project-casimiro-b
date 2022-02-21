@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { FETCH_ALL_DATA_CARD } from "../../store/action";
-
+import {CgScrollV} from "react-icons/cg" 
 import {
   Animator,
   ScrollContainer,
@@ -18,6 +18,7 @@ import {
 
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
+import { icons } from "react-icons";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -45,8 +46,45 @@ const Home = () => {
         <ScrollPage page={0}>
           <div className={styles.bgScroll}>
             <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
-              <h2>37°35′21″N / 14°08′53″E</h2>
-              <h5>Sicily, Italy.</h5>
+
+          <div className={styles.firstScroll}>
+
+           
+
+          <div className={styles.firstText}>
+
+
+
+          <h3>Scopri gli eventi previsti in città, <br></br>
+          prenota l'esperienza che ti ispira di più <br></br> e scopri l'isola insieme a noi.
+          </h3>
+
+        
+
+              </div>
+
+<div className={styles.elements}>
+  <h4>Inizia il viaggio.</h4>
+  <CgScrollV className={styles.iconScroll}/>
+       </div>       
+
+          <div className={styles.secondText}>
+
+
+      
+          <h1>'Ddocu</h1>
+          <h2>La nostra Sicilia per voi</h2>
+
+
+          </div>
+
+
+         
+         
+
+          </div>
+
+
             </Animator>
           </div>
         </ScrollPage>
@@ -59,7 +97,7 @@ const Home = () => {
         </ScrollPage>
         <ScrollPage page={2}>
           <Animator animation={batch(Fade(), Sticky())}>
-            <img src="https://images.unsplash.com/photo-1570720212222-6c41c9bc0706?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2233&q=80" />
+            <img src="https://images.unsplash.com/photo-1538074261162-c0b1526af15a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80" />
           </Animator>
         </ScrollPage>
         <ScrollPage page={3}>
@@ -72,7 +110,7 @@ const Home = () => {
 
         <ScrollPage page={4}>
           <Animator animation={batch(Fade(), Sticky())}>
-            <img src="https://images.unsplash.com/photo-1598976895839-9cb03d135e4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" />
+            <img src="https://images.unsplash.com/photo-1584892177250-542d04a9afe5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" />
           </Animator>
         </ScrollPage>
 
@@ -90,22 +128,17 @@ const Home = () => {
           </Animator>
         </ScrollPage>
 
+      
+
         <ScrollPage page={7}>
-          <div className={styles.bgScroll}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <h3>
-                Scegli la tua meta, <br></br> scegli il tuo ricordo.
-              </h3>
-            </Animator>
-          </div>
-        </ScrollPage>
-
-        <ScrollPage page={8}>
-          {/* <div className={styles.bgScrollMin}>
-
-          </div> */}
+         
           <div className={styles.carouselDiv}>
-            <h1>Destinazioni popolari</h1>
+            
+            <div className={styles.leftText}>
+
+            <h1>Scegli la tua meta, <br></br> scegli il tuo ricordo.</h1>
+</div>
+
             <div className={styles.containercity}>
               <Carousel breakPoints={breakPoints}>
                 {card?.map((item, index) => (
@@ -121,6 +154,8 @@ const Home = () => {
             </div>
           </div>
         </ScrollPage>
+
+
       </ScrollContainer>
     </>
   );
