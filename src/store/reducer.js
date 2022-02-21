@@ -11,6 +11,7 @@ const INIT_STATE = {
     error: null,
     loading: false,
 }
+  
 
 export const myReducer = (state = INIT_STATE, action) => {
 

@@ -106,10 +106,6 @@ const Discover = () => {
             />
           </div>
 
-          
-          <Link to="/sidecart">
-            <button>carrello</button>
-          </Link>
 
           <DiscoverText author={author} />
         </div>

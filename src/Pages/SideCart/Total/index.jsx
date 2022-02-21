@@ -4,7 +4,7 @@ const Total = (props) => {
     
     return (
         <div>
-            <h2>Total Price: {total} €</h2>
+            <p>{total} €</p>
         </div>
     )
 }
