@@ -38,7 +38,7 @@ const Header = (props) => {
     scrollNav();
     window.addEventListener("scroll", scrollNav);
   }, []);
-  console.log(props.user);
+ 
   return (
     <header
       className={`${styles.header} ${

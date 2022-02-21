@@ -1,0 +1,28 @@
+.card_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+
+    width: 300px;
+    height: 200px;
+
+    border-radius: 10px;
+    border: 1px solid red;
+
+    img {
+        
+        width: 100px;
+        height: 100px;
+
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card_text {
+        display: flex;
+        flex-direction: column;
+    }
+}

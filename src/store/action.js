@@ -1,18 +1,35 @@
-import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART } from './constance';
+import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, } from './constance';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import axios from 'axios';
 
-export const CART = (card) => async (dispatch) => {
+
+
+export const ADD_CART = (card) => async (dispatch) => {
     try {
-        dispatch({
-            type: ADD_TO_CART,
-            payload: card,
-        })
+        dispatch(
+            {
+                type: ADD_TO_CART,
+                payload: card,
+            }
+        )
     }
     catch (err) {
         console.log(err)
     }
+}
 
+export const REMOVE_CART = (id) => async (dispatch) => {
+    try {
+        dispatch(
+            {
+                type: REMOVE_TO_CART,
+                payload: id,
+            }
+        )
+    }
+    catch (err) {
+        console.log(err)
+    }
 }
 
 export const LOG_OUT = () => async (dispatch) => {
