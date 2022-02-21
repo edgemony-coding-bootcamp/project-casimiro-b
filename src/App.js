@@ -16,6 +16,7 @@ const City = lazy(() => import("./Pages/City"));
 const LogIn = lazy(() => import("./Pages/LogIn"));
 const SignIn = lazy(() => import("./Pages/SignIn"));
 const Dashboard = lazy(() => import("./Pages/Dashboard"));
+const SideCart = lazy(() => import("./Pages/SideCart"));
 
 const INIT_STATE = {
   name: "'Ddocu",
@@ -43,10 +44,10 @@ function App() {
 
   return (
     <>
- 
+
       <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
-  
+
 
       <Routes>
         <Route
@@ -118,6 +119,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <Dashboard />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/sidecart"
+          element={
+            <Suspense fallback={<Loading />}>
+              <SideCart />
             </Suspense>
           }
         />

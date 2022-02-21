@@ -2,7 +2,7 @@ import styles from './ButtonModal.module.scss';
 
 const ButtonModal = (props) => {
     return (
-        <button className={styles.modalBtn}>{props.text}</button>
+        <button className={styles.modalBtn} onClick={props.Add}>{props.text}</button>
     )
 }
 

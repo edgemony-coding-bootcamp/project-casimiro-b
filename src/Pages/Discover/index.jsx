@@ -1,5 +1,5 @@
 import DiscoverCard from "./DiscoverCard";
-import { FETCH_ALL_DATA } from "../../store/action";
+import { FETCH_ALL_DATA, CART } from "../../store/action";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useMatch } from "react-router-dom";
@@ -12,6 +12,8 @@ import Modal from "../../Components/Modal";
 
 const Discover = () => {
   const user = useSelector((state) => state.user);
+  const cart = useSelector((state) => state.cart);
+  console.log(cart)
 
   const dispatch = useDispatch();
   const [author, setAuthor] = useState("Tutti gli eventi");
@@ -63,12 +65,22 @@ const Discover = () => {
 
   const sortingText = (e) => setAuthor(e.target.value);
 
+  const addToCart = () => {
+    dispatch(CART({
+      img: `ciao`,
+      description: `ciao`,
+      price: `$ciao`
+    }))
+  }
+
   useEffect(() => {
+
     dispatch(FETCH_ALL_DATA());
   }, []);
 
   return (
     <div>
+
       {modalOpen && (
         <Modal
           event={isClicked}
@@ -79,6 +91,7 @@ const Discover = () => {
           description={isClicked.description}
           city={isClicked.city}
           handleClose={handleClose}
+          Add={addToCart}
         />
       )}
 
@@ -95,6 +108,11 @@ const Discover = () => {
               handleRaccomended={handleReccomended}
             />
           </div>
+          <button onClick={() => dispatch(CART({
+            img: `ciao`,
+            description: `ciao`,
+            price: `$ciao`
+          }))}>a cazzo</button>
           <DiscoverText author={author} />
         </div>
 

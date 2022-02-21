@@ -3,6 +3,7 @@ import { myReducer } from './reducer';
 import thunk from 'redux-thunk';
 
 const INIT_STATE = {
+    cart: [],
     user: {},
     events: [],
     experience: [],
