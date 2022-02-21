@@ -10,12 +10,12 @@
   .CardHomepage {
     display: flex;
     justify-content: space-between;
-    border-radius: 10px;
+    
     box-shadow: 0px 0px 1px;
     cursor: pointer;
     // height: 400px;
-    width: 300px;
-    height: 350px;
+    width: 400px;
+    height: 600px;
     
     background-size: cover;
     background-position: center;
@@ -66,7 +66,7 @@
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
       
 
-    
+      
       padding: 0px;
       justify-content: center;
 
@@ -78,3 +78,5 @@
     }
   }
 }
+
+
