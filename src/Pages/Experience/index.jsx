@@ -119,9 +119,7 @@ const Experience = () => {
             <Link to={`/${cityId}`}>
             <button>scopri di più sulla città</button>
             </Link>
-            <Link to="/sidecart">
-            <button>carrello</button>
-          </Link>
+
           </div>
 
           <div className={styles.sectionCard}>

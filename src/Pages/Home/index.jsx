@@ -19,6 +19,7 @@ import {
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 import { icons } from "react-icons";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -45,48 +46,31 @@ const Home = () => {
       <ScrollContainer>
         <ScrollPage page={0}>
           <div className={styles.bgScroll}>
-
             <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
-
               <div className={styles.firstScroll}>
-               
-
-              <div className={styles.secondText}>
-
+                <div className={styles.secondText}>
                   <h1>'Ddocu</h1>
-                  
-              
-                 <button>Conosci l'isola.</button>
+
+                  <AnchorLink href="#carousel">
+                    <button>Conosci l'isola.</button>
+                  </AnchorLink>
 
                   <h3>
                     Scopri gli eventi previsti in città, <br></br>
                     prenota l'esperienza che ti ispira di più <br></br> e scopri
                     l'isola insieme a noi.
                   </h3>
-                
-
-                
-              </div>
-
-              
-              
-
-
-
+                </div>
 
                 <div className={styles.elements}>
                   <h4>Inizia il viaggio.</h4>
                   <CgScrollV className={styles.iconScroll} />
                 </div>
-
-               
               </div>
-
-
             </Animator>
           </div>
         </ScrollPage>
-        
+
         <ScrollPage page={1}>
           <div className={styles.bgScroll}>
             <Animator animation={FadeUp}>
@@ -135,7 +119,7 @@ const Home = () => {
               </h1>
             </div>
 
-            <div className={styles.containercity}>
+            <div id="carousel" className={styles.containercity}>
               <Carousel breakPoints={breakPoints}>
                 {card?.map((item, index) => (
                   <Link key={index} to={`/${item.id}`}>

@@ -21,7 +21,6 @@
   height: 100vh;
   width: 100vw;
   color: white;
-  
 
   .secondText {
     text-align: center;
@@ -43,7 +42,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 
     .iconScroll {
       color: white;
@@ -62,13 +60,6 @@
 }
 
 @media screen and (min-width: 800px) {
-
-  
-
- 
- 
-
-  
   .firstScroll {
     height: 100vh;
     width: 100vw;
@@ -84,8 +75,6 @@
 
     .secondText {
       margin-top: 12%;
-      
-
 
       h1 {
         font-family: "Lora", serif;
@@ -93,37 +82,35 @@
         margin-bottom: 1rem;
       }
 
-     
-     h3 {
-       margin-top: 3rem;}
-     
+      h3 {
+        margin-top: 3rem;
+      }
 
       button {
-
-        
         width: 300px;
         height: 70px;
         border-radius: 35px;
-        background-color:white;
+        background-color: white;
         border: none;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         font-weight: bold;
         font-size: 16px;
-       
-        
-        &:hover { background-color: rgb(219, 215, 210);}
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(188, 110, 126);
+          color: white;
+          transform: scale(1.02);
+          transition: 0.5s all ease;
+        }
       }
     }
-
-   
-    
 
     .elements {
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-bottom: 10px;
-      
 
       .iconScroll {
         color: white;
@@ -135,22 +122,21 @@
   }
 
   .bgScroll {
-   
-    
-   background: linear-gradient(0deg, rgba(135, 172, 207, 0.301) 10%, rgba(77, 189, 223, 0.432) 100%);
-   width: 100vw;
-   height: 100vh;
-   color: white;
-
+    background: linear-gradient(
+      0deg,
+      rgba(135, 172, 207, 0.301) 10%,
+      rgba(77, 189, 223, 0.432) 100%
+    );
+    width: 100vw;
+    height: 100vh;
+    color: white;
   }
 
   img {
-    
     height: 100vh;
     width: 100vw;
     object-fit: cover;
   }
- 
 
   .carouselDiv {
     display: flex;
@@ -175,4 +161,3 @@
     }
   }
 }
-
