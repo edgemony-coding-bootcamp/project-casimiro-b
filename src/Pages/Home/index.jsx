@@ -55,7 +55,7 @@ const Home = () => {
                   <h1>'Ddocu</h1>
 
                   <AnchorLink href="#carousel">
-                    <button>DISCOVER SICILY.</button>
+                    <button>SCOPRI L'ISOLA</button>
                   </AnchorLink>
 
                   <h3>
@@ -92,9 +92,10 @@ const Home = () => {
           <div className={styles.bgScroll}>
 
             <Animator animation= {batch(Fade(0, 1,), Sticky(50, 48, 0), Move())}>
-              <h3>C'è la terra nei miei ricordi, <br></br>
-              c'è il vento che sa di mare <br></br>
-              <h3>ed un cielo che non finisce mai.</h3>
+              <h3>C'è il vento nei miei ricordi, <br></br>
+              il mare blu cobalto <br></br>
+              ed un cielo che non finisce mai...
+             
               </h3>
             </Animator>
           
