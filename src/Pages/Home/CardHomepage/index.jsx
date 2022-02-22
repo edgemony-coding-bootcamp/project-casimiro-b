@@ -1,22 +1,23 @@
 import styles from "./CardHomepage.module.scss"
 
 
-const CardHomepage = ({title, descriptioncity, imagecity}) => {
+const CardHomepage = ({title, imagecity}) => {
 
     return ( <div className={styles.container}>
 
-
+        
+         
+            
+           
+            
+           
 
         <div className={styles.CardHomepage} style={{backgroundImage: `url(${imagecity})`}}>  
 
            
-            {/* <div className={styles.opacity}></div> */}
+           <h3>{title}</h3>
 
-            <div className={styles.textcard}> 
-            
-            <h3>{title}</h3>
-            
-            </div>
+           
             
 
         </div>

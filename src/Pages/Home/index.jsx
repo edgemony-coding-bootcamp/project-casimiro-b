@@ -21,7 +21,7 @@ import {
 
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
-import video from "./video.mp4";
+import video from "./Media/video.mp4";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { icons } from "react-icons";
 
@@ -36,7 +36,7 @@ const Home = () => {
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
+    { width: 550, itemsToShow: 3 },
  
   ];
 
@@ -55,11 +55,11 @@ const Home = () => {
                   <h1>'Ddocu</h1>
 
                   <AnchorLink href="#carousel">
-                    <button>Conosci l'isola.</button>
+                    <button>DISCOVER SICILY.</button>
                   </AnchorLink>
 
                   <h3>
-                    Scopri gli eventi previsti in città, <br></br>
+                    Scopri gli eventi previsti in Sicilia, <br></br>
                     prenota l'esperienza che ti ispira di più <br></br> e scopri
                     l'isola insieme a noi.
                   </h3>
@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
 
                 <div className={styles.elements}>
-                  <h4>Inizia il viaggio.</h4>
+                  <h4>Comincia il viaggio.</h4>
                   <CgScrollV className={styles.iconScroll} />
                 </div>
               </div>
@@ -104,12 +104,10 @@ const Home = () => {
 
         <ScrollPage page={2}>
           <div id="carousel" className={styles.carouselDiv}>
-            <div className={styles.leftText}>
-              <h1>
-                Scegli la tua meta, <br></br> scegli il tuo ricordo.
-              </h1>
-            </div>
-
+        
+              <h1>  Scegli la tua meta, scegli il tuo ricordo.</h1>
+           
+         
             <div className={styles.containercity}>
               <Carousel breakPoints={breakPoints}>
                 {card?.map((item, index) => (

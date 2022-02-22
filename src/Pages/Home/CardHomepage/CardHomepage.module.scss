@@ -4,8 +4,22 @@
 .container {
   display: flex;
   
+  width: 400px;
+  height: 450px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+ 
 
-  
+  h3 {
+
+    margin-top: 100%;
+    font-size: 26px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    color: white;
+    
+  }
+
 
   .CardHomepage {
     display: flex;
@@ -15,7 +29,7 @@
     cursor: pointer;
     // height: 400px;
     width: 400px;
-    height: 600px;
+    height: 300px;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
@@ -26,32 +40,10 @@
     
 
     &:hover {
-      opacity: 90%;
+      opacity: 70%;
     }
 
-    .textcard {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      text-align: center;
-      
-      border-radius: 10px;
-      
-      width: 100%;
-      padding: 10px 5px 0;
-      
-      
-      
-
-      h3 {
-        font-size: 26px;
-        font-family: "Source Sans Pro", sans-serif;
-        font-weight: 700;
-        color: white;
-        
-      }
-    }
+    
   }
 }
 
@@ -75,7 +67,7 @@
 
 
       &:hover {
-        transform: scale(1.02);
+        transform: scale(1.06);
       }
     }
   }
