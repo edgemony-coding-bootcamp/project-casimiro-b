@@ -19,8 +19,6 @@ const Experience = () => {
 
   const [cityId, setCityId] = useState(24);
 
-  console.log(cityId)
-
   const dispatch = useDispatch();
   const experience = useSelector((state) => state.experience);
   const infoCity = useSelector((state) => state.card);
@@ -32,7 +30,6 @@ const Experience = () => {
     setIsClicked(experience.data.find((idCard) => idCard.uuid === uuid));
     setModalOpen(true);
   };
-  console.log(isClicked);
 
   const handleClose = () => {
     setModalOpen(false);
@@ -45,12 +42,14 @@ const Experience = () => {
   }, [cityId]);
 
   const addToCart = () => {
+    const checkCart = cart.includes(isClicked[0])
     dispatch(ADD_CART({
       id: `${isClicked.id}`,
       image: `${isClicked.cover_image_url}`,
       title: `${isClicked.title}`,
-      price: `${isClicked.retail_price.formatted_iso_value}`,
+      price: `${isClicked.retail_price.value}`,
     }))
+
   };
 
   // console.log(experience.data[0].city.name);
@@ -117,7 +116,7 @@ const Experience = () => {
           <div className={styles.sectionHeader}>
             <h1>{info[0]?.title}.</h1>
             <Link to={`/${cityId}`}>
-            <button>scopri di più sulla città</button>
+              <button>scopri di più sulla città</button>
             </Link>
 
           </div>

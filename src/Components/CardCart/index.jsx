@@ -22,8 +22,8 @@ const CardCart = ({ card }) => {
         </div>
 
         <div className={styles.card_actions}>
-         
- 
+
+
           <input type="number" min="0" max="10" value={1} />
           <button onClick={removeCard}>
             <MdDelete />

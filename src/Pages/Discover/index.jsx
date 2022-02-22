@@ -32,7 +32,7 @@ const Discover = () => {
   const [isClicked, setIsClicked] = useState([]);
 
   const match = useMatch("eventi/:id");
-  
+
   const handleOpen = (id) => {
     setIsClicked(events.find((idCard) => idCard.id === id));
     setModalOpen(true);
@@ -64,12 +64,14 @@ const Discover = () => {
   const sortingText = (e) => setAuthor(e.target.value);
 
   const addToCart = () => {
-    dispatch(ADD_CART({
-      id: `${isClicked.id}`,
-      image: `${isClicked.image}`,
-      title: `${isClicked.title}`,
-      price: `${isClicked.price}`,
-    }))
+    if (cart.includes(isClicked[0])) {
+      dispatch(ADD_CART({
+        id: `${isClicked.id}`,
+        image: `${isClicked.image}`,
+        title: `${isClicked.title}`,
+        price: `${isClicked.price}`,
+      }))
+    }
   };
 
   useEffect(() => {
