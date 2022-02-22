@@ -14,7 +14,7 @@ const CardHomepage = ({title, imagecity}) => {
 
         <div className={styles.CardHomepage} style={{backgroundImage: `url(${imagecity})`}}>  
 
-            <h3>{title}</h3>
+            
          
 
            
@@ -23,7 +23,7 @@ const CardHomepage = ({title, imagecity}) => {
         </div>
         
         
-        
+        <h3>{title}</h3>
         
         </div>
     )
