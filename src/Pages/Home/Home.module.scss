@@ -17,11 +17,11 @@
 .firstScroll {
   display: flex;
   flex-direction: column;
-  background-image: url("https://images.unsplash.com/photo-1632415002756-caf843f8c5c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+
+  background-image: url("./Home.png");
   height: 100vh;
   width: 100vw;
   color: white;
-  
 
   .secondText {
     text-align: center;
@@ -43,7 +43,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 
     .iconScroll {
       color: white;
@@ -62,13 +61,6 @@
 }
 
 @media screen and (min-width: 800px) {
-
-  
-
- 
- 
-
-  
   .firstScroll {
     height: 100vh;
     width: 100vw;
@@ -84,8 +76,6 @@
 
     .secondText {
       margin-top: 12%;
-      
-
 
       h1 {
         font-family: "Lora", serif;
@@ -93,37 +83,36 @@
         margin-bottom: 1rem;
       }
 
-     
-     h3 {
-       margin-top: 3rem;}
-     
+      h3 {
+        margin-top: 3rem;
+      }
 
       button {
-
-        
         width: 300px;
         height: 70px;
         border-radius: 35px;
-        background-color:white;
+        background-color: white;
         border: none;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         font-weight: bold;
         font-size: 16px;
-       
-        
-        &:hover { background-color: rgb(219, 215, 210);}
+
+        &:hover {
+          background-color: rgb(219, 215, 210);
+        }
       }
     }
 
-   
-    
+    video {
+      height: 100vh;
+      width: 100%;
+    }
 
     .elements {
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-bottom: 10px;
-      
 
       .iconScroll {
         color: white;
@@ -135,28 +124,30 @@
   }
 
   .bgScroll {
-   
-    
-   background: linear-gradient(0deg, rgba(135, 172, 207, 0.301) 10%, rgba(77, 189, 223, 0.432) 100%);
-   width: 100vw;
-   height: 100vh;
-   color: white;
+    display: flex;
 
+    flex-direction: row;
+    
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    text-align: center;
   }
 
   img {
-    
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
+    width: 340px;
+    height: 400px;
+    border-radius: 45%;
   }
- 
 
   .carouselDiv {
+    background-color: rgb(15, 42, 68);
+    color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 120vh;
+    height: 100vh;
+    
 
     .leftText {
       width: 50%;
@@ -170,9 +161,9 @@
     }
 
     .containercity {
-      width: 80%;
-      gap: 2rem;
+      
+      width: 100%;
+      
     }
   }
 }
-

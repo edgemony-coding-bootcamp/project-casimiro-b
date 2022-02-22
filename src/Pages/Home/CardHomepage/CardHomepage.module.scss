@@ -3,7 +3,7 @@
 
 .container {
   display: flex;
-
+  
 
   
 
@@ -16,12 +16,12 @@
     // height: 400px;
     width: 400px;
     height: 600px;
-    
+    border-radius: 20px;
     background-size: cover;
     background-position: center;
-
+    filter: opacity(90%);
     background-repeat: no-repeat;
-    opacity: 65%;
+    
 
     
 
@@ -57,6 +57,8 @@
 
 @media screen and (min-width: 800px) {
   .container {
+ 
+    
     .CardHomepage {
 
   
