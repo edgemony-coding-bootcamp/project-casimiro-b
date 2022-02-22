@@ -1,12 +1,14 @@
-@import "../../../Tools/General.scss";
+@import "../../Tools/General.scss";
 
 .wrapperBanner {
     width: 100%;
     height: 80px;
+    position: fixed;
     top: 0;
     background-color: $secondary;
     text-align: center;
-    z-index: 3;
+    z-index: 1;
+    transition: all 1;
 
     h3 {
         color: $mainLighter;
@@ -18,10 +20,10 @@
 @media screen and (min-width: 800px) {
     
     .wrapperBanner {
-        height: 115px;
+        height: 100px;
 
         h3 {
-            padding: 35px;
+            padding: 30px;
         }
     }
 }

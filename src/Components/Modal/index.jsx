@@ -1,7 +1,6 @@
 import TextModal from "./TextModal/index";
 import InputModal from "./InputModal";
 import ButtonModal from "./ButtonModal";
-
 import { useParams } from "react-router-dom";
 
 import { MdClose } from "react-icons/md";

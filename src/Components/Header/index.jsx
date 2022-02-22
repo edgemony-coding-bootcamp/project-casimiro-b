@@ -42,15 +42,13 @@ const Header = (props) => {
 
   return (
     <header
-      className={`${styles.header} ${
-        isActive || navScroll ? styles.headerResp : ""
-      }`}
+      className={`${styles.header} ${isActive || navScroll ? styles.headerResp : ""
+        }`}
     >
       <Link to="/">
         <p
-          className={`${styles.logo} ${
-            isActive || navScroll ? styles.logoActive : ""
-          }`}
+          className={`${styles.logo} ${isActive || navScroll ? styles.logoActive : ""
+            }`}
         >
           {name}
         </p>
@@ -61,19 +59,19 @@ const Header = (props) => {
       <ul className={`${styles.menuItems} ${isActive ? styles.showMenu : ""}`}>
         {links.map((item, index) => (
           <li key={index}>
-            <Link to={item.link} className={CheckActive(item.link)}>
+            <Link to={item.link} className={CheckActive(item.link)} onClick={() => setIsActive(!isActive)}>
               {item.label}
             </Link>
           </li>
         ))}
-               <Link to="/sidecart">
-           <FaShoppingCart/>
-          </Link>
-        <Link to={props.dash}>
+        <Link to="/sidecart" onClick={() => setIsActive(!isActive)}>
+          <FaShoppingCart />
+        </Link>
+        <Link to={props.dash} onClick={() => setIsActive(!isActive)}>
           <FaUserAlt />
         </Link>
         <Link onClick={props.logOut} to={props.dash}>
-        <FaUserAltSlash />
+          <FaUserAltSlash />
         </Link>
 
 
