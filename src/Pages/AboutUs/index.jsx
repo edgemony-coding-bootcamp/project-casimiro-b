@@ -1,8 +1,11 @@
 import styles from "./AboutUs.module.scss";
+import Banner from "../SideCart/Banner";
 
 const AboutUs = () => {
   return (
+    
     <div className={styles.containerBase}>
+    <Banner />
       <div className={styles.containerBaseTwo}>
         <div className={styles.containerOne}>
           
