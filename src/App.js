@@ -17,6 +17,7 @@ const LogIn = lazy(() => import("./Pages/LogIn"));
 const SignIn = lazy(() => import("./Pages/SignIn"));
 const Dashboard = lazy(() => import("./Pages/Dashboard"));
 const SideCart = lazy(() => import("./Pages/SideCart"));
+const NotFound = lazy(() => import("./Pages/NotFound"))
 
 const INIT_STATE = {
   name: "'D",
@@ -44,7 +45,7 @@ function App() {
 
   return (
     <>
-{/* dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} */}
+      {/* dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} */}
       <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
 
@@ -59,7 +60,7 @@ function App() {
           }
         />
         <Route
-          path="/:id"
+          path="/city/:id"
           element={
             <Suspense fallback={<Loading />}>
               <City />
@@ -127,6 +128,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <SideCart />
+            </Suspense>
+          }
+        />
+        <Route 
+          path="/*"
+          element={
+            <Suspense fallback={<Loading />}>
+              <NotFound />
             </Suspense>
           }
         />

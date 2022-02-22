@@ -122,7 +122,7 @@ const Home = () => {
             <div id="carousel" className={styles.containercity}>
               <Carousel breakPoints={breakPoints}>
                 {card?.map((item, index) => (
-                  <Link key={index} to={`/${item.id}`}>
+                  <Link key={index} to={`city/${item.id}`}>
                     <CardHomepage
                       key={index}
                       title={item.title}

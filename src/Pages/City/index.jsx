@@ -10,7 +10,7 @@ const City = () => {
   const cities = useSelector((state) => state.cities);
   console.log(cities);
 
-  const match = useMatch("/:id");
+  const match = useMatch("city/:id");
 
   console.log(match);
 
