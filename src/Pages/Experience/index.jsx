@@ -116,7 +116,7 @@ const Experience = () => {
         <div className={styles.sectionCity}>
           <div className={styles.sectionHeader}>
             <h1>{info[0]?.title}.</h1>
-            <Link to={`/${cityId}`}>
+            <Link to={`/city/${cityId}`}>
             <button>scopri di più sulla città</button>
             </Link>
 
