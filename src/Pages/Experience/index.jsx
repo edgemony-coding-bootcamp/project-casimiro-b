@@ -1,5 +1,6 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Modal from "../../Components/Modal";
+import Banner from "../../Components/Banner";
 import CardExperience from "./CardExperience";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
@@ -18,6 +19,8 @@ const Experience = () => {
   const [isClicked, setIsClicked] = useState([]);
 
   const [cityId, setCityId] = useState(24);
+
+  const [showBanner, setShowBanner] = useState(false);
 
   console.log(cityId)
 
@@ -51,6 +54,11 @@ const Experience = () => {
       title: `${isClicked.title}`,
       price: `${isClicked.retail_price.formatted_iso_value}`,
     }))
+
+    setShowBanner(true);
+    setTimeout(() => {
+      setShowBanner(false);
+    }, 2000);
   };
 
   // console.log(experience.data[0].city.name);
@@ -71,6 +79,7 @@ const Experience = () => {
           Add={addToCart}
         />
       )}
+      {showBanner && <Banner />}
 
       <div className={styles.container_hero}>
         <div className={styles.heroMain}>

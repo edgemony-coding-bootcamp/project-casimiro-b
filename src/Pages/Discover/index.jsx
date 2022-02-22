@@ -10,6 +10,7 @@ import DiscoverText from "./DiscoverText";
 import DiscoverMenu from "../../Components/Menu";
 
 import Modal from "../../Components/Modal";
+import Banner from "../../Components/Banner";
 
 const Discover = () => {
   const dispatch = useDispatch();
@@ -28,6 +29,8 @@ const Discover = () => {
   const events = useSelector((state) => state.events);
 
   const [modalOpen, setModalOpen] = useState(false);
+
+  const [showBanner, setShowBanner] = useState(false);
 
   const [isClicked, setIsClicked] = useState([]);
 
@@ -70,6 +73,11 @@ const Discover = () => {
       title: `${isClicked.title}`,
       price: `${isClicked.price}`,
     }))
+
+    setShowBanner(true);
+    setTimeout(() => {
+      setShowBanner(false);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -91,6 +99,7 @@ const Discover = () => {
           Add={addToCart}
         />
       )}
+      {showBanner && <Banner />}
 
       <div className={styles.discoverContOne}>
         <div className={styles.discoverElementOne}>
