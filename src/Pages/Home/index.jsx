@@ -91,7 +91,7 @@ const Home = () => {
 
           <div className={styles.bgScroll}>
 
-            <Animator animation= {batch(Fade(0, 1,), Sticky(50, 50, 0), Move())}>
+            <Animator animation= {batch(Fade(0, 1,), Sticky(50, 48, 0), Move())}>
               <h3>C'è la terra nei miei ricordi, <br></br>
               c'è il vento che sa di mare <br></br>
               <h3>ed un cielo che non finisce mai.</h3>

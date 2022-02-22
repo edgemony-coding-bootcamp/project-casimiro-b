@@ -9,13 +9,13 @@ const CardHomepage = ({title, imagecity}) => {
          
             
            
-            
+             
            
 
         <div className={styles.CardHomepage} style={{backgroundImage: `url(${imagecity})`}}>  
 
-           
-           <h3>{title}</h3>
+            <h3>{title}</h3>
+         
 
            
             
