@@ -8,6 +8,7 @@ import {
   FETCH_ALL_DATA_FAIL,
   ADD_TO_CART,
   REMOVE_TO_CART,
+  ADD_QUANTITY
 } from "./constance";
 import {
   createUserWithEmailAndPassword,
@@ -20,6 +21,17 @@ export const ADD_CART = (card) => async (dispatch) => {
     dispatch({
       type: ADD_TO_CART,
       payload: card,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const CHANGE_QUANTITY = ({ quantity, id }) => async (dispatch) => {
+  try {
+    dispatch({
+      type: ADD_QUANTITY,
+      payload: { quantity, id }
     });
   } catch (err) {
     console.log(err);
@@ -59,26 +71,26 @@ export const USER_SIGNUP =
     registerEmail,
     registerPassword
   ) =>
-  async (dispatch) => {
-    try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-      console.log(user);
-      setRegisterEmail("");
-      setRegisterPassword("");
+    async (dispatch) => {
+      try {
+        const user = await createUserWithEmailAndPassword(
+          auth,
+          registerEmail,
+          registerPassword
+        );
+        console.log(user);
+        setRegisterEmail("");
+        setRegisterPassword("");
 
-      dispatch({
-        type: USER_LOGGED_SUCCESS,
-        payload: user,
-      });
-    } catch (err) {
-      console.log(err);
-      console.log("Email o password non valide");
-    }
-  };
+        dispatch({
+          type: USER_LOGGED_SUCCESS,
+          payload: user,
+        });
+      } catch (err) {
+        console.log(err);
+        console.log("Email o password non valide");
+      }
+    };
 
 export const USER_LOGIN =
   (auth, loginEmail, loginPassword) => async (dispatch) => {

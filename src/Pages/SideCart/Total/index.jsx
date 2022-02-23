@@ -1,7 +1,6 @@
 const Total = (props) => {
     const total = props.cart.reduce(
-        (prevValue, currentValue) => prevValue + parseInt(currentValue.price), 0);
-    
+        (prevValue, currentValue) => prevValue + parseInt(currentValue.price * currentValue.quantity), 0);
     return (
         <div>
             <p>{total} €</p>

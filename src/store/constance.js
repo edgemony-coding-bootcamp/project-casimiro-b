@@ -12,4 +12,5 @@ export const USER_LOGGED_SUCCESS = 'USER_LOGGED_SUCCESS';
 
 // CART 
 export const ADD_TO_CART = 'ADD_TO_CART';
+export const ADD_QUANTITY = 'ADD_QUANTITY';
 export const REMOVE_TO_CART = 'REMOVE_TO_CART';

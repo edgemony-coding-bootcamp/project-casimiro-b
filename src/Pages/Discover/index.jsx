@@ -75,6 +75,7 @@ const Discover = () => {
           image: `${isClicked.image}`,
           title: `${isClicked.title}`,
           price: `${isClicked.price}`,
+          quantity: 1
         })
       );
       setShowBanner(true);
@@ -90,6 +91,7 @@ const Discover = () => {
             image: `${isClicked.image}`,
             title: `${isClicked.title}`,
             price: `${isClicked.price}`,
+            quantity: 1
           })
         );
         setShowBanner(true);
@@ -99,6 +101,7 @@ const Discover = () => {
       }
     }
   };
+  console.log(cart)
 
   useEffect(() => {
     console.log(cart);

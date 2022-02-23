@@ -1,4 +1,4 @@
-import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART } from './constance';
+import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, ADD_QUANTITY } from './constance';
 
 
 const INIT_STATE = {
@@ -11,7 +11,7 @@ const INIT_STATE = {
     error: null,
     loading: false,
 }
-  
+
 
 export const myReducer = (state = INIT_STATE, action) => {
 
@@ -57,13 +57,23 @@ export const myReducer = (state = INIT_STATE, action) => {
                 user: action.payload
             }
         case ADD_TO_CART:
-            
+
             return {
                 ...state,
                 cart: [...state.cart, action.payload],
             }
+        case ADD_QUANTITY:
+            const payload = action.payload;
+            const newCartState = [...state.cart];
+            console.log(newCartState)
+            const foundIndex = newCartState.findIndex((card) => card.id === payload.id);
+            newCartState[foundIndex] = { ...newCartState[foundIndex], quantity: payload.quantity }
+            return {
+                ...state,
+                cart: newCartState
+            }
         case REMOVE_TO_CART:
-            
+
             return {
                 ...state,
                 cart: state.cart.filter((item) => item.id !== action.payload),

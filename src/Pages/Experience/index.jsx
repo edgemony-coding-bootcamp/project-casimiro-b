@@ -56,10 +56,11 @@ const Experience = () => {
     if (cart.length === 0) {
       dispatch(
         ADD_CART({
-          id: `${isClicked.id}`,
+          id: `${isClicked.city.id}`,
           image: `${isClicked.cover_image_url}`,
           title: `${isClicked.title}`,
           price: `${isClicked.retail_price.value}`,
+          quantity: 2
         })
       );
       setShowBanner(true);
@@ -71,10 +72,11 @@ const Experience = () => {
       } else {
         dispatch(
           ADD_CART({
-            id: `${isClicked.id}`,
+            id: `${isClicked.city.id}`,
             image: `${isClicked.cover_image_url}`,
             title: `${isClicked.title}`,
             price: `${isClicked.retail_price.value}`,
+            quantity: 1
           })
         );
         setShowBanner(true);
