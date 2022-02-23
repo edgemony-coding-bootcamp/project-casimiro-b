@@ -21,7 +21,7 @@ import {
 
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
-import video from "./Media/video.mp4";
+import video from "./Media/videoddocu.mp4";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
