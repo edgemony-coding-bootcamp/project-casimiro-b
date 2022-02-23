@@ -1,28 +1,29 @@
-import ParallaxComponent from "./ParallaxComponent";
-import ParallaxComponentCenter from "./ParallaxComponentCenter";
 import CardHomepage from "./CardHomepage";
 import { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { FETCH_ALL_DATA_CARD } from "../../store/action";
-
+import { CgScrollV } from "react-icons/cg";
 import {
   Animator,
   ScrollContainer,
   ScrollPage,
   batch,
   Fade,
-  FadeIn,
   Move,
-  MoveIn,
   MoveOut,
   Sticky,
   StickyIn,
-  ZoomIn,
+  Zoom,
+  FadeIn,
+  MoveIn,
 } from "react-scroll-motion";
 
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
+import video from "./Media/videoddocu.mp4";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -33,21 +34,14 @@ const Home = () => {
     dispatch(FETCH_ALL_DATA_CARD());
   }, []);
 
-  const images = [
-    "https://images.unsplash.com/photo-1559424092-88b61cb7a6c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    "https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-  ];
-
-  const description = [
-    `‘Ddocu è ipsum ponosm entiv. Pregt aferade. Folingar bast, biosam,lorem ipsum ponosm entiv. ‘Ddocu è ipsum ponosm entiv. Pregt aferade. Folingar bast, biosam,lorem ipsum ponosm entiv.`,
-    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error esse eius quod incidunt consequuntur omnis quae ab pariatur. Adipisci cumque neque iste dignissimos dolore velit assumenda, iure quaerat eius nemo?`,
-  ];
-
   const breakPoints = [
+
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 },
+    { width: 550, itemsToShow: 1 },
+    { width: 850, itemsToShow: 2 },
+    { width: 1150, itemsToShow: 3 },
+    { width: 1450, itemsToShow: 3 }
+ 
   ];
 
   const ZoomInScrollOut = batch(StickyIn(), Fade());
@@ -56,93 +50,85 @@ const Home = () => {
   return (
     <>
       <ScrollContainer>
+
         <ScrollPage page={0}>
           <div className={styles.bgScroll}>
-            <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -200))}>
-              <h2>37°35′21″N / 14°08′53″E </h2>
-              <h5>Sicily, Italy.</h5>
+            <Animator animation={batch(Sticky(), Fade(), MoveOut(0, -300))}>
+              <div className={styles.firstScroll}>
+                <div className={styles.secondText}>
+                  <h1>'Ddocu</h1>
+
+                  <AnchorLink href="#carousel">
+                    <button>SCOPRI L'ISOLA</button>
+                  </AnchorLink>
+
+                  <h3>
+                    Scopri gli eventi previsti in Sicilia, <br></br>
+                    prenota l'esperienza che ti ispira di più <br></br> e scopri
+                    l'isola insieme a noi.
+                  </h3>
+                  
+                </div>
+
+                <div className={styles.elements}>
+                  <h4>Comincia il viaggio.</h4>
+                  <CgScrollV className={styles.iconScroll} />
+                </div>
+              </div>
             </Animator>
           </div>
         </ScrollPage>
+
+     
+
         <ScrollPage page={1}>
+
+         <video
+          src={video}
+          loading="lazy"
+          autoPlay
+          muted
+          loop
+          playsinline
+        ></video>
+
+
           <div className={styles.bgScroll}>
-            <Animator animation={ZoomInScrollOut}>
-              <h3>C'era la terra nei miei ricordi,</h3>
+
+            <Animator animation= {batch(Fade(0, 1,), Sticky(50, 48, 0), Move())}>
+              <h3>C'è il vento nei miei ricordi, <br></br>
+              il mare blu cobalto <br></br>
+              ed un cielo che non finisce mai...
+             
+              </h3>
             </Animator>
+          
+           
           </div>
         </ScrollPage>
+
         <ScrollPage page={2}>
-            <Animator animation={batch(Fade(), Sticky())}>
-
-
-              <img src="https://images.unsplash.com/photo-1605447781678-2a5baca0e07b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"/>
-
-            </Animator>
-        </ScrollPage>
-        <ScrollPage page={3}>
-          <div className={styles.bgScroll}>
-            <Animator animation={FadeUp}>
-              <h3>c'era il vento che sapeva di mare</h3>
-            </Animator>
-          </div>
-        </ScrollPage>
-        <ScrollPage page={4}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <img src="https://images.unsplash.com/photo-1601324353981-5f920af43146?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"/>
-            </Animator>
-        </ScrollPage>
-        <ScrollPage page={5}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <img src="https://images.unsplash.com/photo-1617103099853-6dd647eb1489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
-            </Animator>
-            <Animator animation={FadeUp}>
-            <h2 className={styles.sky}>ed un cielo che non finiva mai.</h2>
-            </Animator>
-        </ScrollPage>
-        {/* <ScrollPage page={2}>
-          <div className={styles.section_3}>
-            <h2>
-              <Animator animation={MoveIn(-1000, 0)}>land</Animator>
-              <Animator animation={MoveIn(1000, 0)}>water</Animator>
-              <Animator animation={MoveOut(1000, 0)}>air</Animator>
-              <Animator animation={MoveOut(-1000, 0)}>fire</Animator>
-            </h2>
-          </div>
-        </ScrollPage> */}
-
-        {/* <ScrollPage page={6}>
-          <div className={styles.bgScroll}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <h3>è il cielo che non finisce mai.</h3>
-            </Animator>
-          </div>
-        </ScrollPage> */}
-
-
-        <ScrollPage page={6}>
-          <div className={styles.bgScrollMin}>
-            <Animator animation={batch(Fade(), Sticky())}>
-              <h2>Scegli la tua meta, <br></br> scegli il tuo ricordo.</h2>
-            </Animator>
+          <div id="carousel" className={styles.carouselDiv}>
+        
+              <h1>  Scegli la tua meta, scegli il tuo ricordo.</h1>
+           
+         
+            <div className={styles.containercity}>
+              <Carousel breakPoints={breakPoints}>
+                {card?.map((item, index) => (
+                  <Link key={index} to={`city/${item.id}`}>
+                    <CardHomepage
+                      key={index}
+                      title={item.title}
+                      imagecity={item.imagecity}
+                    />
+                  </Link>
+                ))}
+              </Carousel>
+            </div>
           </div>
         </ScrollPage>
       </ScrollContainer>
-
-      <div className={styles.carouselDiv}>
-        <div className={styles.containercity}>
-          <Carousel breakPoints={breakPoints}>
-            {card?.map((item, index) => (
-              <Link key={index} to={`/${item.id}`}>
-                <CardHomepage
-                  key={index}
-                  title={item.title}
-                  imagecity={item.imagecity}
-                />
-              </Link>
-            ))}
-          </Carousel>
-        </div>
-      </div>
     </>
   );
 };

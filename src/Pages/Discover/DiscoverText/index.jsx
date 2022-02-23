@@ -1,40 +1,33 @@
 import styles from "./DiscoverText.module.scss";
 
-const DiscoverText = () => {
+const DiscoverText = (props) => {
+
+
   return (
     <div className={styles.textContainer}>
 
-      <h1>William Shakespeare Hamlet</h1>
+      <h1>{props.author}.</h1>
 
       <p>
-        Anon comes in a fellow, takes off his crown, kisses it, pours poison in
-        the king's ears, and exit. The Queen returns, finds the King dead, and
-        makes passionate action. The Poisoner with some three or four Mutes,
-        comes in again, seeming to lament with her.
+
+       All'interno di questa sezione troverai tutti gli eventi previsti nella città da te seleziona tramite il menù presente qui sopra.
+       In Sicilia è molto comune organizzare eventi all'aperto grazie al clima spesso favorevole, non mancano però quelli al chiuso, i musei ed i teatri più belli dell'Isola sono pronti ad accogliervi.
+
       </p>
 
       <p className={styles.quote}>
 
 
-        " The dead body is carried away. The Poisoner wooes the Queen with
-        gifts; she seems loth and unwilling awhile, but in the end accepts his
-        love."
-        <br></br>
-        - R.Hollie
-      </p>
+        "L'arte scuote dall'anima la polvere accumulata nella vita di tutti i giorni."
 
-      <p>
 
-        The best actors in the world, either for tragedy, comedy, history,
-        pastoral, pastoral-comical, historical-pastoral, tragical-historical,
-        tragical-comical- historical-pastoral, scene individable, or poem.
 
         <br></br>
-
-        unlimited: Seneca cannot be too heavy nor Plautus too light. For the law
-        of writ and the liberty, these are the only men.
-
+        <span>- P.Picasso</span>
+        
       </p>
+
+    
 
     </div>
   );

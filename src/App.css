@@ -1,3 +1,5 @@
+
+
 .rec.rec-carousel {
   width: 100vw;
 }
@@ -6,15 +8,17 @@
 
 .rec.rec-arrow {
   border-radius: 0;
-  color: rgba(0, 0, 0, 0.5);
-  background-color: #f4efef;
+  color: white;
+  border: 2px solid white;
   box-shadow: none;
   visibility: hidden;
+  border-radius: 10px;
 }
 
 
 .rec.rec-arrow.rec-arrow:hover {
   background-color: #BC6E7E;
+  border: none
 }
 
 .rec.rec-arrow.rec-arrow:focus {
@@ -26,7 +30,14 @@
   background-color: #f4efef;
   box-shadow: none;
 
+
 } 
+
+.rec.rec-dot:focus {
+  background-color: #BC6E7E;
+  box-shadow: none;
+}
+
 
 .rec.rec-dot:hover { 
 
@@ -45,7 +56,7 @@ box-shadow: none;
 
 
   .rec.rec-carousel {
-    width: 100% ;
+    width: 80% ;
   }
 
 

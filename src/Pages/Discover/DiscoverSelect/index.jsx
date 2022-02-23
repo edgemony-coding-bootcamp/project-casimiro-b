@@ -4,9 +4,9 @@ const DiscoverSelect = ({ sort, sorting }) => {
   return (
     <div className={styles.selectContainer}>
       <form>
-        <label> Inserisci la tua città: </label>
+        <label> Seleziona la tua città: </label>
         <select onChange={sorting} className={styles.selectCity} value={sort}>
-          <option value="All"> All </option>
+          <option value="Tutti gli eventi"> Eventi in Sicilia </option>
           <option value="Palermo"> Palermo </option>
           <option value="Catania"> Catania </option>
           <option value="Messina"> Messina </option>

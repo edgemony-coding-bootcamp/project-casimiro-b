@@ -10,7 +10,7 @@ const City = () => {
   const cities = useSelector((state) => state.cities);
   console.log(cities);
 
-  const match = useMatch("/:id");
+  const match = useMatch("city/:id");
 
   console.log(match);
 
@@ -50,14 +50,14 @@ const City = () => {
           </div>
         </div>
         <div className={styles.containerThree}>
-          <Link to={"/discover"}>
+          <Link to={`/eventi/${cities.id}`}>
             <div className={styles.citiesEvents}>
               <h2>
                 Gli eventi in <br /> città
               </h2>
             </div>
           </Link>
-          <Link to={"/experience"}>
+          <Link to={"/esperienze"}>
             <div className={styles.citiesExperience}>
               <h2>
                 Esperienze <br /> da vivere
