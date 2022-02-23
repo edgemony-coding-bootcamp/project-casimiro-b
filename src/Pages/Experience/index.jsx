@@ -15,16 +15,12 @@ import styles from "./Experience.module.scss";
 
 const Experience = () => {
   const [modalOpen, setModalOpen] = useState(false);
-
   const [isClicked, setIsClicked] = useState([]);
-
   const [cityId, setCityId] = useState(24);
-
   const [showBanner, setShowBanner] = useState(false);
 
-  console.log(cityId);
-
   const dispatch = useDispatch();
+
   const experience = useSelector((state) => state.experience);
   const infoCity = useSelector((state) => state.card);
   const cart = useSelector((state) => state.cart);
@@ -35,7 +31,6 @@ const Experience = () => {
     setIsClicked(experience.data.find((idCard) => idCard.uuid === uuid));
     setModalOpen(true);
   };
-  console.log(isClicked);
 
   const handleClose = () => {
     setModalOpen(false);
@@ -60,7 +55,8 @@ const Experience = () => {
           image: `${isClicked.cover_image_url}`,
           title: `${isClicked.title}`,
           price: `${isClicked.retail_price.value}`,
-          quantity: 2
+          quantity: 1
+         
         })
       );
       setShowBanner(true);
@@ -77,6 +73,7 @@ const Experience = () => {
             title: `${isClicked.title}`,
             price: `${isClicked.retail_price.value}`,
             quantity: 1
+            
           })
         );
         setShowBanner(true);
@@ -86,9 +83,6 @@ const Experience = () => {
       }
     }
   };
-
-  // console.log(experience.data[0].city.name);
-  // console.log(image[0].imagecity)
 
   return (
     <div className={styles.prova_container}>

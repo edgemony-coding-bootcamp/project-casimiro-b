@@ -1,5 +1,4 @@
 import DiscoverCard from "./DiscoverCard";
-import { Link } from "react-router-dom";
 import { FETCH_ALL_DATA, ADD_CART } from "../../store/action";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -14,27 +13,18 @@ import Banner from "../../Components/Banner";
 
 const Discover = () => {
   const dispatch = useDispatch();
-  // const user = useSelector((state) => state.user);
-
   const cart = useSelector((state) => state.cart);
 
   const [author, setAuthor] = useState("Tutti gli eventi");
-
   const [popular, setPopular] = useState(false);
-
   const [favorite, setFavorite] = useState(false);
-
   const [reccomended, setReccomended] = useState(false);
-
   const events = useSelector((state) => state.events);
-
   const [modalOpen, setModalOpen] = useState(false);
-
   const [showBanner, setShowBanner] = useState(false);
-
   const [isClicked, setIsClicked] = useState([]);
 
-  const match = useMatch("eventi/:id");
+  // const match = useMatch("eventi/:id");
 
   const handleOpen = (id) => {
     setIsClicked(events.find((idCard) => idCard.id === id));
@@ -75,7 +65,7 @@ const Discover = () => {
           image: `${isClicked.image}`,
           title: `${isClicked.title}`,
           price: `${isClicked.price}`,
-          quantity: 1
+          quantity: 1,
         })
       );
       setShowBanner(true);
@@ -91,7 +81,7 @@ const Discover = () => {
             image: `${isClicked.image}`,
             title: `${isClicked.title}`,
             price: `${isClicked.price}`,
-            quantity: 1
+            quantity: 1,
           })
         );
         setShowBanner(true);
@@ -101,10 +91,8 @@ const Discover = () => {
       }
     }
   };
-  console.log(cart)
 
   useEffect(() => {
-    console.log(cart);
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 

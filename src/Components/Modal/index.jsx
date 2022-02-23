@@ -1,5 +1,4 @@
 import TextModal from "./TextModal/index";
-import InputModal from "./InputModal";
 import ButtonModal from "./ButtonModal";
 import { useParams } from "react-router-dom";
 
@@ -49,12 +48,9 @@ const Modal = ({ handleClose, event, discover, image, title, price, description,
         {/* PARTE 4 - FORM */}
         <div className={styles.modalFormDiscover}>
           <div>
-            <h3>Prenota Evento</h3>
+            <h3>Acquista Evento</h3>
           </div>
-
           <div className={styles.modalFormInput}>
-            <InputModal type="text" text="Nome e Congnome" />
-            <InputModal type="text" text="E-mail" />
             <ButtonModal text="Aggiungi al carrello" Add={Add} />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, ADD_QUANTITY } from './constance';
+import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY } from './constance';
 
 
 const INIT_STATE = {
@@ -16,23 +16,27 @@ const INIT_STATE = {
 export const myReducer = (state = INIT_STATE, action) => {
 
     switch (action.type) {
+
         case FETCH_ALL_DATA_REQUEST:
             return {
                 ...state,
                 loading: true,
             }
+
         case FETCH_ALL_DATA_SUCCESS:
             return {
                 ...state,
                 loading: false,
                 events: action.payload
             }
+
         case FETCH_ALL_DATA_SUCCESS_CARD:
             return {
                 ...state,
                 loading: false,
                 card: action.payload
             }
+
         case FETCH_ALL_DATA_SUCCESS_CITIES:
             return {
                 ...state,
@@ -45,6 +49,7 @@ export const myReducer = (state = INIT_STATE, action) => {
                 loading: false,
                 experience: action.payload
             }
+
         case FETCH_ALL_DATA_FAIL:
             return {
                 ...state,
@@ -56,22 +61,43 @@ export const myReducer = (state = INIT_STATE, action) => {
                 ...state,
                 user: action.payload
             }
+
         case ADD_TO_CART:
 
             return {
                 ...state,
                 cart: [...state.cart, action.payload],
             }
-        case ADD_QUANTITY:
-            const payload = action.payload;
+
+        case INCREMENT_QUANTITY:
+
             const newCartState = [...state.cart];
             console.log(newCartState)
-            const foundIndex = newCartState.findIndex((card) => card.id === payload.id);
-            newCartState[foundIndex] = { ...newCartState[foundIndex], quantity: payload.quantity }
+
+
+            const foundIndex = newCartState.findIndex((card) => card.id === action.payload);
+            console.log(foundIndex)
+            newCartState[foundIndex] = { ...newCartState[foundIndex], quantity: newCartState[foundIndex].quantity += 1 }
+
             return {
                 ...state,
                 cart: newCartState
             }
+
+        case DECREMENT_QUANTITY:
+
+            const newCartStateDec = [...state.cart];
+
+
+            const foundIndexDec = newCartStateDec.findIndex((card) => card.id === action.payload);
+         
+            newCartStateDec[foundIndexDec] = { ...newCartStateDec[foundIndexDec], quantity: newCartStateDec[foundIndexDec].quantity - 1 }
+            
+            return {
+                ...state,
+                cart: newCartStateDec 
+            }
+
         case REMOVE_TO_CART:
 
             return {

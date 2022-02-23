@@ -8,7 +8,8 @@ import {
   FETCH_ALL_DATA_FAIL,
   ADD_TO_CART,
   REMOVE_TO_CART,
-  ADD_QUANTITY
+  INCREMENT_QUANTITY,
+  DECREMENT_QUANTITY,
 } from "./constance";
 import {
   createUserWithEmailAndPassword,
@@ -27,16 +28,29 @@ export const ADD_CART = (card) => async (dispatch) => {
   }
 };
 
-export const CHANGE_QUANTITY = ({ quantity, id }) => async (dispatch) => {
+export const CHANGE_QUANTITY = (id) => async (dispatch) => {
   try {
     dispatch({
-      type: ADD_QUANTITY,
-      payload: { quantity, id }
+      type: INCREMENT_QUANTITY,
+      payload: id
     });
   } catch (err) {
     console.log(err);
   }
 };
+export const MINUS_QUANTITY = (id) => async (dispatch) => {
+
+  try {
+    dispatch({
+      type: DECREMENT_QUANTITY,
+      payload: id
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+
 
 export const REMOVE_CART = (id) => async (dispatch) => {
   try {
@@ -107,7 +121,7 @@ export const USER_LOGIN =
         payload: user,
       });
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       console.log("Email o password non valide");
     }
   };

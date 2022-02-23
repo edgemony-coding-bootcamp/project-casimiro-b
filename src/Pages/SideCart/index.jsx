@@ -7,33 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 const SideCart = () => {
   const cart = useSelector((state) => state.cart);
 
-  // const cart = JSON.parse(localStorage.getItem("cart"));
-
-  const [totalPrice, setTotalPrice] = useState();
-  // store.subscribe(() => {
-  //   saveState({
-  //    /* example state */
-  //     cart:store.getState().cart
-  //   });
-  // });
-
-  //   useEffect(() => {
-  //     getLocalCart();
-  //   }, []);
-
-  //   useEffect(() => {
-  //       localStorage.setItem("item", JSON.stringify(cart));
-  //   }, [cart])
-
-  //  const getLocalTodos = () => {
-  //     if (localStorage.getItem("todos") === null) {
-  //       localStorage.setItem("todos", JSON.stringify([]));
-  //     } else {
-  //       let todoLocal = JSON.parse(localStorage.getItem('todos'));
-  //       setTodos(todoLocal);
-  //     }
-  //   };
-
   return (
     <div className={styles.card_wrapper}>
       <div className={styles.cart_container}>
@@ -50,7 +23,7 @@ const SideCart = () => {
           <h2>Prezzo Totale: </h2>
           <Total cart={cart} />
         </div>
-        <button className={styles.card_btn}>ACQUISTA</button>
+        <button className={styles.card_btn}> <p>ACQUISTA</p> </button>
       </div>
     </div>
   );

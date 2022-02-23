@@ -2,23 +2,21 @@ import styles from "./CardCart.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 
 import { MdDelete } from "react-icons/md";
+import { BiPlus, BiMinus } from "react-icons/bi";
 
-import { REMOVE_CART, CHANGE_QUANTITY } from "../../store/action";
-import { useState } from "react";
+import {
+  REMOVE_CART,
+  CHANGE_QUANTITY,
+  MINUS_QUANTITY,
+} from "../../store/action";
 
-const CardCart = ({ card, totalPrice }) => {
+const CardCart = ({ card }) => {
   const dispatch = useDispatch();
-  const cart = useSelector(state => state.cart);
-  console.log(card)
 
-  const changeQuantity = (e) => {
-    console.log(e.target)
-    const q = e.target.value;
-    dispatch(CHANGE_QUANTITY(q, card.id));
-  }
-
-
+  const incrementQuantity = () => dispatch(CHANGE_QUANTITY(card.id));
+  const decrementQuantity = () => dispatch(MINUS_QUANTITY(card.id));
   const removeCard = () => dispatch(REMOVE_CART(card.id));
+
   return (
     <div className={styles.card_container}>
       <div>
@@ -32,11 +30,13 @@ const CardCart = ({ card, totalPrice }) => {
         </div>
 
         <div className={styles.card_actions}>
-
-
-          <input type="number" min="1" max="10" onChange={changeQuantity} value={card.quantity} />
+          <div className={styles.quantity_btn}>
+            <button onClick={decrementQuantity}><BiMinus className={styles.icon}/></button>
+            <p>{card.quantity}</p>
+            <button onClick={incrementQuantity}><BiPlus className={styles.icon}/></button>
+          </div>
           <button onClick={removeCard}>
-            <MdDelete />
+            <MdDelete className={styles.icon}/>
           </button>
         </div>
       </div>
