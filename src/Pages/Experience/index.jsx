@@ -22,7 +22,7 @@ const Experience = () => {
 
   const [showBanner, setShowBanner] = useState(false);
 
-  console.log(cityId)
+  console.log(cityId);
 
   const dispatch = useDispatch();
   const experience = useSelector((state) => state.experience);
@@ -48,17 +48,36 @@ const Experience = () => {
   }, [cityId]);
 
   const addToCart = () => {
-    dispatch(ADD_CART({
-      id: `${isClicked.id}`,
-      image: `${isClicked.cover_image_url}`,
-      title: `${isClicked.title}`,
-      price: `${isClicked.retail_price.formatted_iso_value}`,
-    }))
-
-    setShowBanner(true);
-    setTimeout(() => {
-      setShowBanner(false);
-    }, 2000);
+    if (cart.length === 0) {
+      dispatch(
+        ADD_CART({
+          id: `${isClicked.id}`,
+          image: `${isClicked.cover_image_url}`,
+          title: `${isClicked.title}`,
+          price: `${isClicked.retail_price.value}`,
+        })
+      );
+      setShowBanner(true);
+      setTimeout(() => {
+        setShowBanner(false);
+      }, 2000);
+    } else {
+      if (cart.some((cart) => cart.title === isClicked.title)) {
+      } else {
+        dispatch(
+          ADD_CART({
+            id: `${isClicked.id}`,
+            image: `${isClicked.cover_image_url}`,
+            title: `${isClicked.title}`,
+            price: `${isClicked.retail_price.value}`,
+          })
+        );
+        setShowBanner(true);
+        setTimeout(() => {
+          setShowBanner(false);
+        }, 2000);
+      }
+    }
   };
 
   // console.log(experience.data[0].city.name);
@@ -126,9 +145,8 @@ const Experience = () => {
           <div className={styles.sectionHeader}>
             <h1>{info[0]?.title}.</h1>
             <Link to={`/city/${cityId}`}>
-            <button>scopri di più sulla città</button>
+              <button>scopri di più sulla città</button>
             </Link>
-
           </div>
 
           <div className={styles.sectionCard}>

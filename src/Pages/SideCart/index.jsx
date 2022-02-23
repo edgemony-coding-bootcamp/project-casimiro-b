@@ -1,12 +1,13 @@
 import { CardCart } from "../../Components/CardCart";
 import Total from "./Total";
 import styles from "./SideCart.module.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 const SideCart = () => {
   const cart = useSelector((state) => state.cart);
 
+  const [totalPrice, setTotalPrice] = useState();
   // store.subscribe(() => {
   //   saveState({
   //    /* example state */

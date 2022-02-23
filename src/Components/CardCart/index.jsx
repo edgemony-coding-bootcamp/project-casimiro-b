@@ -4,9 +4,15 @@ import { useDispatch } from "react-redux";
 import { MdDelete } from "react-icons/md";
 
 import { REMOVE_CART } from "../../store/action";
+import { useState } from "react";
 
-const CardCart = ({ card }) => {
+const CardCart = ({ card, totalPrice }) => {
   const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
+  totalPrice = (card.price * quantity)
+
+  const changeQuantity = (e) => setQuantity(e.target.value);
+  
 
   const removeCard = () => dispatch(REMOVE_CART(card.id));
   return (
@@ -18,13 +24,13 @@ const CardCart = ({ card }) => {
       <div className={styles.card_body}>
         <div className={styles.card_text}>
           <h3>{card.title}</h3>
-          <p>{card.price} €</p>
-        </div>
+          <p>{totalPrice} €</p>
+      </div>
 
         <div className={styles.card_actions}>
          
  
-          <input type="number" min="0" max="10" value={1} />
+          <input type="number" min="0" max="10" onChange={changeQuantity} value={quantity}/>
           <button onClick={removeCard}>
             <MdDelete />
           </button>

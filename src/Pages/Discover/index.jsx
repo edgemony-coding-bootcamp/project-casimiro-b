@@ -35,7 +35,7 @@ const Discover = () => {
   const [isClicked, setIsClicked] = useState([]);
 
   const match = useMatch("eventi/:id");
-  
+
   const handleOpen = (id) => {
     setIsClicked(events.find((idCard) => idCard.id === id));
     setModalOpen(true);
@@ -67,17 +67,37 @@ const Discover = () => {
   const sortingText = (e) => setAuthor(e.target.value);
 
   const addToCart = () => {
-    dispatch(ADD_CART({
-      id: `${isClicked.id}`,
-      image: `${isClicked.image}`,
-      title: `${isClicked.title}`,
-      price: `${isClicked.price}`,
-    }))
-
-    setShowBanner(true);
-    setTimeout(() => {
-      setShowBanner(false);
-    }, 2000);
+    console.log(cart.length);
+    if (cart.length === 0) {
+      dispatch(
+        ADD_CART({
+          id: `${isClicked.id}`,
+          image: `${isClicked.cover_image_url}`,
+          title: `${isClicked.title}`,
+          price: `${isClicked.price }`,
+        })
+      );
+      setShowBanner(true);
+      setTimeout(() => {
+        setShowBanner(false);
+      }, 2000);
+    } else {
+      if (cart.some((cart) => cart.title === isClicked.title)) {
+      } else {
+        dispatch(
+          ADD_CART({
+            id: `${isClicked.id}`,
+            image: `${isClicked.cover_image_url}`,
+            title: `${isClicked.title}`,
+            price: `${isClicked.price}`,
+          })
+        );
+        setShowBanner(true);
+        setTimeout(() => {
+          setShowBanner(false);
+        }, 2000);
+      }
+    }
   };
 
   useEffect(() => {
@@ -114,7 +134,6 @@ const Discover = () => {
               handleRaccomended={handleReccomended}
             />
           </div>
-
 
           <DiscoverText author={author} />
         </div>
