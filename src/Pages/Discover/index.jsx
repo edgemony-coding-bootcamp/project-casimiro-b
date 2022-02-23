@@ -72,9 +72,9 @@ const Discover = () => {
       dispatch(
         ADD_CART({
           id: `${isClicked.id}`,
-          image: `${isClicked.cover_image_url}`,
+          image: `${isClicked.image}`,
           title: `${isClicked.title}`,
-          price: `${isClicked.price }`,
+          price: `${isClicked.price}`,
         })
       );
       setShowBanner(true);
@@ -87,7 +87,7 @@ const Discover = () => {
         dispatch(
           ADD_CART({
             id: `${isClicked.id}`,
-            image: `${isClicked.cover_image_url}`,
+            image: `${isClicked.image}`,
             title: `${isClicked.title}`,
             price: `${isClicked.price}`,
           })
@@ -99,6 +99,11 @@ const Discover = () => {
       }
     }
   };
+
+  useEffect(() => {
+    console.log(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   useEffect(() => {
     dispatch(FETCH_ALL_DATA());

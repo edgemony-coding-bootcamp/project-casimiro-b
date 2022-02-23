@@ -7,6 +7,8 @@ import { useSelector, useDispatch } from "react-redux";
 const SideCart = () => {
   const cart = useSelector((state) => state.cart);
 
+  // const cart = JSON.parse(localStorage.getItem("cart"));
+
   const [totalPrice, setTotalPrice] = useState();
   // store.subscribe(() => {
   //   saveState({

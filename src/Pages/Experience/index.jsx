@@ -43,6 +43,11 @@ const Experience = () => {
   };
 
   useEffect(() => {
+    console.log(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  useEffect(() => {
     dispatch(FETCH_ALL_DATA_EXPERIENCE(cityId));
     dispatch(FETCH_ALL_DATA_CARD());
   }, [cityId]);
