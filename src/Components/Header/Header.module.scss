@@ -1,44 +1,25 @@
 @import "../../Tools/General.scss";
 
 .header {
-
   width: 100vw;
-  
-
   padding: 20px;
   align-items: center;
-  background-color: $main;
   top: 0;
   position: fixed;
   z-index: 1;
+  background: rgb(96 92 92 / 38%);
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(7px);
   transition: all 0.1s ease-in-out;
-
-}
-
-.headerResp {
-  background-color: $dark-shadow;
-
-  .resp_menu {
-    color: $mainLighter;
-  }
-
-  .menuItems a {
-    color: $mainLighter;
-  }
 }
 
 .logo {
   margin: 0;
   padding: 0;
-  color: black;
+  color: $mainLighter;
   font-size: 24px;
   font-family: 'Lora', serif;
   display: inline-block;
-}
-
-.logoActive { 
-  color : white;
-  
 }
 
 .menuItems {
@@ -62,7 +43,7 @@
     padding: 10px 25px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
-    
+    color: $mainLighter;    
 
     &::selection {
       color: none;
@@ -78,10 +59,10 @@
 
 .resp_menu {
   float: right;
-  background-color: transparent;
   border: none;
   transition: $transition;
   font-size: 30px;
+  background: none;
 }
 
 .icon_menu {
@@ -93,10 +74,6 @@
   top: 0px;
   height: 60vh;
   overflow: auto;
-
-  a {
-    color: $mainLighter;
-  }
 }
 
 @media screen and (min-width: 800px) {
@@ -104,33 +81,14 @@
 
   .header {
     width: 100%;
-    
-    
-    
     display: flex;
     justify-content: center;
-    background: $light-shadow;
     height: 7rem;
-  }
-
-  .headerResp {
-    background-color: $main;
-
-    .menuItems a {
-      color: $mainDarker;
-    }
   }
 
   .logo {
     margin-left: 70px;
-    color: white;
     font-size: 32px;
-  
-  }
-
-  .logoActive { 
-    color : black;
-    
   }
   
 
@@ -145,7 +103,6 @@
 
     a {
       transition: $baseTransition;
-      color: $mainLighter;
 
       &:hover {
         color: $secondary;
