@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+<h1 align="center">
+'Ddocu
+<h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### ‘Ddocu è una web app che valorizza il territorio siciliano, l’utente al suo interno trova eventi e pacchetti turistici mirati a migliorare la sua esperienza di viaggio. 
 
-## Available Scripts
+<img align="center" src="./public/ImgReadMe/HomeMac.jpg" alt="desktopmac" width=600/>
 
-In the project directory, you can run:
+<hr>
+<h2 align="center">Scopri l'isola</h2>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img align="center" src="./public/ImgReadMe/Homepage Card.jpg" alt="desktopmactwo" width=600/>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<hr>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img align="right" src="./public/ImgReadMe/HomeIphone.jpg" alt="cardicity" width=260/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h2>Technologies used</h2>
+  <ul>
+    <li>HTML</li>
+    <li>SASS</li>
+    <li>Javascript</li>
+    <li>React.js</li>
+    <li>Redux</li>
+    <li>Firebase</li>
+    <li>Heroku</li>
+    <li>Axios</li>
+    <li>Musement API</li>
+</ul>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
+<hr>
 
-### `npm run eject`
+<img align="right" src="./public/ImgReadMe/X - 15.jpg" alt="homephone" width=150/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2>Features</h2>
+<ol>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  <li>Designed from zero</li>
+  <li>UI and UX user friendly</li>
+  <li>Mobile First Design</li>
+  <li>SEO optimized</li>
+  <li>Best practices</li>
+  
+</ol>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br>
 
-## Learn More
+  <img width="400" src="./public/ImgReadMe/Esperienze.jpg" alt="pagesesperienze">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<hr>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## How to run it!
 
-### Analyzing the Bundle Size
+First, run the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-### Making a Progressive Web App
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### Advanced Configuration
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-### Deployment
+<hr>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Presentation day
 
-### `npm run build` fails to minify
+<h4>03/2022</h4>
+<a href="https://edgemony-coding-bootcamp.github.io/project-casimiro-b/">Follow this link to visit it!</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>Made by</h3>
+<ul>
+  <li>
+    <a href="https://www.linkedin.com/in/margheritagrasso/">
+     Margherita Grasso
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/giulianotaro/">
+      Giulia Notaro
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/chiaracaruso/">
+      Chiara Caruso
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/andrea-alunni-guiducci-203786216/">
+      Andrea Alunni Guiducci
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/giuseppe-gallo-cassarino-b03510155/">
+      Giuseppe Gallo Cassarino
+    </a>
+  </li>
+</ul>
+
+<h4>With the special participation of
+  <a href="https://www.linkedin.com/in/casimiro-p-ciancimino/"> 
+  Casimiro Ciancimino
+  </a>
+</h4>
