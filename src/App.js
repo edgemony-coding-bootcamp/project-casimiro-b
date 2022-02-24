@@ -33,8 +33,8 @@ const INIT_STATE = {
 
 function App() {
   const dispatch = useDispatch();
-  const user = JSON.parse(localStorage.getItem('user'));
-  // const user = useSelector((state) => state.user)
+  // const user = JSON.parse(localStorage.getItem('user'));
+  const user = useSelector((state) => state.user)
 
   useEffect(() => {
     dispatch(USER_LOGIN())
@@ -46,7 +46,8 @@ function App() {
 
   return (
     <>
-      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={user === null ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
+      {/* dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} */}
+      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
 
 
