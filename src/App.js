@@ -33,6 +33,7 @@ const INIT_STATE = {
 
 function App() {
   const dispatch = useDispatch();
+  // const user = JSON.parse(localStorage.getItem('user'));
   const user = useSelector((state) => state.user)
 
   useEffect(() => {
@@ -131,7 +132,7 @@ function App() {
             </Suspense>
           }
         />
-        <Route 
+        <Route
           path="*"
           element={
             <Suspense fallback={<Loading />}>

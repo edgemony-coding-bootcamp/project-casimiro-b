@@ -96,7 +96,7 @@ export const USER_SIGNUP =
         console.log(user);
         setRegisterEmail("");
         setRegisterPassword("");
-
+        localStorage.setItem('user', user)
         dispatch({
           type: USER_LOGGED_SUCCESS,
           payload: user,
@@ -115,8 +115,9 @@ export const USER_LOGIN =
         loginEmail,
         loginPassword
       );
+      localStorage.setItem('user', JSON.stringify(user))
       console.log(user);
-
+      window.location.assign('/dashboard')
       dispatch({
         type: USER_LOGGED_SUCCESS,
         payload: user,
