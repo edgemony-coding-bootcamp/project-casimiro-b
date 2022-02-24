@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 const SideCart = () => {
-  const cart = useSelector((state) => state.cart);
+  // const cart = useSelector((state) => state.cart);
+  const cart = JSON.parse(localStorage.getItem('cart'))
 
   return (
     <div className={styles.card_wrapper}>
