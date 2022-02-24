@@ -40,12 +40,12 @@ const AboutUs = () => {
       </div>
       <div className={styles.newsletter}>
         <form>
-          <h3>Join our newsletter</h3>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h4>
+          <h3>Iscriviti alla newsletter</h3>
+          <h4>Resta aggiornato sugli eventi in Sicilia.</h4>
 
           <input type="email" placeholder="Inserisci la tua email" />
 
-          <button>Submit</button>
+          <button>Iscriviti</button>
 
           <p className={styles.privacy}>
             By signing up you agree to our User Agreement (including the class

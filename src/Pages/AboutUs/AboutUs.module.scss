@@ -75,9 +75,10 @@
       input {
         text-align: center;
         width: 200px;
-        margin-top: 60px;
+        margin-top: 2rem;
         border: none;
         border-bottom: 2px solid black;
+        padding: 0.5rem;
 
         outline: none;
       }
@@ -87,10 +88,22 @@
       text-align: center;
       width: 75px;
       height: 33px;
+      border-radius: 15px;
+      font-weight: 600;
       box-shadow: none;
       border: none;
       background-color: #f4efef;
+      cursor: pointer;
+      
+
+      &:hover {
+        color: #fff;
+        background-color: rgb(188, 110, 126);
+        transition: 0.4s all ease;
+      }
     }
+
+
     .privacy {
       font-size: 10px;
     }
