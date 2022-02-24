@@ -17,7 +17,7 @@
 <hr>
 
 
-<img align="right" src="./public/ImgReadMe/HomeIphone.jpg" alt="cardicity" width=260/>
+<img align="right" src="./public/ImgReadMe/X - 11.jpg" alt="cardicity" width=150/>
 
 <h2>Technologies used</h2>
   <ul>
@@ -40,6 +40,7 @@
 <br>
 
 <h2>Features</h2>
+
 <ol>
 
   <li>Designed from zero</li>
@@ -52,7 +53,7 @@
 
 <br>
 
-  <img width="400" src="./public/ImgReadMe/Esperienze.jpg" alt="pagesesperienze">
+  <img align="center" width="600" src="./public/ImgReadMe/Esperienze.jpg" alt="pagesesperienze">
 
 <hr>
 
