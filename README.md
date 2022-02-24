@@ -1,23 +1,31 @@
-<h1 align="center">
-'Ddocu
-<h1>
 
-### ‘Ddocu è una web app che valorizza il territorio siciliano, l’utente al suo interno trova eventi e pacchetti turistici mirati a migliorare la sua esperienza di viaggio. 
-
-<img align="center" src="./public/ImgReadMe/HomeMac.jpg" alt="desktopmac" width=600/>
-
+<p align="center" >
+<img src="./public/ImgReadMe/Ddocu_logo.png" alt="desktopmac" width=200/>
+</p>
+<br>
 <hr>
+<br>
+
+<div align="center"> 
+
+‘Ddocu è una web app che valorizza il territorio siciliano, l’utente al suo interno trova eventi e pacchetti turistici mirati a migliorare la sua esperienza di viaggio.
+
+</div>
+
+<br>
+
+<p align="center" >
+<img src="./public/ImgReadMe/MOCKUP_2.jpg" alt="desktopmac" width=800/>
+</p>
+
+<br>
+
 <h2 align="center">Scopri l'isola</h2>
 
-
-
-<img align="center" src="./public/ImgReadMe/Homepage Card.jpg" alt="desktopmactwo" width=600/>
-
+<br>
 
 <hr>
-
-
-<img align="right" src="./public/ImgReadMe/X - 11.jpg" alt="cardicity" width=150/>
+<br>
 
 <h2>Technologies used</h2>
   <ul>
@@ -35,7 +43,7 @@
 <br>
 <hr>
 
-<img align="right" src="./public/ImgReadMe/X - 15.jpg" alt="homephone" width=150/>
+
 
 <br>
 
@@ -53,11 +61,18 @@
 
 <br>
 
-  <img align="center" width="600" src="./public/ImgReadMe/Esperienze.jpg" alt="pagesesperienze">
 
+
+
+
+<h2 align="center"> Mobile First Design</h2>
+<br>
+  <p align="center">
+  <img width="800" src="./public/ImgReadMe/MOCKUP_1.jpg" alt="pagesesperienze">
+ </p>
+ <br>
 <hr>
-
-
+<br>
 
 ## How to run it!
 
@@ -77,13 +92,19 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+<br>
+
 <hr>
+<br>
 
 ## Presentation day
+
+<br>
 
 <h4>03/2022</h4>
 <a href="https://edgemony-coding-bootcamp.github.io/project-casimiro-b/">Follow this link to visit it!</a>
 
+<br>
 <h3>Made by</h3>
 <ul>
   <li>
