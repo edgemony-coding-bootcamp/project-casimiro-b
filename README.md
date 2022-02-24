@@ -22,9 +22,9 @@
 
 <h2 align="center">Scopri l'isola</h2>
 
-<br>
 
-<hr>
+
+
 <br>
 
 <h2>Technologies used</h2>
@@ -41,11 +41,7 @@
 </ul>
 
 <br>
-<hr>
 
-
-
-<br>
 
 <h2>Features</h2>
 
@@ -71,8 +67,7 @@
   <img width="800" src="./public/ImgReadMe/MOCKUP_1.jpg" alt="pagesesperienze">
  </p>
  <br>
-<hr>
-<br>
+
 
 ## How to run it!
 
@@ -92,9 +87,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-<br>
-
-<hr>
 <br>
 
 ## Presentation day
