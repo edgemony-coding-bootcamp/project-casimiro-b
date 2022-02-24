@@ -16,6 +16,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const ADD_CART = (card) => async (dispatch) => {
   try {
@@ -120,6 +121,7 @@ export const USER_LOGIN =
         type: USER_LOGGED_SUCCESS,
         payload: user,
       });
+
     } catch (err) {
       // console.log(err);
       console.log("Email o password non valide");

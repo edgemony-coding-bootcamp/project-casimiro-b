@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import styles from "./Log.module.scss";
 import { BiHide, BiShow } from "react-icons/bi";
 import { FaGoogle, FaFacebookSquare } from "react-icons/fa";
+import { Link } from "react-router-dom"
 
 
 const Log = (props) => {
+  const user = useSelector((state) => state.user)
   const [values, setValues] = useState({
     password: "",
     showPassword: false,
@@ -48,7 +51,9 @@ const Log = (props) => {
       </div>
       <div className={styles.btn_container}>
         <button className={styles.btn_one} onClick={props.logBtn}>
-          <p>{props.btn}</p>
+          <Link to={user.user !== undefined ? "/dashboard" : "/Log"}>
+            <p>{props.btn}</p>
+          </Link>
         </button>
         <button className={styles.btn_two}>
           <i><FaGoogle /></i>

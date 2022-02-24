@@ -1,7 +1,5 @@
 import styles from "./DiscoverCard.module.scss";
 
-import { AiFillEye } from "react-icons/ai";
-
 const DiscoverCard = ({ event, handleOpen }) => {
   const date = new Date(event.date);
 
@@ -17,13 +15,12 @@ const DiscoverCard = ({ event, handleOpen }) => {
       <div className={styles.description_container}>
         <div className={styles.title}>
           <h1>{event.title}</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <p>{event.about}</p>
         </div>
         <div className={styles.btn_title}>
           <button onClick={() => handleOpen(event.id)}>
             <p>Scopri</p>
 
-            {/* <AiFillEye /> */}
           </button>
         </div>
       </div>
