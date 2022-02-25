@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import styles from "./Log.module.scss";
 import { BiHide, BiShow } from "react-icons/bi";
 import { FaGoogle, FaFacebookSquare } from "react-icons/fa";
-
+import { signInWithGoogle } from "../../firebase-config";
 
 const Log = (props) => {
   const user = useSelector((state) => state.user)
@@ -52,7 +52,7 @@ const Log = (props) => {
           <p>{props.btn}</p>
 
         </button>
-        <button className={styles.btn_two}>
+        <button className={styles.btn_two} onClick={signInWithGoogle}>
           <i><FaGoogle /></i>
           <p>Continua con Google</p>
         </button>
