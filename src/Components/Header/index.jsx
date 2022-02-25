@@ -51,8 +51,6 @@ const Header = (props) => {
         <Link onClick={props.logOut} to={props.dash}>
           <FaUserAltSlash />
         </Link>
-
-
       </ul>
     </header>
   );
