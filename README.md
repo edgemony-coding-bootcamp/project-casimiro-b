@@ -92,7 +92,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ## Presentation day
 
 <h4>03/2022</h4>
-<a href="https://edgemony-coding-bootcamp.github.io/project-casimiro-b/">Follow this link to visit it!</a>
+<a href="https://argo-two.web.app/">Follow this link to visit it!</a>
 
 <br>
 <h3>Made by</h3>
