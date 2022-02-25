@@ -1,5 +1,5 @@
 import CardHomepage from "./CardHomepage";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { FETCH_ALL_DATA_CARD } from "../../store/action";
@@ -14,9 +14,7 @@ import {
   MoveOut,
   Sticky,
   StickyIn,
-  Zoom,
-  FadeIn,
-  MoveIn,
+  
 } from "react-scroll-motion";
 
 import styles from "./Home.module.scss";
@@ -89,7 +87,7 @@ const Home = () => {
           autoPlay
           muted
           loop
-          playsinline
+          
         ></video>
 
 
