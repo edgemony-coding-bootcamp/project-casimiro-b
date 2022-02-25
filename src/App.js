@@ -33,8 +33,8 @@ const INIT_STATE = {
 
 function App() {
   const dispatch = useDispatch();
-  const user = JSON.parse(localStorage.getItem('user'));
-  // const user = useSelector((state) => state.user)
+  // const user = JSON.parse(localStorage.getItem('user'));
+  const user = useSelector((state) => state.user)
 
   useEffect(() => {
     dispatch(USER_LOGIN())
