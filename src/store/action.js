@@ -16,7 +16,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export const ADD_CART = (card) => async (dispatch) => {
   try {

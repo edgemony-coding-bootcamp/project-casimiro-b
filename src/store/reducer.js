@@ -66,22 +66,19 @@ export const myReducer = (state = INIT_STATE, action) => {
 
             return {
                 ...state,
-                cart: [...state.cart, action.payload],
+                cart: [...state.cart,  action.payload],
             }
 
         case INCREMENT_QUANTITY:
 
             const newCartState = [...state.cart];
-            console.log(newCartState)
-
 
             const foundIndex = newCartState.findIndex((card) => card.id === action.payload);
-            console.log(foundIndex)
             newCartState[foundIndex] = { ...newCartState[foundIndex], quantity: newCartState[foundIndex].quantity += 1 }
-
+            
             return {
                 ...state,
-                cart: newCartState
+                cart: newCartState,
             }
 
         case DECREMENT_QUANTITY:

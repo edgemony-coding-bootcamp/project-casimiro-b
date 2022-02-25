@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 const SideCart = () => {
-  // const cart = useSelector((state) => state.cart);
-  const cart = JSON.parse(localStorage.getItem('cart'))
+  const cart = useSelector((state) => state.cart);
+  // const cart = JSON.parse(localStorage.getItem('cart'))
   console.log(cart)
 
   return (
@@ -14,7 +14,7 @@ const SideCart = () => {
       <div className={styles.cart_container}>
         <h2>Carrello</h2>
         <div className={styles.item_container}>
-          {cart.map((card) => (
+          {cart?.map((card) => (
             <CardCart key={card.id} card={card} />
           ))}
         </div>

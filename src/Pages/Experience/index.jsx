@@ -38,7 +38,6 @@ const Experience = () => {
   };
 
   useEffect(() => {
-    console.log(cart);
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
@@ -62,7 +61,7 @@ const Experience = () => {
       setShowBanner(true);
       setTimeout(() => {
         setShowBanner(false);
-      }, 2000);
+      }, 1000);
     } else {
       if (cart.some((cart) => cart.title === isClicked.title)) {
       } else {
@@ -79,7 +78,7 @@ const Experience = () => {
         setShowBanner(true);
         setTimeout(() => {
           setShowBanner(false);
-        }, 2000);
+        }, 1000);
       }
     }
   };

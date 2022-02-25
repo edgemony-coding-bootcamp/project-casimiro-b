@@ -13,7 +13,14 @@ import Banner from "../../Components/Banner";
 
 const Discover = () => {
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
+  let cart = useSelector((state) => state.cart);
+
+  useEffect(()=>{
+    const localCart = JSON.parse(localStorage.getItem('cart'));
+    if(localCart.length >0){
+      
+    }
+  }, [cart])
 
   const [author, setAuthor] = useState("Tutti gli eventi");
   const [popular, setPopular] = useState(false);
@@ -67,11 +74,11 @@ const Discover = () => {
           price: `${isClicked.price}`,
           quantity: 1,
         })
-      );
-      setShowBanner(true);
-      setTimeout(() => {
-        setShowBanner(false);
-      }, 2000);
+        );
+        setShowBanner(true);
+        setTimeout(() => {
+          setShowBanner(false);
+        }, 1000);
     } else {
       if (cart.some((cart) => cart.title === isClicked.title)) {
       } else {
@@ -83,19 +90,15 @@ const Discover = () => {
             price: `${isClicked.price}`,
             quantity: 1,
           })
-        );
-        setShowBanner(true);
-        setTimeout(() => {
-          setShowBanner(false);
-        }, 2000);
+          );
+          setShowBanner(true);
+          setTimeout(() => {
+            setShowBanner(false); 
+          }, 1000);
+        }
       }
-    }
   };
-
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
-
+  
   useEffect(() => {
     dispatch(FETCH_ALL_DATA());
   }, []);
