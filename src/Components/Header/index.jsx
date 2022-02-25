@@ -1,4 +1,5 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
@@ -9,6 +10,7 @@ import styles from "./Header.module.scss";
 const Header = (props) => {
   const name = props.name || "App";
   const links = props.links || [{ link: "/", label: "Link" }];
+  const log = props.log || [{ link: "/", label: "Link" }];
 
   const CheckActive = (link) => {
     const resolved = useResolvedPath(link);
@@ -23,6 +25,26 @@ const Header = (props) => {
     e.preventDefault();
     setIsActive(!isActive);
   };
+
+  const user = useSelector((state) => state.user);
+
+  const logSign = () => {
+    if (user.user === undefined)  {
+      return (
+        <>
+          {log.map((item, index) => (
+            <li key={index}>
+              <Link to={item.link} className={CheckActive(item.link)} onClick={() => setIsActive(!isActive)}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </>
+      )
+    } else {
+      return <Link onClick={props.logOut} to={props.dash}>LOG OUT</Link>
+    }
+  }
 
   return (
     <header className={styles.header}>
@@ -42,18 +64,16 @@ const Header = (props) => {
             </Link>
           </li>
         ))}
+      </ul>
+      <ul className={`${styles.menuItems} ${isActive ? styles.showMenu : ""}`}>
+        {logSign()}
         <Link to="/sidecart" onClick={() => setIsActive(!isActive)}>
           <FaShoppingCart />
         </Link>
-        <Link to={props.dash} onClick={() => setIsActive(!isActive)}>
-          <FaUserAlt />
-        </Link>
-        <Link onClick={props.logOut} to={props.dash}>
-          <FaUserAltSlash />
-        </Link>
-
-
       </ul>
+
+
+
     </header>
   );
 };
