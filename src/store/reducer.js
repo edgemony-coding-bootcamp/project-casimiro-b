@@ -2,7 +2,7 @@ import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX,
 
 
 const INIT_STATE = {
-    cart: [],
+    cart: JSON.parse(localStorage.getItem('cart')) === null ? [] : JSON.parse(localStorage.getItem('cart')),
     user: {},
     events: [],
     experience: [],
@@ -72,16 +72,16 @@ export const myReducer = (state = INIT_STATE, action) => {
         case INCREMENT_QUANTITY:
 
             const newCartState = [...state.cart];
-            console.log(newCartState)
 
 
             const foundIndex = newCartState.findIndex((card) => card.id === action.payload);
-            console.log(foundIndex)
             newCartState[foundIndex] = { ...newCartState[foundIndex], quantity: newCartState[foundIndex].quantity += 1 }
+            localStorage.setItem('cart', JSON.stringify(newCartState))
+            const localCart = JSON.parse(localStorage.getItem('cart'))
 
             return {
                 ...state,
-                cart: newCartState
+                cart: localCart
             }
 
         case DECREMENT_QUANTITY:
@@ -90,12 +90,13 @@ export const myReducer = (state = INIT_STATE, action) => {
 
 
             const foundIndexDec = newCartStateDec.findIndex((card) => card.id === action.payload);
-         
+
             newCartStateDec[foundIndexDec] = { ...newCartStateDec[foundIndexDec], quantity: newCartStateDec[foundIndexDec].quantity - 1 }
-            
+            localStorage.setItem('cart', JSON.stringify(newCartStateDec))
+            const localCartDec = JSON.parse(localStorage.getItem('cart'))
             return {
                 ...state,
-                cart: newCartStateDec 
+                cart: localCartDec,
             }
 
         case REMOVE_TO_CART:
