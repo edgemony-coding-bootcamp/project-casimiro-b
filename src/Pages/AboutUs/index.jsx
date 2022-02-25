@@ -43,7 +43,7 @@ const AboutUs = () => {
       <div className={styles.newsletter}>
 
         <h2>Contattaci</h2>
-        <h3>Il team di 'Ddocu a tua disposizione.</h3>
+        <h3 className={styles.team}>Il team di 'Ddocu a tua disposizione.</h3>
 
         <Contact
           name="Margherita Grasso"

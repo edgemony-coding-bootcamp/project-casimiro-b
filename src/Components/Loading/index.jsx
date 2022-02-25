@@ -1,11 +1,11 @@
+
+
 const Loading = () => {
 
+  return (
+<></>
+  )
 
-
-    return (
-        <>  </>
-
-    )
-}
+};
 
 export default Loading;
