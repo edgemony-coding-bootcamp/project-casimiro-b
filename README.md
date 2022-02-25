@@ -32,7 +32,7 @@
     <li>HTML</li>
     <li>SASS</li>
     <li>Javascript</li>
-    <li>React.js</li>
+    <li>ReactJS</li>
     <li>Redux</li>
     <li>Firebase</li>
     <li>Heroku</li>
