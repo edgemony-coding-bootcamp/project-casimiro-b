@@ -42,12 +42,14 @@ function App() {
 
   const LogOut = () => {
     dispatch(LOG_OUT())
+    window.location.assign('/Log')
+
   }
 
   return (
     <>
       {/* dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} */}
-      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={user === null ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
+      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={user === null || user.user === undefined ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
 
 

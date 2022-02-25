@@ -1,7 +1,6 @@
 import styles from './Dashboard.module.scss';
 import { useState, useEffect } from 'react'
 import { USER_LOGIN } from "../../store/action";
-import { useSelector, useDispatch } from "react-redux";
 
 import DashboardCard from "./DashboardCard";
 import DashboardCardReset from './DashboardCardReset';
@@ -9,7 +8,6 @@ import DashboardCardReset from './DashboardCardReset';
 const Dashboard = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     const name1 = user.user.email.substring(0, user.user.email.lastIndexOf("@"));
-    console.log(user)
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');

@@ -1,9 +1,9 @@
-import { USER_LOGGED_SUCCESS, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY } from './constance';
+import { USER_LOGGED_SUCCESS, USER_LOGOUT, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY } from './constance';
 
 
 const INIT_STATE = {
-    cart: JSON.parse(localStorage.getItem('cart')) === null ? [] : JSON.parse(localStorage.getItem('cart')),
-    user: {},
+    cart: localStorage.getItem('cart') === null ? [] : JSON.parse(localStorage.getItem('cart')),
+    user: localStorage.getItem('user') === null ? [] : JSON.parse(localStorage.getItem('user')),
     events: [],
     experience: [],
     card: [],
@@ -60,6 +60,14 @@ export const myReducer = (state = INIT_STATE, action) => {
             return {
                 ...state,
                 user: action.payload
+            }
+
+        case USER_LOGOUT:
+            const localUser = localStorage.setItem('user', JSON.stringify({}));
+
+            return {
+                ...state,
+                user: localUser
             }
 
         case ADD_TO_CART:
