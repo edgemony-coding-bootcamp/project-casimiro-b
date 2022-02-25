@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       {/* dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} */}
-      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={user.length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
+      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={user?.length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
 
 
