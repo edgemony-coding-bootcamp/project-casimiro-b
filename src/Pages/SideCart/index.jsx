@@ -1,11 +1,11 @@
 import { CardCart } from "../../Components/CardCart";
 import Total from "./Total";
 import styles from "./SideCart.module.scss";
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const SideCart = () => {
   const cart = useSelector((state) => state.cart);
+  console.log(cart)
 
   return (
     <div className={styles.card_wrapper}>

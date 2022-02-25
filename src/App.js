@@ -3,7 +3,7 @@ import { Suspense, lazy } from "react";
 import "./App.css";
 import { useEffect } from 'react'
 import { USER_LOGIN, LOG_OUT } from "./store/action";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
@@ -26,27 +26,31 @@ const INIT_STATE = {
     { link: "/Eventi", label: "EVENTI" },
     { link: "/Esperienze", label: "ESPERIENZE" },
     { link: "/AboutUs", label: "ABOUT US" },
+  ],
+  log: [
     { link: "/Log", label: "LOG IN" },
     { link: "/sign", label: "SIGN IN" },
-  ],
+  ]
 };
 
 function App() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user)
+  const user = JSON.parse(localStorage.getItem('user'));
+  // const user = useSelector((state) => state.user)
 
   useEffect(() => {
     dispatch(USER_LOGIN())
-  }, [])
+  })
 
   const LogOut = () => {
     dispatch(LOG_OUT())
+    window.location.assign('/Log')
   }
 
   return (
     <>
       {/* dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} */}
-      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
+      <Header name={INIT_STATE.name} links={INIT_STATE.nav} log={INIT_STATE.log} dash={user === null || user.user === undefined ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
 
 
@@ -131,7 +135,7 @@ function App() {
             </Suspense>
           }
         />
-        <Route 
+        <Route
           path="*"
           element={
             <Suspense fallback={<Loading />}>

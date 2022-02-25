@@ -1,20 +1,21 @@
 import styles from "./DashboardCard.module.scss";
 
 const DashboardCard = (props) => {
-    return (
-        <div className={styles.wrapperCard}>
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" onChange={props.onChangeName} />
+  return (
+    <div className={styles.wrapperCard}>
 
-            <label for="cognome">Cognome</label>
-            <input type="text" name="cognome" onChange={props.onChangeSurname} />
+      <h3>Username</h3>
+      <p>{props.name}</p>
 
-            <label for="email">Nome</label>
-            <input type="text" name="email" onChange={props.onChangeEmail} />
+      <h3>Email</h3>
+      <p>{props.email}</p>
 
-            <p>Possedendo un account accetti i nostri termini e condizioni, privacy e la nostra cookie policy.</p>
-        </div>
-    )
-}
+      <p className={styles.cookies}>
+        Possedendo un account accetti i nostri termini e condizioni, privacy e
+        la nostra cookie policy.
+      </p>
+    </div>
+  );
+};
 
 export default DashboardCard;

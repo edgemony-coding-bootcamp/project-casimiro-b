@@ -2,7 +2,6 @@ import DiscoverCard from "./DiscoverCard";
 import { FETCH_ALL_DATA, ADD_CART } from "../../store/action";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useMatch } from "react-router-dom";
 import styles from "./Discover.module.scss";
 import DiscoverSelect from "./DiscoverSelect";
 import DiscoverText from "./DiscoverText";
@@ -57,7 +56,7 @@ const Discover = () => {
   const sortingText = (e) => setAuthor(e.target.value);
 
   const addToCart = () => {
-    console.log(cart.length);
+
     if (cart.length === 0) {
       dispatch(
         ADD_CART({

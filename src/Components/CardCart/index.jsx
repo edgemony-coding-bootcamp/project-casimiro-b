@@ -1,5 +1,5 @@
 import styles from "./CardCart.module.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { MdDelete } from "react-icons/md";
 import { BiPlus, BiMinus } from "react-icons/bi";
@@ -31,12 +31,12 @@ const CardCart = ({ card }) => {
 
         <div className={styles.card_actions}>
           <div className={styles.quantity_btn}>
-            <button onClick={decrementQuantity}><BiMinus className={styles.icon}/></button>
+            <button onClick={card.quantity === 1 ? '' : decrementQuantity}><BiMinus className={styles.icon} /></button>
             <p>{card.quantity}</p>
-            <button onClick={incrementQuantity}><BiPlus className={styles.icon}/></button>
+            <button onClick={incrementQuantity}><BiPlus className={styles.icon} /></button>
           </div>
           <button onClick={removeCard}>
-            <MdDelete className={styles.icon}/>
+            <MdDelete className={styles.icon} />
           </button>
         </div>
       </div>

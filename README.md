@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+<br>
+<p align="center" >
+<img src="./public/ImgReadMe/Ddocu_logo.png" alt="desktopmac" width=200/>
+</p>
+<br>
+<hr>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center"> 
 
-## Available Scripts
+‘Ddocu è una web app che valorizza il territorio siciliano, l’utente al suo interno trova eventi e pacchetti turistici mirati a migliorare la sua esperienza di viaggio.
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center" >
+<img src="./public/ImgReadMe/MOCKUP_2.jpg" alt="desktopmac" width=800/>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+<h2 align="center">Scopri l'isola</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2>Technologies used</h2>
+  <ul>
+    <li>HTML</li>
+    <li>SASS</li>
+    <li>Javascript</li>
+    <li>ReactJS</li>
+    <li>Redux</li>
+    <li>Firebase</li>
+    <li>Heroku</li>
+    <li>Axios</li>
+    <li>Musement API</li>
+</ul>
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2>Features</h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<ol>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  <li>Designed from zero</li>
+  <li>UI and UX user friendly</li>
+  <li>Mobile First Design</li>
+  <li>SEO optimized</li>
+  <li>Best practices</li>
+  
+</ol>
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<h2 align="center"> Mobile First Design</h2>
+<br>
+  <p align="center">
+  <img width="800" src="./public/ImgReadMe/MOCKUP_1.jpg" alt="pagesesperienze">
+ </p>
+ <br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## How to run it!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Once you've forked, downloaded the zip file or cloned the repository, run the following command to install all the libraries you need to run it properly:
 
-### Advanced Configuration
+```bash
+npm i
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Then, run the development server:
 
-### Deployment
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### `npm run build` fails to minify
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Presentation day
+
+<h4>03/2022</h4>
+<a href="https://edgemony-coding-bootcamp.github.io/project-casimiro-b/">Follow this link to visit it!</a>
+
+<br>
+<h3>Made by</h3>
+<ul>
+  <li>
+    <a href="https://www.linkedin.com/in/margheritagrasso/">
+     Margherita Grasso
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/giulianotaro/">
+      Giulia Notaro
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/chiaracaruso/">
+      Chiara Caruso
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/andrea-alunni-guiducci-203786216/">
+      Andrea Alunni Guiducci
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/giuseppe-gallo-cassarino-b03510155/">
+      Giuseppe Gallo Cassarino
+    </a>
+  </li>
+</ul>
+
+<h4>With the special participation of
+  <a href="https://www.linkedin.com/in/casimiro-p-ciancimino/"> 
+  Casimiro Ciancimino
+  </a>
+</h4>

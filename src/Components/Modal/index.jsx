@@ -1,6 +1,5 @@
 import TextModal from "./TextModal/index";
 import ButtonModal from "./ButtonModal";
-import { useParams } from "react-router-dom";
 
 import { MdClose } from "react-icons/md";
 
@@ -15,7 +14,6 @@ const Modal = ({ handleClose, event, discover, image, title, price, description,
     <div className={styles.modalBackground}>
       <div className={styles.modalContainer}>
         <button
-          className={styles.modalCloseBtn}
           className={styles.modalCloseBtn}
           onClick={handleClose}
         >
@@ -38,7 +36,7 @@ const Modal = ({ handleClose, event, discover, image, title, price, description,
               <TextModal title="Description" text={description} />
             </div>
             <div className={styles.modalTextComponent}>
-              <TextModal title="Price" text={price} />
+              <TextModal title="Price" text={price} currencySimbol="true"/>
               {discover &&
                 <TextModal title="Date" text={`${date.getDate()}/${date.getMonth()}`} />}
               <TextModal title="Location" text={city} />

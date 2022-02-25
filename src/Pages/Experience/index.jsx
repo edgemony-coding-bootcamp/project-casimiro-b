@@ -92,7 +92,7 @@ const Experience = () => {
           discover={false}
           image={isClicked.cover_image_url}
           title={isClicked.title}
-          price={isClicked.retail_price.formatted_iso_value}
+          price={isClicked.retail_price.value}
           description={isClicked.description}
           city={isClicked.city.name}
           handleClose={handleClose}

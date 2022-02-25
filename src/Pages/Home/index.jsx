@@ -1,5 +1,5 @@
 import CardHomepage from "./CardHomepage";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { FETCH_ALL_DATA_CARD } from "../../store/action";
@@ -13,10 +13,6 @@ import {
   Move,
   MoveOut,
   Sticky,
-  StickyIn,
-  Zoom,
-  FadeIn,
-  MoveIn,
 } from "react-scroll-motion";
 
 import styles from "./Home.module.scss";
@@ -32,7 +28,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(FETCH_ALL_DATA_CARD());
-  }, []);
+  });
 
   const breakPoints = [
 
@@ -44,8 +40,6 @@ const Home = () => {
  
   ];
 
-  const ZoomInScrollOut = batch(StickyIn(), Fade());
-  const FadeUp = batch(Fade(), Sticky(), Move());
 
   return (
     <>
@@ -89,7 +83,7 @@ const Home = () => {
           autoPlay
           muted
           loop
-          playsinline
+          
         ></video>
 
 
