@@ -1,0 +1,28 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h3 {
+
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color:black;
+    }
+    .contactUs {
+
+        margin-top: 0.5rem;
+
+        a {padding: 0 0.2rem;}
+
+        svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    }
+
+  
+}
