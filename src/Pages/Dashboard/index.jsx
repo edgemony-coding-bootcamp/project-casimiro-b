@@ -1,6 +1,4 @@
 import styles from './Dashboard.module.scss';
-import { useState, useEffect } from 'react'
-import { USER_LOGIN } from "../../store/action";
 
 import DashboardCard from "./DashboardCard";
 import DashboardCardReset from './DashboardCardReset';
@@ -9,18 +7,7 @@ const Dashboard = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     const name1 = user.user.email.substring(0, user.user.email.lastIndexOf("@"));
 
-    const [name, setName] = useState('');
-    const [surname, setSurname] = useState('');
-    const [email, setEmail] = useState('');
-
-    // const dispatch = useDispatch();
-    // const user = useSelector((state) => state.user)
-
-    // useEffect(() => {
-    //     dispatch(USER_LOGIN())
-    // }, [])
-
-    // console.log(user)
+    console.log(user.user.email)
 
     return (
         <div className={styles.main}>
@@ -30,9 +17,8 @@ const Dashboard = () => {
 
             <div className={styles.sectionCard}>
                 <DashboardCard
-                    onChangeName={((e) => setName(e.target.value))}
-                    onChangeSurname={((e) => setSurname(e.target.value))}
-                    onChangeEmail={((e) => setEmail(e.target.value))}
+                    name={name1}
+                    email={user.user.email}
                 />
                 <DashboardCardReset /> {/* props reset da impostare */}
 

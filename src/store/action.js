@@ -1,5 +1,6 @@
 import {
   USER_LOGGED_SUCCESS,
+  USER_LOGGED_GOOGLE_SUCCESS,
   USER_LOGOUT,
   FETCH_ALL_DATA_SUCCESS,
   FETCH_ALL_DATA_SUCCESS_EX,
@@ -15,8 +16,10 @@ import {
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInWithPopup
 } from "firebase/auth";
 import axios from "axios";
+
 
 export const ADD_CART = (card) => async (dispatch) => {
   try {
@@ -120,6 +123,26 @@ export const USER_LOGIN =
       window.location.assign('/dashboard')
       dispatch({
         type: USER_LOGGED_SUCCESS,
+        payload: user,
+      });
+
+    } catch (err) {
+      console.log("Email o password non valide");
+    }
+  };
+
+export const USER_LOGIN_GOOGLE =
+  (auth, provider) => async (dispatch) => {
+    try {
+      const user = await signInWithPopup(
+        auth,
+        provider
+      );
+      localStorage.setItem('user', JSON.stringify(user))
+      console.log(user);
+      window.location.assign('/dashboard')
+      dispatch({
+        type: USER_LOGGED_GOOGLE_SUCCESS,
         payload: user,
       });
 

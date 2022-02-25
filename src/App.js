@@ -3,7 +3,7 @@ import { Suspense, lazy } from "react";
 import "./App.css";
 import { useEffect } from 'react'
 import { USER_LOGIN, LOG_OUT } from "./store/action";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Loading from "./Components/Loading";
@@ -38,7 +38,7 @@ function App() {
 
   useEffect(() => {
     dispatch(USER_LOGIN())
-  }, [])
+  })
 
   const LogOut = () => {
     dispatch(LOG_OUT())

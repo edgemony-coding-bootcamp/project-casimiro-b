@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useState } from "react";
 import styles from "./Log.module.scss";
 import { BiHide, BiShow } from "react-icons/bi";
 import { FaGoogle, FaFacebookSquare } from "react-icons/fa";
-import { signInWithGoogle } from "../../firebase-config";
+
 
 const Log = (props) => {
-  const user = useSelector((state) => state.user)
   const [values, setValues] = useState({
     password: "",
     showPassword: false,
@@ -20,9 +18,6 @@ const Log = (props) => {
     event.preventDefault();
   };
 
-  const handlePasswordChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
   return (
     <div className={styles.log_wrapper}>
       <div className={styles.text_container}>
@@ -52,7 +47,7 @@ const Log = (props) => {
           <p>{props.btn}</p>
 
         </button>
-        <button className={styles.btn_two} onClick={signInWithGoogle}>
+        <button className={styles.btn_two} onClick={props.logGoogle} >
           <i><FaGoogle /></i>
           <p>Continua con Google</p>
         </button>

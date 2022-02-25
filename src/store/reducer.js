@@ -1,4 +1,4 @@
-import { USER_LOGGED_SUCCESS, USER_LOGOUT, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY } from './constance';
+import { USER_LOGGED_SUCCESS, USER_LOGGED_GOOGLE_SUCCESS, USER_LOGOUT, FETCH_ALL_DATA_SUCCESS, FETCH_ALL_DATA_SUCCESS_EX, FETCH_ALL_DATA_SUCCESS_CARD, FETCH_ALL_DATA_SUCCESS_CITIES, FETCH_ALL_DATA_REQUEST, FETCH_ALL_DATA_FAIL, ADD_TO_CART, REMOVE_TO_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY } from './constance';
 
 
 const INIT_STATE = {
@@ -57,6 +57,11 @@ export const myReducer = (state = INIT_STATE, action) => {
                 error: true
             }
         case USER_LOGGED_SUCCESS:
+            return {
+                ...state,
+                user: action.payload
+            }
+        case USER_LOGGED_GOOGLE_SUCCESS:
             return {
                 ...state,
                 user: action.payload

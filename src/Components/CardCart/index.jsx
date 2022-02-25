@@ -1,5 +1,5 @@
 import styles from "./CardCart.module.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { MdDelete } from "react-icons/md";
 import { BiPlus, BiMinus } from "react-icons/bi";

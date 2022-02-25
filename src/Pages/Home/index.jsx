@@ -13,8 +13,6 @@ import {
   Move,
   MoveOut,
   Sticky,
-  StickyIn,
-  
 } from "react-scroll-motion";
 
 import styles from "./Home.module.scss";
@@ -30,7 +28,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(FETCH_ALL_DATA_CARD());
-  }, []);
+  });
 
   const breakPoints = [
 
@@ -42,8 +40,6 @@ const Home = () => {
  
   ];
 
-  const ZoomInScrollOut = batch(StickyIn(), Fade());
-  const FadeUp = batch(Fade(), Sticky(), Move());
 
   return (
     <>
