@@ -1,6 +1,5 @@
 import styles from "./LogIn.module.scss";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from 'firebase/auth';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { auth } from '../../firebase-config';
 import { useSelector, useDispatch } from "react-redux";
 import { USER_LOGIN } from "../../store/action";
@@ -19,25 +18,9 @@ const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
 
-  // onAuthStateChanged(auth, (currentUser) => {
-  //   setUser(currentUser);
-  // })
 
   const logIn = () => {
     dispatch(USER_LOGIN(auth, loginEmail, loginPassword))
-  }
-  // const logIn = async () => {
-  //   try {
-  //     const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-  //     console.log(user)
-  //   }
-  //   catch (err) {
-  //     console.log(err)
-  //     console.log('Email o password non valide');
-  //   }
-  // }
-  const logOut = async () => {
-    await signOut(auth);
   }
 
   return (

@@ -32,9 +32,9 @@
   }
 
   .containerTwo {
-    height: 40vh;
+    height: 70vh;
     width: 100%;
-    background-image: url("https://images.unsplash.com/photo-1497400338895-940f2d01a6f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80");
+    background-image: url("./aboutus.jpg");
     margin-top: 5rem;
 
     background-size: cover;
@@ -75,9 +75,10 @@
       input {
         text-align: center;
         width: 200px;
-        margin-top: 60px;
+        margin-top: 2rem;
         border: none;
         border-bottom: 2px solid black;
+        padding: 0.5rem;
 
         outline: none;
       }
@@ -87,10 +88,22 @@
       text-align: center;
       width: 75px;
       height: 33px;
+      border-radius: 15px;
+      font-weight: 600;
       box-shadow: none;
       border: none;
       background-color: #f4efef;
+      cursor: pointer;
+      
+
+      &:hover {
+        color: #fff;
+        background-color: rgb(188, 110, 126);
+        transition: 0.4s all ease;
+      }
     }
+
+
     .privacy {
       font-size: 10px;
     }
@@ -122,7 +135,7 @@
         height: 100vh;
         background-position: center;
         width: 50%;
-        margin-top: 0px;
+        margin-top: 112px;
       }
     }
 

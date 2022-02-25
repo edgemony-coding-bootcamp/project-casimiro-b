@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const SideCart = () => {
   const cart = useSelector((state) => state.cart);
+  console.log(cart)
 
   return (
     <div className={styles.card_wrapper}>

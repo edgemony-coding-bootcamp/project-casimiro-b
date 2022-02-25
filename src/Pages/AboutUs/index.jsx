@@ -24,7 +24,7 @@ const AboutUs = () => {
             terra così come lo siamo noi, innamorati di un'isola, bella e
             dannata, profumata e fiera, vi accompagneremo lungo il vostro
             viaggio consigliandovi i luoghi più suggestivi, i luoghi simbolo
-            della Sicilia, ma ve ne faremo scoprire anche gli angoli più
+            della Sicilia e gli eventi principali, ma ve ne faremo scoprire anche gli angoli più
             nascosti e silenziosamente affascinanti.
           </p>
           <p className={styles.quote}>
@@ -40,12 +40,12 @@ const AboutUs = () => {
       </div>
       <div className={styles.newsletter}>
         <form>
-          <h3>Join our newsletter</h3>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h4>
+          <h3>Iscriviti alla newsletter</h3>
+          <h4>Resta aggiornato sugli eventi in Sicilia.</h4>
 
           <input type="email" placeholder="Inserisci la tua email" />
 
-          <button>Submit</button>
+          <button>Iscriviti</button>
 
           <p className={styles.privacy}>
             By signing up you agree to our User Agreement (including the class

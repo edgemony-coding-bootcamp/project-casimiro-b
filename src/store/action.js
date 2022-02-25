@@ -1,5 +1,6 @@
 import {
   USER_LOGGED_SUCCESS,
+  USER_LOGOUT,
   FETCH_ALL_DATA_SUCCESS,
   FETCH_ALL_DATA_SUCCESS_EX,
   FETCH_ALL_DATA_SUCCESS_CARD,
@@ -16,7 +17,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export const ADD_CART = (card) => async (dispatch) => {
   try {
@@ -69,7 +69,7 @@ export const LOG_OUT = () => async (dispatch) => {
     const user = {};
 
     dispatch({
-      type: USER_LOGGED_SUCCESS,
+      type: USER_LOGOUT,
       payload: user,
     });
   } catch (err) {
@@ -96,7 +96,7 @@ export const USER_SIGNUP =
         console.log(user);
         setRegisterEmail("");
         setRegisterPassword("");
-
+        localStorage.setItem('user', user)
         dispatch({
           type: USER_LOGGED_SUCCESS,
           payload: user,
@@ -115,15 +115,15 @@ export const USER_LOGIN =
         loginEmail,
         loginPassword
       );
+      localStorage.setItem('user', JSON.stringify(user))
       console.log(user);
-
+      window.location.assign('/dashboard')
       dispatch({
         type: USER_LOGGED_SUCCESS,
         payload: user,
       });
 
     } catch (err) {
-      // console.log(err);
       console.log("Email o password non valide");
     }
   };

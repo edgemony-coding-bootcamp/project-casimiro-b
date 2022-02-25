@@ -57,7 +57,7 @@ const Discover = () => {
   const sortingText = (e) => setAuthor(e.target.value);
 
   const addToCart = () => {
-    console.log(cart.length);
+
     if (cart.length === 0) {
       dispatch(
         ADD_CART({
