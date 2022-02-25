@@ -81,8 +81,9 @@
 
   .header {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
     height: 7rem;
   }
 

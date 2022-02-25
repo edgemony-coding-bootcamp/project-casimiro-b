@@ -29,7 +29,7 @@ const Header = (props) => {
   const user = useSelector((state) => state.user);
 
   const logSign = () => {
-    if (user === null)  {
+    if (user.user === undefined)  {
       return (
         <>
           {log.map((item, index) => (
