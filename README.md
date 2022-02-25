@@ -71,7 +71,13 @@
 
 ## How to run it!
 
-First, run the development server:
+Once you've forked, downloaded the zip file or cloned the repository, run the following command to install all the libraries you need to run it properly:
+
+```bash
+npm i
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
