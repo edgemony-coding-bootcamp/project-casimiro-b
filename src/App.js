@@ -26,9 +26,11 @@ const INIT_STATE = {
     { link: "/Eventi", label: "EVENTI" },
     { link: "/Esperienze", label: "ESPERIENZE" },
     { link: "/AboutUs", label: "ABOUT US" },
+  ],
+  log: [
     { link: "/Log", label: "LOG IN" },
     { link: "/sign", label: "SIGN IN" },
-  ],
+  ]
 };
 
 function App() {
@@ -43,13 +45,12 @@ function App() {
   const LogOut = () => {
     dispatch(LOG_OUT())
     window.location.assign('/Log')
-
   }
 
   return (
     <>
       {/* dash={Object.keys(user).length === 0 ? '/Log' : '/dashboard'} logOut={LogOut} user={user} */}
-      <Header name={INIT_STATE.name} links={INIT_STATE.nav} dash={user === null || user.user === undefined ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
+      <Header name={INIT_STATE.name} links={INIT_STATE.nav} log={INIT_STATE.log} dash={user === null || user.user === undefined ? '/Log' : '/dashboard'} logOut={LogOut} user={user} />
 
 
 
