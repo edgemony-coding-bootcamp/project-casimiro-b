@@ -24,7 +24,7 @@ const AboutUs = () => {
             terra così come lo siamo noi, innamorati di un'isola, bella e
             dannata, profumata e fiera, vi accompagneremo lungo il vostro
             viaggio consigliandovi i luoghi più suggestivi, i luoghi simbolo
-            della Sicilia, ma ve ne faremo scoprire anche gli angoli più
+            della Sicilia e gli eventi principali, ma ve ne faremo scoprire anche gli angoli più
             nascosti e silenziosamente affascinanti.
           </p>
           <p className={styles.quote}>
