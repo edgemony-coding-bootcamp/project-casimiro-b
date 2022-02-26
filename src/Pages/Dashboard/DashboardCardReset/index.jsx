@@ -8,7 +8,7 @@ const DashboardCardReset = (reset) => {
             <h2>Reset Password</h2>
             <p>Hai bisogno di una nuova password?  Niente paura.<br/>
                 Ti invieremo via email un link così potrai reimpostarla</p>
-            <button className={styles.btn} onClick={reset}>Invia link</button>
+            <button className={styles.btn}>Invia link</button>
         </div>
     );
 };

@@ -17,7 +17,7 @@ import {
 
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
-import video from "./Media/videoddocu.mp4";
+import video from "./Media/videoddocu.webm";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
@@ -28,7 +28,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(FETCH_ALL_DATA_CARD());
-  });
+  }, []);
 
   const breakPoints = [
 

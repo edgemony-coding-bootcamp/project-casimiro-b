@@ -39,7 +39,7 @@ const LogIn = () => {
       <div className={styles.container_one}>
         <Log
           title="Log In"
-          subtitle={`Welcome back.`}
+          subtitle="Welcome back."
           btn="Accedi"
           logBtn={logIn}
           logGoogle={logGoogle}

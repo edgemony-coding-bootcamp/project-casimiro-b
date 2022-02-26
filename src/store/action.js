@@ -84,8 +84,8 @@ export const LOG_OUT = () => async (dispatch) => {
 export const USER_SIGNUP =
   (
     auth,
-    setRegisterEmail,
-    setRegisterPassword,
+    // setRegisterEmail,
+    // setRegisterPassword,
     registerEmail,
     registerPassword
   ) =>
@@ -96,10 +96,10 @@ export const USER_SIGNUP =
           registerEmail,
           registerPassword
         );
-        console.log(user);
-        setRegisterEmail("");
-        setRegisterPassword("");
-        localStorage.setItem('user', user)
+        // setRegisterEmail("");
+        // setRegisterPassword("");
+        localStorage.setItem('user', JSON.stringify(user)) 
+        window.location.assign('/dashboard')
         dispatch({
           type: USER_LOGGED_SUCCESS,
           payload: user,

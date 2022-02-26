@@ -40,7 +40,7 @@ function App() {
 
   useEffect(() => {
     dispatch(USER_LOGIN())
-  })
+  }, [])
 
   const LogOut = () => {
     dispatch(LOG_OUT())
