@@ -1,19 +1,19 @@
 @import '../../../Tools/General.scss';
 
 .modalBtn {
-    border: none;
-    padding: 10px 24px;
-    width: 100%;
+border: none;
+padding: 10px 24px;
+width: 100%;
 
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
+font-family: 'Source Sans Pro', sans-serif;
+font-weight: 600;
+font-size: 1rem;
 
-    cursor: pointer;
+cursor: pointer;
 
-    &:hover{
-        background-color: $secondary;
-        color: #fff;
-        transition: all 0.4s ease;
-    }
+&:hover{
+    background-color: $secondary;
+    color: #fff;
+    transition: all 0.4s ease;
+}
 }

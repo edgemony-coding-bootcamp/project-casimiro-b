@@ -36,7 +36,7 @@ const Modal = ({ handleClose, event, discover, image, title, price, description,
               <TextModal title="Description" text={description} />
             </div>
             <div className={styles.modalTextComponent}>
-              <TextModal title="Price" text={price} currencySimbol="true"/>
+              <TextModal title="Price" text={price} currencySimbol="true" />
               {discover &&
                 <TextModal title="Date" text={`${date.getDate()}/${date.getMonth()}`} />}
               <TextModal title="Location" text={city} />

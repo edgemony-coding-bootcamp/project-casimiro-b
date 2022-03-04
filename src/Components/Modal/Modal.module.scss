@@ -1,155 +1,155 @@
 .modalBackground {
-  z-index: 1;
-  width: 100vw;
-  position: fixed;
-  height: 100vh;
+z-index: 1;
+width: 100vw;
+position: fixed;
+height: 100vh;
 }
 
 .modalContainer {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+box-shadow: 0 0 0 2000px rgba(24, 22, 22, 0.8);
+
+
+opacity: 1;
+
+// margin: 0px 42px;
+margin: 2rem auto;
+
+
+padding: 3rem;
+
+width: 350px;
+
+border-radius: 10px;
+
+
+background-color: #fff;
+
+.modalCloseBtn {
+  border: none;
+  background-color: #fff;
+  font-weight: 800;
+  font-size: 28px;
+  display: flex;
+  justify-content: end;
+  padding-top: 5px;
+  margin-top: -30px;
+  margin-right: -20px;
+  
+}
+
+button {
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  
+}
+
+.modalTitle {
+  margin-top: 2rem;
+
+  h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+  }
+}
+
+.modalImg {
+  
+  margin-top: 2rem;
+  height: 130px;
+  object-fit: cover;
+  object-position: end;
+  border-radius: 10px;
+}
+
+.modalBodyContainer {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
-  box-shadow: 0 0 0 2000px rgba(24, 22, 22, 0.8);
-
-
-  opacity: 1;
-
-  // margin: 0px 42px;
-  margin: 2rem auto;
-  
-
-  padding: 3rem;
-
-  width: 350px;
-
-  border-radius: 10px;
-
-
-  background-color: #fff;
-
-  .modalCloseBtn {
-    border: none;
-    background-color: #fff;
-    font-weight: 800;
-    font-size: 28px;
-    display: flex;
-    justify-content: end;
-    padding-top: 5px;
-    margin-top: -30px;
-    margin-right: -20px;
-    
-  }
-
-  button {
-    border: none;
-    font-weight: 800;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    
-  }
-
-  .modalTitle {
-    margin-top: 2rem;
-
-    h1 {
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 800;
-      font-size: 18px;
-    }
-  }
-
-  .modalImg {
-   
-    margin-top: 2rem;
-    height: 130px;
-    object-fit: cover;
-    object-position: end;
-    border-radius: 10px;
-  }
-
-  .modalBodyContainer {
-    margin-top: 2rem;
+  .modalTextContainer {
     display: flex;
     flex-direction: column;
 
-    .modalTextContainer {
-      display: flex;
-      flex-direction: column;
-
-      gap: 2rem;
-    }
-
-    .modalTextComponent {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 1rem;
-      text-align: left;
-    }
+    gap: 2rem;
   }
 
-  .modalFormDiscover {
+  .modalTextComponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+  }
+}
+
+.modalFormDiscover {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 1rem;
+
+  h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+  }
+
+  .modalFormInput {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    
 
-    margin-top: 1rem;
-
-    h3 {
-      font-family: "Source Sans Pro", sans-serif;
-      font-size: 14px;
-    }
-
-    .modalFormInput {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-top: 0.8rem;
-      margin-bottom: 0.8rem;
-      
-  
-    }
   }
+}
 }
 
 @media screen and (min-width: 800px) {
 
-  .modalContainer {
-    width: 700px;
-    height: 700px;
-    
-    margin: 12vh auto;
+.modalContainer {
+  width: 700px;
+  height: 700px;
+  
+  margin: 12vh auto;
 
 
 
-    .modalImg {
-      height: 200px;
-      width: 100%;
-    }
+  .modalImg {
+    height: 200px;
+    width: 100%;
+  }
 
 
-    .modalBodyContainer {
+  .modalBodyContainer {
+    flex-direction: row;
+
+    .modalTextContainer {
       flex-direction: row;
+      justify-content: space-between;
 
-      .modalTextContainer {
-        flex-direction: row;
-        justify-content: space-between;
-
-        gap: 12rem;
-      }
-
-      .modalTextComponent {
-        flex-direction: column;
-        justify-content: space-around;
-        text-align: end;
-      }
+      gap: 12rem;
     }
-    .modalFormDiscover {
-      .modalFormInput {
-        flex-direction: row;
-      }
+
+    .modalTextComponent {
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: end;
     }
   }
+  .modalFormDiscover {
+    .modalFormInput {
+      flex-direction: row;
+    }
+  }
+}
 }

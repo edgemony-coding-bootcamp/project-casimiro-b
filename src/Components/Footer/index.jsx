@@ -23,7 +23,7 @@ const Footer = () => {
             <div className={styles.footerContact}>
 
                 <Link to="/AboutUs">
-                <p>Contattaci</p>
+                    <p>Contattaci</p>
                 </Link>
                 <p>Iscriviti</p>
                 <p>Servizio Clienti</p>
