@@ -51,10 +51,10 @@ const Log = (props) => {
           <i><FaGoogle /></i>
           <p>Continua con Google</p>
         </button>
-        <button className={styles.btn_two}>
+        {/* <button className={styles.btn_two}>
           <i><FaFacebookSquare /></i>
           <p>Continua con Facebook</p>
-        </button>
+        </button> */}
       </div>
       <div className={styles.terms}>
         <input className={styles.terms_input} type="checkbox" />
