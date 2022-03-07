@@ -5,11 +5,11 @@ const TextModal = (props) => {
         <div className={styles.textComponent}>
 
             <h3>{props.title}</h3>
-            {props.currencySimbol ? <p>{props.text} €</p> : <p>{props.text}</p>  }
+            {props.currencySimbol ? <p>{props.text} €</p> : <p>{props.text}</p>}
 
 
         </div>
-        
+
     )
 }
 

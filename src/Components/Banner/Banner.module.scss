@@ -1,29 +1,29 @@
 @import "../../Tools/General.scss";
 
 .wrapperBanner {
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    background-color: $secondary;
-    text-align: center;
-    z-index: 1;
-    transition: all 0.2s ease;
+width: 100%;
+height: 80px;
+position: fixed;
+top: 0;
+background-color: $secondary;
+text-align: center;
+z-index: 1;
+transition: all 0.2s ease;
 
-    h3 {
-        color: $mainLighter;
-        padding: 25px;
-    }
+h3 {
+    color: $mainLighter;
+    padding: 25px;
+}
 }
 
 
 @media screen and (min-width: 800px) {
-    
-    .wrapperBanner {
-        height: 100px;
 
-        h3 {
-            padding: 30px;
-        }
+.wrapperBanner {
+    height: 100px;
+
+    h3 {
+        padding: 30px;
     }
+}
 }
